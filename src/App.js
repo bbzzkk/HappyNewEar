@@ -3,13 +3,14 @@ import { Switch, Route } from "react-router-dom";
 import HeaderContainer from './containers/HeaderContainer'
 import Homepage from "./pages/Hompage";
 import FooterContainer from "./containers/FooterContainer";
-import PreviewContainer from './containers/PreviewContainer';
+import PreViewContainer from './containers/PreViewContainer';
+
 
 function App() {
   return (
     <div className="App">
       <HeaderContainer />
-      <PreviewContainer/>
+      <PreViewContainer/>
       <Switch>
         <Route exact path="/" component={Homepage} />
       </Switch>
