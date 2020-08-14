@@ -1,15 +1,15 @@
 import React from 'react';
-
 import { Switch, Route } from "react-router-dom";
-
 import HeaderContainer from './containers/HeaderContainer'
 import Homepage from "./pages/Hompage";
 import FooterContainer from "./containers/FooterContainer";
+import PreviewContainer from './containers/PreviewContainer';
 
 function App() {
   return (
     <div className="App">
       <HeaderContainer />
+      <PreviewContainer/>
       <Switch>
         <Route exact path="/" component={Homepage} />
       </Switch>
