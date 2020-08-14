@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router-dom";
 
 import HeaderContainer from './containers/HeaderContainer'
 import Homepage from "./pages/Hompage";
-import FooterContainer from "./containers/FootContainer";
+import FooterContainer from "./containers/FooterContainer";
 
 function App() {
   return (
