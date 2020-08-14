@@ -1,9 +1,18 @@
 import React, { Component } from 'react'
 
+// import {inject, observer} from 'mobx-react'
+
+import Header from '../components/Header'
+
+// @inject('HomeStore')
+// @observer
 class HeaderContainer extends Component{
+    handleLogin = () =>{
+        //
+    }
     render(){
         return(
-            <div>헤더</div>
+            <Header handleLogin={this.handleLogin}/>
         )
     }
 }
