@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from "react-router-dom"
 
 // import { resetGlobalState } from 'mobx/lib/internal';
 
@@ -22,7 +23,9 @@ class Header extends Component{
                         <div className="right">
                             <div className="options">
                                 <button onClick={handleLogin}>로그인</button>
-                                <button onClick={handleLogin}>관심상품</button>
+                                <Link to="/cart">
+                                    <button>관심상품</button>
+                                </Link>
                             </div>                
                         </div>
                     </div>
