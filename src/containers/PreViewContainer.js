@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+
 import PreViewList from '../components/PreViewList'
-import ItemJson from '../ItemJson';
+
+import ItemJson from '../data/ItemJson';
 
 class PreViewContainer extends Component {
     categoryClick = () => {

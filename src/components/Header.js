@@ -10,29 +10,25 @@ import { Link } from "react-router-dom"
 
 class Header extends Component{
     render(){
-        const {handleLogin} = this.props
         return (
-            
-                <div>
-                    <div>
-                        <div 
-                        className="logo">
-                            <img 
-                        style={{width:'10em' }}src='images/header/HNElogo.png'/>
-                        </div>
-                        <div className="right">
-                            <div className="options">
-                                <button onClick={handleLogin}>로그인</button>
-                                <Link to="/cart">
-                                    <button>관심상품</button>
-                                </Link>
-                            </div>                
-                        </div>
-                    </div>
+          <div>
+            <div>
+              <Link className="logoContainer" to="/">
+                <img
+                  style={{ width: "10em" }}
+                  src="images/header/HNElogo.png"
+                  alt="logo"
+                />
+              </Link>
+              <div className="right">
+                <div className="options">
+                  <Link to="/login">로그인</Link>
+                  <Link to="/cart">관심상품</Link>
                 </div>
-   
-            
-        )}
+              </div>
+            </div>
+          </div>
+        );}
 }
 
 
