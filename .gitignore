@@ -2,6 +2,7 @@
 
 package-lock.json
 
+/src/firebase/firebase.utils.js
 
 # dependencies
 /node_modules

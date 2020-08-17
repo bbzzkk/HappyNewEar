@@ -1,13 +1,16 @@
 import React, { Component} from 'react';
 
-import LoginFormContainer from '../containers/LoginFormContainer';
+import SignInFormContainer from "../containers/SignInFormContainer";
+import SignUpFormContainer from '../containers/SignUpFormContainer';
 
 class LoginPage extends Component{
-
     render(){
-        return(
-            <LoginFormContainer/>
-        )
+        return (
+          <>
+            <SignInFormContainer />
+            <SignUpFormContainer />
+          </>
+        );
     }
 }
 
