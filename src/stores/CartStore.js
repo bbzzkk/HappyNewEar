@@ -1,4 +1,5 @@
 import { observable, computed, action } from 'mobx';
+import User from '../User';
 
 class CartStore {
     @observable user = User[4];
@@ -119,3 +120,5 @@ class CartStore {
 
     }
 }
+
+export default CartStore;

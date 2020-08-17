@@ -4,7 +4,9 @@ import EmptyCart from '../components/EmptyCart';
 import { inject, observer } from 'mobx-react';
 import TotalCount from '../components/TotalCount';
 
-@inject('cartStore')
+@inject((stores) => ({ 
+    cartStore: stores.cart
+ }))
 @observer
 class CartContainer extends Component {
 
