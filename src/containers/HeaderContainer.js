@@ -5,7 +5,6 @@ import {inject, observer} from 'mobx-react'
 import Header from '../components/Header'
 
 @inject((stores) => ({
-  userStore: stores.userStore,
   authStore: stores.authStore,
 }))
 @observer
@@ -14,7 +13,7 @@ class HeaderContainer extends Component {
     this.props.authStore.logout();
   };
   render() {
-    const { currentUser } = this.props.userStore;
+    const { currentUser } = this.props.authStore;
     return (
       <Header currentUser={currentUser} handleLogout={this.handleLogout} />
     );
