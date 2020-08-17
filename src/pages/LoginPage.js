@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { Component} from 'react';
 
-const LoginPage = () => {
-    return <div>로그인</div>;
-};
+import LoginFormContainer from '../containers/LoginFormContainer';
+
+class LoginPage extends Component{
+
+    render(){
+        return(
+            <LoginFormContainer/>
+        )
+    }
+}
 
 export default LoginPage;
