@@ -6,6 +6,7 @@ import { inject, observer } from 'mobx-react';
 @inject('cartStore')
 @observer
 class CartContainer extends Component {
+
     render() {
 
         const { cartStore } = this.props;
@@ -14,7 +15,11 @@ class CartContainer extends Component {
             <div className='CartContainer'>
                 <h1>장바구니</h1>
                 <hr/>
-                {cartStore._cartList.length !== 0 ? <Cart cartList={cartStore._cartList}/> : <EmptyCart />}
+                {
+                    cartStore._item.length !== 0
+                        ? <Cart item={cartStore._item} />
+                    : <EmptyCart />
+                }
             </div>
         );
     }

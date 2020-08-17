@@ -3,11 +3,11 @@ import CartItem from './CartItem';
 
 class CartList extends Component {
     render() {
-        const { items } = this.props;
+        const { items, onCartListSelect, caseListCheckBox, onItemSelect } = this.props;
         
         const cartItem = items.item.map(item => {
             return (
-                <CartItem item={item} />
+                <CartItem item={item} onItemSelect={onItemSelect}/>
             );
         });
 
@@ -15,7 +15,7 @@ class CartList extends Component {
             <div className='CartList'>
                 <div>
                     <label>
-                        <input type='checkbox' />
+                        <input type='checkbox' name={items.listName} checked={items.checked} onClick={(e) => onCartListSelect(e)}/>
                         {items.listName}
                     </label> 
                     <hr/>
