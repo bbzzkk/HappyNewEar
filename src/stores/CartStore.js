@@ -2,8 +2,9 @@ import { observable, computed, action } from 'mobx';
 import User from '../User';
 
 class CartStore {
-    @observable user = User[0];
-    @observable item = this.user.item;
+    @observable user = User[2];
+    @observable items = this.user.items;
+    @observable allChecked = true;
 
     @computed
     get _user() {
@@ -11,104 +12,100 @@ class CartStore {
     }
 
     @computed
-    get _item() {
-        return this.item ? this.item.slice() : [];
+    get _items() {
+        return this.items ? this.items.slice() : [];
     }
 
     @computed
-    get _caseList() {
-        return this.caseList ? { ...this.caseList } : {};
+    get _allChecked() {
+        return this.allChecked;
     }
 
     @computed
-    get _keyringList() {
-        return this.keyringList ? { ...this.keyringList } : {};
+    get _itemCount() {
+        let cnt = 0;
+
+        this.items.map(item => {
+            if (item.checked === true) {
+                cnt += item.count;
+            }
+            return item;
+        });
+
+        return cnt;
     }
 
     @computed
-    get _stickerList() {
-        return this.stickerList ? { ...this.stickerList } : {};
-    }
+    get _totalPrice() {
+        let total = 0;
 
-    @computed
-    get _allSelectCheckBox() {
-        return this.allSelectCheckBox;
-    }
+        this.items.map(item => {
+            if (item.checked === true) {
+                total += item.count * item.price;
+            }
+            return item;
+        });
 
-    @computed
-    get _caseCheckBox() {
-        return this.caseCheckBox;
-    }
+        return total;
 
-    @computed
-    get _keyringCheckBox() {
-        return this.keyringCheckBox;
-    }
-
-    @computed
-    get _stickerCheckBox() {
-        return this.stickerCheckBox;
     }
 
     @action
-    allSelect = (e) => {   
-        this.allSelectCheckBox = e.target.checked;
-        this.cartList = this.cartList.map(list => {
-            list.checked = e.target.checked;
-            list.item = list.item.map(item => {
+    handleAllCheck = (e) => {
+        this.allChecked = e.target.checked;
+        this.items = this.items.map(item => {
+            item.checked = e.target.checked;
+            return item;
+        })
+    }
+
+    @action
+    handleCheck = (e) => {
+        let isAllChecked = true;
+
+        this.items = this.items.map(item => {
+            if (item.name === e.target.name) {
                 item.checked = e.target.checked;
-                return item;
-            });
-            return list;
-        });
-    }
-
-    @action
-    cartListSelect = (e) => {
-        // const idx = this.cartList.findIndex(obj => obj.listName === e.target.name);
-        // this.caseListCheckBox = e.target.checked;
-        // this.cartList[idx].checked = e.target.checked;
-        // this.caseList = this.cartList[idx];
-
-        if (e.target.checked === false) {
-            this.allSelectCheckBox = false;
-        }
-
-        this.cartList = this.cartList.map(list => {
-            if (list.listName === e.target.name) {
-                list.checked = e.target.checked;
-                list.item = list.item.map(item => {
-                    item.checked = e.target.checked;
-                    return item;
-                });
             }
-            return list;
-        });
-    }
-
-    @action
-    itemSelect = (e) => {
-        // const listIdx = this.cartList.findIndex(obj => obj.listName === listName);
-        // const itemIdx = this.cartList[listIdx].item.findIndex(obj => obj.id === item.id);
-        // this.cartList[listIdx].item[itemIdx].checked = true;
-
-        this.cartList = this.cartList.map(list => {
-            if (e.target.checked === false) {
-                this.allSelectCheckBox = false;
+            if (item.checked === false) {
+                isAllChecked = false;
             }
-
-            list.item = list.item.map(item => {
-                if (item.name === e.target.name)
-                    item.checked = e.target.checked;
-                return item;
-            });
-            return list;
+            return item;
         });
+
+        this.allChecked = isAllChecked;
     }
 
     @action
     deleteSelected = () => {
+        this.items = this.items.filter(item => item.checked !== true);
+    }
 
+    @action
+    deleteItem = (itemName) => {
+        this.items = this.items.filter(item => item.name !== itemName);
+    }
+
+    @action
+    addClick = (itemName) => {
+        this.items = this.items.map(item => {
+            if (item.name === itemName) {
+                item.count++;
+            }
+            return item;
+        });
+    }
+
+    @action
+    subClick = (itemName) => {
+        this.items = this.items.map(item => {
+            if (item.name === itemName) {
+                if (item.count !== 1) {
+                    item.count--;
+                }
+            }
+            return item;
+        });
     }
 
     @action
