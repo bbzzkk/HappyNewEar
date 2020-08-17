@@ -19,7 +19,6 @@ class LoginFormContainer extends Component {
   render() {
     const { email, password } = this.props.login;
     return (
-      // <div>하이</div>
       <LoginForm
         email={email}
         password={password}

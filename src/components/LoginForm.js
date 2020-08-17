@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-// import InputFormContainer from '../containers/InputFormContainer'
+import {signInWithGoogle} from '../firebase/firebase.utils'
 
 class LoginForm extends Component{
     render(){
@@ -25,6 +25,9 @@ class LoginForm extends Component{
               />
               <div className="login-buttons">
                 <button type="submit">로그인</button>
+                <button type="button"onClick={signInWithGoogle}>
+                  구글 계정으로 로그인
+                </button>
               </div>
             </form>
           </>

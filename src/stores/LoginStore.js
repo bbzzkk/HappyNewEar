@@ -1,5 +1,7 @@
 import { action, observable } from "mobx";
 
+import { auth } from "../firebase/firebase.utils";
+
 export default class LoginStore {
   constructor(root) {
     this.root = root;
@@ -16,5 +18,9 @@ export default class LoginStore {
   @action login = () =>{
     this.root.login.email = "";
     this.root.login.password = "";
+  }
+
+  @action logout = () =>{
+    auth.signOut()
   }
 }
