@@ -9,22 +9,31 @@ import LoginPage from './pages/LoginPage'
 import HeaderContainer from "./containers/HeaderContainer";
 import FooterContainer from "./containers/FooterContainer";
 
-import {auth} from './firebase/firebase.utils'
+import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 
-@inject((stores) => ({ user: stores.user }))
+@inject((stores) => ({ authStore: stores.authStore }))
 @observer
 class App extends Component {
-  
-  // open subscription to whole App
   componentDidMount() {
-    const unsubscribeFromAuth = auth.onAuthStateChanged((user) => {
-      this.props.user.setCurrentUser(user);
+    const unsubscribeFromAuth = auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        const userRef = await createUserProfileDocument(user);
+        userRef.onSnapshot((snapShot) => {
+          this.props.authStore.setCurrentUser({
+            id: snapShot.id,
+            ...snapShot.data(),
+          });
+        });
+        return;
+      }
+
+      this.props.authStore.setCurrentUser(user);
     });
-    this.props.user.setUnsubscribeFromAuth(unsubscribeFromAuth)
+    this.props.authStore.setUnsubscribeFromAuth(unsubscribeFromAuth);
   }
 
   componentWillUnmount() {
-    // this.unsubscribeFromAut;
+    this.props.authStore.unsubscribeFromAuth();
   }
 
   render() {
