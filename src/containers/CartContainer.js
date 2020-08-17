@@ -3,6 +3,7 @@ import CartList from '../components/CartList';
 import EmptyCart from '../components/EmptyCart';
 import { inject, observer } from 'mobx-react';
 import TotalCount from '../components/TotalCount';
+import { Grid, Header } from 'semantic-ui-react';    
 
 @inject((stores) => ({ 
     cartStore: stores.cart
@@ -42,11 +43,9 @@ class CartContainer extends Component {
 
     render() {
         const { cartStore } = this.props;
-
         return (
             <div className='CartContainer'>
-                <h1>장바구니</h1>
-                <hr/>
+                <h2>장바구니</h2>
                 {
                     cartStore._items.length !== 0
                         ? <>
