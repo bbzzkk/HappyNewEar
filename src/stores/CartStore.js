@@ -2,8 +2,10 @@ import { observable, computed, action } from 'mobx';
 import User from '../User';
 
 class CartStore {
-    @observable user = User[2];
-    @observable items = this.user.items;
+    @observable user = User[4];
+    @observable items = this.user.items.sort(function (a, b) {
+        return a.category < b.category ? -1 : a.category > b.category ? 1 : 0;
+    });
     @observable allChecked = true;
 
     @computed
