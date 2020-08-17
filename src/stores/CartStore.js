@@ -1,20 +1,124 @@
 import { observable, computed, action } from 'mobx';
+import User from '../User';
 
-import User from '../data/User';
+class CartStore {
+    @observable user = User[4];
+    @observable items = this.user.items.sort(function (a, b) {
+        return a.category < b.category ? -1 : a.category > b.category ? 1 : 0;
+    });
+    @observable allChecked = true;
 
-export default class CartStore {
-  constructor(root) {
-    this.root = root;
-  }
+    @computed
+    get _user() {
+        return this.user ? { ...this.user } : {};
+    }
 
-  @observable user = User[1];
-  @observable cartList = [];
+    @computed
+    get _items() {
+        return this.items ? this.items.slice() : [];
+    }
 
-  @computed get _user() {
-    return this.user ? { ...this.user } : {};
-  }
+    @computed
+    get _allChecked() {
+        return this.allChecked;
+    }
 
-  @computed get _cartList() {
-    return this.user.cartList ? this.user.cartList.slice() : [];
-  }
+    @computed
+    get _itemCount() {
+        let cnt = 0;
+
+        this.items.map(item => {
+            if (item.checked === true) {
+                cnt += item.count;
+            }
+            return item;
+        });
+
+        return cnt;
+    }
+
+    @computed
+    get _totalPrice() {
+        let total = 0;
+
+        this.items.map(item => {
+            if (item.checked === true) {
+                total += item.count * item.price;
+            }
+            return item;
+        });
+
+        return total;
+
+    }
+
+    @action
+    handleAllCheck = (e) => {
+        this.allChecked = e.target.checked;
+        this.items = this.items.map(item => {
+            item.checked = e.target.checked;
+            return item;
+        })
+    }
+
+    @action
+    handleCheck = (e) => {
+        let isAllChecked = true;
+
+        this.items = this.items.map(item => {
+            if (item.name === e.target.name) {
+                item.checked = e.target.checked;
+            }
+            if (item.checked === false) {
+                isAllChecked = false;
+            }
+            return item;
+        });
+
+        this.allChecked = isAllChecked;
+    }
+
+    @action
+    deleteSelected = () => {
+        this.items = this.items.filter(item => item.checked !== true);
+    }
+
+    @action
+    deleteItem = (itemName) => {
+        this.items = this.items.filter(item => item.name !== itemName);
+    }
+
+    @action
+    addClick = (itemName) => {
+        this.items = this.items.map(item => {
+            if (item.name === itemName) {
+                item.count++;
+            }
+            return item;
+        });
+    }
+
+    @action
+    subClick = (itemName) => {
+        this.items = this.items.map(item => {
+            if (item.name === itemName) {
+                if (item.count !== 1) {
+                    item.count--;
+                }
+            }
+            return item;
+        });
+    }
+
+    @action
+    put = (listName, item) => {
+
+    }
+
+    @action
+    take = () => {
+
+    }
 }
+
+export default CartStore;

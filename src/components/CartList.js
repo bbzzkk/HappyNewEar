@@ -3,28 +3,36 @@ import CartItem from './CartItem';
 
 class CartList extends Component {
     render() {
-        const { items } = this.props;
-        
-        const cartItem = items.item.map(item => {
+        const {
+            items,
+            allChecked,
+            onHandleAllCheck,
+            onHandleCheck,
+            onDeleteSelected,
+            onDeleteItem,
+            onAddClick,
+            onSubClick } = this.props; 
+
+        const cartLists = items.map(item => {
             return (
-                <CartItem item={item} />
+                <CartItem
+                    item={item}
+                    onHandleCheck={onHandleCheck}
+                    onDeleteItem={onDeleteItem}
+                    onAddClick={onAddClick}
+                    onSubClick={onSubClick}/>
             );
         });
 
         return (
-            <div className='CartList'>
-                <div>
-                    <label>
-                        <input type='checkbox' />
-                        {items.listName}
-                    </label> 
-                    <hr/>
-                </div>
-                {cartItem}
-                <div>
-                    주문금액 ??원
-                <hr/>
-                </div>
+            <div className='Cart'> 
+                <label>
+                    <input type='checkbox' checked={allChecked} onClick={(e) => onHandleAllCheck(e)}/>
+                    전체선택
+                </label>
+                <button onClick={onDeleteSelected}>선택삭제</button>
+                <hr />
+                {cartLists}
             </div>
         );
     }
