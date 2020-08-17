@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 export default class Header extends Component{
   render(){
-    const {currentUser, handleLogout} = this.props
+    const { currentUser, handleSignOut } = this.props;
     return (
       <div>
         <Link className="logoContainer" to="/">
@@ -16,8 +16,8 @@ export default class Header extends Component{
         </Link>
         <div className="right">
           <div className="options">
-            {currentUser && <div onClick={handleLogout}>로그아웃</div>}
-            {!currentUser && <Link to="/login">로그인</Link>}
+            {currentUser && <div onClick={handleSignOut}>로그아웃</div>}
+            {!currentUser && <Link to="/signin">로그인</Link>}
             <Link to="/cart">관심상품</Link>
           </div>
         </div>
