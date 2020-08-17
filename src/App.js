@@ -5,6 +5,8 @@ import { Switch, Route } from "react-router-dom";
 import { observer, inject } from "mobx-react";
 
 import Homepage from "./pages/Hompage";
+import CartPage from "./pages/CartPage";
+import DetailPage from "./pages/DetailPage";
 import LoginPage from './pages/LoginPage'
 import HeaderContainer from "./containers/HeaderContainer";
 import FooterContainer from "./containers/FooterContainer";
@@ -44,6 +46,8 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route path="/login" component={LoginPage} />
+            <Route path="/cart" component={CartPage} />
+            <Route path="/detail" component={DetailPage} />
           </Switch>
         </div>
         <FooterContainer />
