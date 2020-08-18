@@ -46,7 +46,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route path="/list" component={ListPage} />
-            <Route path="/login" component={LoginPage} />
+            <Route path="/signin" component={LoginPage} />
             <Route path="/cart" component={CartPage} />
             <Route path="/detail" component={DetailPage} />
           </Switch>
