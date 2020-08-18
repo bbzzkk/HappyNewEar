@@ -4,14 +4,17 @@ import { Switch, Route } from "react-router-dom";
 
 import { observer, inject } from "mobx-react";
 
+import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
+
 import Homepage from "./pages/Hompage";
 import CartPage from "./pages/CartPage";
 import DetailPage from "./pages/DetailPage";
-import LoginPage from './pages/LoginPage'
+import SignInAndSignUpPage from "./pages/SignInAndSignUpPage";
 import HeaderContainer from "./containers/HeaderContainer";
 import FooterContainer from "./containers/FooterContainer";
 import ListPage from "./pages/ListPage";
-import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
+
+import AppLayout from './styles/AppLayout'
 
 @inject((stores) => ({ authStore: stores.authStore }))
 @observer
@@ -40,19 +43,19 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <AppLayout>
         <HeaderContainer />
         <div className="routes">
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route path="/list" component={ListPage} />
-            <Route path="/signin" component={LoginPage} />
+            <Route path="/signin" component={SignInAndSignUpPage} />
             <Route path="/cart" component={CartPage} />
             <Route path="/detail" component={DetailPage} />
           </Switch>
         </div>
         <FooterContainer />
-      </div>
+      </AppLayout>
     );
   }
 }

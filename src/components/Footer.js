@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
 
+import FooterLayout from '../styles/FooterLayout'
+
 class Footer extends Component {
     render(){
         return (
-          <div className="footer-wrapper">
+          <FooterLayout>
             <div className="address">
               서울특별시 강남구 테허란로 212(역삼동 718-5번지) 504호
             </div>
@@ -26,7 +28,7 @@ class Footer extends Component {
                 />
               </a>
             </div>
-          </div>
+          </FooterLayout>
         );
     }
 }
