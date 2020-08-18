@@ -6,7 +6,7 @@ import TotalCount from '../components/TotalCount';
 import { Grid, Header } from 'semantic-ui-react';    
 
 @inject((stores) => ({ 
-    cartStore: stores.cart
+    cartStore: stores.cartStore
  }))
 @observer
 class CartContainer extends Component {

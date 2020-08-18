@@ -1,26 +1,29 @@
 import React, { Component } from "react";
 
 import LoginForm from "../components/LoginForm";
+import { observer, inject } from "mobx-react";
 
+@inject(stores => ({login: stores.login}))
+@observer
 class LoginFormContainer extends Component {
-  handleChange = () => {
-    //
+  handleChange = (event) => {
+    const {name, value} = event.target
+    console.log(name, value)
+    this.props.login.changeLoginForm(name, value)
   };
 
-  handleSubmit = () => {
-    //
+  handleLogin = () => {
+    this.props.login.login()
   };
+
   render() {
-    // const { email, password } = this.props.UserStore;
-    const email= ""
-    const password = ""
+    const { email, password } = this.props.login;
     return (
-        // <div>하이</div>
       <LoginForm
         email={email}
         password={password}
         handleChange={this.handleChange}
-        handleSubmit={this.handleSubmit}
+        handleLogin={this.handleLogin}
       />
     );
   }

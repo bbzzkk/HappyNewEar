@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PreViewList from '../components/PreViewList';
 import Product from '../Product';
-import Item from './Item';
+import PreViewListItem from './PreViewListItem';
 //import ItemJason from '../ItemJason';
 
 class Detail extends Component {
@@ -13,7 +13,7 @@ class Detail extends Component {
 
         return(
             <div>
-                <Item name={temp.imageUrl}></Item>
+                <PreViewListItem name={temp.imageUrl}></PreViewListItem>
                 <p>상품명:{temp.name}</p>
                 <p>가격:{temp.price}원</p>
             </div>

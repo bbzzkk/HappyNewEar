@@ -1,31 +1,35 @@
 import React, { Component } from "react";
 
-import {signInWithGoogle} from '../firebase/firebase.utils'
-
 class LoginForm extends Component{
     render(){
-        const { email, password, handleChange, handleLogin } = this.props;
+        const {
+          signInEmail,
+          signInPassword,
+          handleChange,
+          handleSignIn,
+          handleSignInWithGoogle,
+        } = this.props;
         return (
           <>
             <h2 className="title">로그인</h2>
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleSignIn}>
               <input
-                name="email"
+                name="signInEmail"
                 type="email"
                 onChange={handleChange}
-                value={email}
+                value={signInEmail}
                 required
               />
               <input
-                name="password"
+                name="signInPassword"
                 type="password"
                 onChange={handleChange}
-                value={password}
+                value={signInPassword}
                 required
               />
-              <div className="login-buttons">
+              <div className="sigin-buttons">
                 <button type="submit">로그인</button>
-                <button type="button"onClick={signInWithGoogle}>
+                <button type="button" onClick={handleSignInWithGoogle}>
                   구글 계정으로 로그인
                 </button>
               </div>
