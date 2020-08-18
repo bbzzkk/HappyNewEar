@@ -30,7 +30,6 @@ class PreViewContainer extends Component {
                    <Link to="/list">
                    <h1 onClick={() => this.OnCategoryClick(list.id)}>{list.category}</h1>
                    </Link> 
-                    
                     <PreViewList
                         items={list.items}
                         >

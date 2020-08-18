@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { PreViewItemWrapper } from '../styles/PreViewLayout';
-import { Card, Icon, Image, Button, Grid, Label } from 'semantic-ui-react'
+import { Card, Icon, Image, Grid  } from 'semantic-ui-react'
+import { CartIconHover } from '../styles/PreViewLayout';
 
 class PreViewListItem extends Component {
     render() {
@@ -19,8 +20,10 @@ class PreViewListItem extends Component {
                                 <p style={{ color: 'black', fontSize: '15px'}}>{price}원</p>
                             </Grid.Column>
                             <Grid.Column textAlign='center'>
-                                <Icon name='shopping basket' color='grey' size='large'/>
-                                <label>담기</label>
+                                <CartIconHover>
+                                    <Icon name='shopping basket' color='grey' size='large'/>
+                                    <label>담기</label>
+                                </CartIconHover>
                             </Grid.Column>
                         </Grid>
                     </Card.Content>

@@ -19,8 +19,15 @@ const PreViewItemWrapper = styled.div(props => ({
     float: 'left',
  }))
 
+const CartIconHover = styled.div(props => ({
+    hover: {
+        backgroundColor:'red'
+    }
+ }))
+
 export {
     PreViewWrapper,
     PreViewListWrapper,
     PreViewItemWrapper,
+    CartIconHover,
 }
