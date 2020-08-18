@@ -4,7 +4,7 @@ import CartContainer from '../containers/CartContainer';
 class CartPage extends Component {
     render() {
         return (
-            <CartContainer />
+            <CartContainer/>
         );
     }
 }
