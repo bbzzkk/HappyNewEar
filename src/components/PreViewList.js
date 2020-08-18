@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
-import Item from './Item';
+import PreViewListItem from './PreViewListItem';
 
 class PreViewList extends Component {
     render() {
-        const { items, itemClick } = this.props;
-        const result = items.map(tmp => {
-            return (
-                <div onClick={itemClick}>
-                    <Item name={tmp.imageUrl}></Item>
-                </div>
-            );
-        });
+        const { items, itemClick, ItemJson, onCategoryClick} = this.props;
+        
+        const prevItems = items.filter(tmp => tmp.id < 5);
 
+        const previewItems = prevItems.map((preitems) =>{
+            return (
+               <div>
+                   <PreViewListItem img = {preitems.imageUrl}
+                         price = {preitems.price}
+                         id = {preitems.id}
+                         >
+                         </PreViewListItem>
+               </div>
+            );
+        })
         return (
-            result
+            previewItems
         );
     }
 }

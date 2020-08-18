@@ -1,30 +1,41 @@
 import React, { Component } from 'react';
 
+import { observer, inject } from "mobx-react";
+
+import { Link } from "react-router-dom";
+
 import PreViewList from '../components/PreViewList'
 
-import ItemJson from '../data/ItemJson';
+@inject((stores) => ({
+    previewStore: stores.previewStore,
+  }))
 
+@observer
 class PreViewContainer extends Component {
-    categoryClick = () => {
+    OnCategoryClick = (id) => {
         console.log("categoryClick");
+        this.props.previewStore.CategoryClick(id);
     }
-
     itemClick = () => {
         console.log("itemClick");
     }
-
     render() {
-        const item = ItemJson;
-
-        const previewList = item.map(list => {
+        const { itemjson } = this.props.previewStore;
+        console.log(itemjson);
+        const previewList = itemjson.map(list => {
             return (
                 <div>
-                    <h1 onClick={this.categoryClick}>{list.category}</h1>
-                    <PreViewList items={list.items} itemClick={this.itemClick}></PreViewList>
+                   <Link to="/list">
+                   <h1 onClick={() => this.OnCategoryClick(list.id)}>{list.category}</h1>
+                   </Link> 
+                    
+                    <PreViewList
+                        items={list.items}
+                        >
+                    </PreViewList>
                 </div>
-            );
-        });
-
+            )
+        })
         return (
             previewList
         );

@@ -5,7 +5,7 @@ import { inject, observer } from 'mobx-react';
 import TotalCount from '../components/TotalCount';
 
 @inject((stores) => ({ 
-    cartStore: stores.cart
+    cartStore: stores.cartStore
  }))
 @observer
 class CartContainer extends Component {

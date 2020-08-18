@@ -10,7 +10,7 @@ import DetailPage from "./pages/DetailPage";
 import LoginPage from './pages/LoginPage'
 import HeaderContainer from "./containers/HeaderContainer";
 import FooterContainer from "./containers/FooterContainer";
-
+import ListPage from "./pages/ListPage";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 
 @inject((stores) => ({ authStore: stores.authStore }))
@@ -45,7 +45,8 @@ class App extends Component {
         <div className="routes">
           <Switch>
             <Route exact path="/" component={Homepage} />
-            <Route path="/login" component={LoginPage} />
+            <Route path="/list" component={ListPage} />
+            <Route path="/signin" component={LoginPage} />
             <Route path="/cart" component={CartPage} />
             <Route path="/detail" component={DetailPage} />
           </Switch>
