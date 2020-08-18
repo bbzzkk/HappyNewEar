@@ -14,6 +14,8 @@ const slideImages = [
     'images/slider/yellow.jpg'
 ]
 
+import { PreViewWrapper } from '../styles/PreViewLayout';
+
 @inject((stores) => ({
     previewStore: stores.previewStore,
   }))
@@ -34,18 +36,17 @@ class PreViewContainer extends Component {
         const { itemjson } = this.props.previewStore;
         const previewList = itemjson.map(list => {
             return (
-                <div>
+                <PreViewWrapper>
                    <Link to="/list">
                    <h1 onClick={() => this.OnCategoryClick(list.id)}>{list.category}</h1>
                    </Link> 
-                    
                     <PreViewList
                         OnitemClick={this.OnitemClick}
                         items={list.items}
                         itemjson = {list}
                         >
                     </PreViewList>
-                </div>
+                </PreViewWrapper>
             )
         })
         return (

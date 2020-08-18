@@ -1,10 +1,10 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
-const FooterLayout = styled.div((props) => ({
-    gridRowStart: '2',
-    gridRowEnd: '3',
+const FooterWrapper = styled.div(props => ({
+    backgroundColor: '#fff',
     textAlign: 'center',
-    height: '10em'
 }))
 
-export default FooterLayout;
+export {
+    FooterWrapper,
+}
