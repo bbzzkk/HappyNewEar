@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import SignInAndUpFormLayout from "../styles/SignInAndUpFormLayout";
 import CustomButton from "../styles/CustomButton";
 import TextField from "@material-ui/core/TextField";

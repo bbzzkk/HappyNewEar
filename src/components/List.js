@@ -6,23 +6,21 @@ class List extends Component {
         const { items, itemClick, ItemJson, onCategoryClick} = this.props;
         
         console.log(items);
-        const viewItems = items.map((preitems) =>{
+        const viewItems = items.map((preitems) => {
             return (
-               
-               <div>
-                   <ListItem img = {preitems.imageUrl}
-                         price = {preitems.price}
-                         id = {preitems.id}
-                         >
-                         </ListItem>
-               </div>
+                <div>
+                    <ListItem img={preitems.imageUrl}
+                        price={preitems.price}
+                        id={preitems.id}
+                    >
+                    </ListItem>
+                </div>
             );
-        })
+        });
+
         return (
            // result
-
             viewItems
-
         );
     }
 }

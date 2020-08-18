@@ -1,5 +1,4 @@
 import { action, observable } from "mobx";
-
 import { auth, signInWithGoogle, createUserProfileDocument } from "../firebase/firebase.utils";
 
 export default class AuthStore {

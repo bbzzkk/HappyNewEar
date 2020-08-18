@@ -8,7 +8,6 @@ import List from "../components/List"
 @observer
 
 class ListContainer extends Component {
-    
     render() {
         const { SelectCategory } = this.props.previewStore;
         console.log(SelectCategory);

@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-
 import { Switch, Route } from "react-router-dom";
-
 import { observer, inject } from "mobx-react";
-
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
-
 import Homepage from "./pages/Hompage";
 import CartPage from "./pages/CartPage";
 import DetailPage from "./pages/DetailPage";
@@ -13,7 +9,6 @@ import SignInAndSignUpPage from "./pages/SignInAndSignUpPage";
 import HeaderContainer from "./containers/HeaderContainer";
 import FooterContainer from "./containers/FooterContainer";
 import ListPage from "./pages/ListPage";
-
 
 @inject((stores) => ({ authStore: stores.authStore }))
 @observer
@@ -58,15 +53,5 @@ class App extends Component {
     );
   }
 }
-
-const LayoutStyle = {
-    overflow: 'hidden',
-};
-  
-const HeaderStyle = {
-    width: '100%',
-    position: 'fixed'
-};
-
 
 export default App;

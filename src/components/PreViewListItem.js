@@ -2,15 +2,20 @@ import React, { Component } from 'react';
 import { PreViewItemWrapper } from '../styles/PreViewLayout';
 import { Card, Icon, Image, Grid  } from 'semantic-ui-react'
 import { CartIconHover } from '../styles/PreViewLayout';
+import { Link } from "react-router-dom";
 
 class PreViewListItem extends Component {
     render() {
-        const { img ,name, price , id} = this.props;
+        const { img ,name, price , id, OnitemClick, itemjson} = this.props;
         
+        const categoryID = itemjson.id;
+
         return (
             <PreViewItemWrapper>
                 <Card>
-                    <Image src={img} wrapped ui={false} />
+                    <Link to="/detail">
+                    <Image onClick={() => OnitemClick(id, categoryID)} src= {img} wrapped ui={true}/>
+                    </Link>
                     <Card.Content>
                     <Card.Header>{name}</Card.Header>
                     </Card.Content>
