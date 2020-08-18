@@ -7,20 +7,22 @@ import { Link } from "react-router-dom";
 import PreViewList from '../components/PreViewList'
 
 @inject((stores) => ({
-    homeStores: stores.homeStores,
+    previewStore: stores.previewStore,
   }))
+
 @observer
 class PreViewContainer extends Component {
     OnCategoryClick = (id) => {
         console.log("categoryClick");
-        this.props.HomeStore.CategoryClick(id);
+        this.props.previewStore.CategoryClick(id);
     }
     itemClick = () => {
         console.log("itemClick");
     }
     render() {
-        const { ItemJson } = this.props.HomeStore;
-        const previewList = ItemJson.map(list => {
+        const { itemjson } = this.props.previewStore;
+        console.log(itemjson);
+        const previewList = itemjson.map(list => {
             return (
                 <div>
                    <Link to="/list">

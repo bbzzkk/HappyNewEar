@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import { observer, inject } from "mobx-react";
 import List from "../components/List"
 
-@inject("HomeStore")
+@inject((stores) => ({
+    previewStore: stores.previewStore,
+  }))
 @observer
 
 class ListContainer extends Component {
     
     render() {
-        const { HomeStore } = this.props;
-        const SelectCategory = HomeStore.SelectCategory;
+        const { SelectCategory } = this.props.previewStore;
         console.log(SelectCategory);
         const SelectCategoryItems = SelectCategory.items;
         console.log(SelectCategoryItems);

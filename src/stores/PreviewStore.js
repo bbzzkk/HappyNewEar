@@ -7,22 +7,18 @@ export default class PreviewStore {
     this.root = root;
   }
 
-  @observable ItemJson = ItemJson;
-
   @observable 
   itemjson = ItemJson;
 
   @observable
-  caselist = ItemJson[0].items;
-
-  @observable
-  keyringlist = ItemJson[1].items;
-
-  @observable
-  stickerlist = ItemJson[2].items;
+  SelectCategory = ItemJson;
 
   @action
-  selectCategory(){
+  CategoryClick(SelectCategoryId) {
+      this.SelectCategory = ItemJson;
+      const temp = this.SelectCategory.find((Json) => Json.id === SelectCategoryId);
       
-  }    
+      this.SelectCategory = temp;
+      console.log(this.SelectCategory);
+  }      
 }
