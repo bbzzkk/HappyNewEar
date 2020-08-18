@@ -24,7 +24,7 @@ export const createUserProfileDocument = async (userAuth, additionalInfo) => {
     const {displayName, email} = userAuth;
     const createdAt = new Date();
     try{
-      await userRef.sef({
+      await userRef.set({
         displayName,
         email,
         createdAt,
@@ -34,6 +34,7 @@ export const createUserProfileDocument = async (userAuth, additionalInfo) => {
       console.log(error.message)
     }
   }
+  return userRef;
 }
 
 firebase.initializeApp(firebaseConfig);
