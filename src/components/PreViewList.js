@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PreViewListItem from './PreViewListItem';
+import { PreViewListWrapper } from '../styles/PreViewLayout';
 
 class PreViewList extends Component {
     render() {
@@ -8,16 +9,14 @@ class PreViewList extends Component {
         const prevItems = items.filter(tmp => tmp.id < 5);
         const previewItems = prevItems.map((preitems) =>{
             return (
-               <div>
-                   <PreViewListItem img = {preitems.imageUrl}
-                         price = {preitems.price}
-                         id = {preitems.id}
-                         name = {preitems.name}
-                         OnitemClick = {OnitemClick}
-                         itemjson = {itemjson}
-                         >
-                         </PreViewListItem>
-               </div>
+               <PreViewListWrapper>
+                    <PreViewListItem img={preitems.imageUrl}
+                        name={preitems.name}
+                        price = {preitems.price}
+                        id = {preitems.id}
+                        >
+                    </PreViewListItem>
+               </PreViewListWrapper>
             );
         })
         return (
