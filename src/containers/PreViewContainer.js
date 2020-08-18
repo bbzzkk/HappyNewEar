@@ -44,7 +44,7 @@ class PreViewContainer extends Component {
         })
         return (
             <div>
-                <div className="slide-container" height="fit-content">
+                <div className="slide-container" height="fit-content" >
                     <Slide>
                         <div className="each-slide" style={{'backgroundImage': `url(${slideImages[0]})`, height:'700px'}}>
                             <div style={{'backgroundImage': `url(${slideImages[0]})`}}>

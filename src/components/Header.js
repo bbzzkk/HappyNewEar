@@ -1,6 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+
 import { Link } from "react-router-dom"
+
 import HeaderLayout from '../styles/HeaderLayout'
+import {Icon, Segment } from 'semantic-ui-react';
 
 export default class Header extends Component{
     render() {
@@ -13,11 +16,11 @@ export default class Header extends Component{
                 </Link>
                 <div className="options">
                 <div className="option">
-                    {currentUser && <div onClick={handleSignOut}>로그아웃</div>}
-                    {!currentUser && <Link to="/signin">로그인</Link>}
+                    {currentUser && <div onClick={handleSignOut}>SIGN OUT</div>}
+                    {!currentUser && <Link to="/signin">SIGN IN</Link>}
                 </div>
                 <div className="option">
-                    <Link to="/cart">관심상품</Link>
+                    <Link to="/cart"><Icon name = "shopping cart" size="big"/></Link>
                 </div>
                 </div>
             </HeaderLayout>

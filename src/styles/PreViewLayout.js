@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 const PreViewWrapper = styled.div(props => ({
+    paddingTop: '75px',
     padding: '1rem',
     maxWidth: '1366px', // NOTE: Full Wide XGA / 1366x768 => 16:9
     width: '100%',
