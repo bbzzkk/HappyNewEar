@@ -1,26 +1,28 @@
-import { action, observable} from "mobx";
-import ItemJson from "../ItemJson";
+import { observable, computed, action } from 'mobx';
 
-class PreviewStore {
-    //관리해야하는 state객체 @observable 선언 및 초기화 
+import ItemJson from '../data/ItemJson';
 
-    @observable 
-    itemjson = ItemJson;
+export default class PreviewStore {
+  constructor(root) {
+    this.root = root;
+  }
 
-    @observable
-    caselist = ItemJson[0].items;
+  @observable ItemJson = ItemJson;
 
-    @observable
-    keyringlist = ItemJson[1].items;
+  @observable 
+  itemjson = ItemJson;
 
-    @observable
-    stickerlist = ItemJson[2].items;
+  @observable
+  caselist = ItemJson[0].items;
 
-    
-    @action
-    selectCategory(){
-        
-    }    
+  @observable
+  keyringlist = ItemJson[1].items;
+
+  @observable
+  stickerlist = ItemJson[2].items;
+
+  @action
+  selectCategory(){
+      
+  }    
 }
-
-export default new PreviewStore();

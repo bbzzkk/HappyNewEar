@@ -1,38 +1,27 @@
 import React, {Component} from 'react';
 
-// import { resetGlobalState } from 'mobx/lib/internal';
+import { Link } from "react-router-dom"
 
-// import {HeaderBlock, Wrapper } from '../styles/HeaderStyle'
-
-//import Responsive from './Responsive';
-//import Button from './Button';
-
-class Header extends Component{
-    render(){
-        const {handleLogin} = this.props
-        return (
-            
-                <div>
-                    <div>
-                        <div 
-                        className="logo">
-                            <img 
-                        style={{width:'10em' }}src='images/header/HNElogo.png'/>
-                        </div>
-                        <div className="right">
-                            <div className="options">
-                                <button onClick={handleLogin}>로그인</button>
-                                <button onClick={handleLogin}>관심상품</button>
-                            </div>                
-                        </div>
-                    </div>
-                </div>
-   
-            
-        )}
+export default class Header extends Component{
+  render(){
+    const { currentUser, handleSignOut } = this.props;
+    return (
+      <div>
+        <Link className="logoContainer" to="/">
+          <img
+            style={{ width: "10em" }}
+            src="images/header/HNElogo.png"
+            alt="logo"
+          />
+        </Link>
+        <div className="right">
+          <div className="options">
+            {currentUser && <div onClick={handleSignOut}>로그아웃</div>}
+            {!currentUser && <Link to="/signin">로그인</Link>}
+            <Link to="/cart">관심상품</Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
-
-
-
-
-export default Header

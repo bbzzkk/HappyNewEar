@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
+
 import { observer, inject } from "mobx-react";
-import PreViewList from '../components/PreViewList'
-import ListContainer from './ListContainer';
+
 import { Link } from "react-router-dom";
 
-@inject("HomeStore")
-@observer
+import PreViewList from '../components/PreViewList'
 
+@inject((stores) => ({
+    homeStores: stores.homeStores,
+  }))
+@observer
 class PreViewContainer extends Component {
-    
     OnCategoryClick = (id) => {
         console.log("categoryClick");
         this.props.HomeStore.CategoryClick(id);
     }
-
     itemClick = () => {
         console.log("itemClick");
     }
