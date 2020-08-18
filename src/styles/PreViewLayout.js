@@ -1,23 +1,22 @@
 import styled from '@emotion/styled';
 
 const PreViewWrapper = styled.div(props => ({
-    paddingTop: '75px',
-    padding: '1rem',
-    maxWidth: '1366px', // NOTE: Full Wide XGA / 1366x768 => 16:9
-    width: '100%',
-    margin: '0 auto',
-    // minHeight: '84vh',
-    overflow: 'auto',
-    // backgroundColor: '#F5F6FF'
+    // paddingTop: '75px',
+    // paddingLeft: '1rem',
+    // paddingRight: '1rem',
+    // margin: '0 auto',
+    // width: '100%',
+    // overflow: 'auto',
 }))
 
 const PreViewListWrapper = styled.div(props => ({
-    margin: '0 auto',
-    textAlign: 'center',
+    // margin: '0 auto',
+    // marginTop: '2rem',
+    // textAlign: 'center',
 }))
 
 const PreViewItemWrapper = styled.div(props => ({
-    float: 'left',
+    // float: 'left',
  }))
 
 const CartIconHover = styled.div(props => ({
@@ -26,9 +25,15 @@ const CartIconHover = styled.div(props => ({
     }
  }))
 
+const Category = styled.h1(props => ({
+    // textAlign: 'center',
+    // paddingTop: '2rem',
+ }))
+
 export {
     PreViewWrapper,
     PreViewListWrapper,
     PreViewItemWrapper,
     CartIconHover,
+    Category
 }

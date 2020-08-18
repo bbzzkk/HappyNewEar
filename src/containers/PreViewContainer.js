@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import PreViewList from '../components/PreViewList'
 import 'react-slideshow-image/dist/styles.css'
 import { Slide } from 'react-slideshow-image';
-import { PreViewWrapper } from '../styles/PreViewLayout';
+import { PreViewWrapper, Category } from '../styles/PreViewLayout';
 
 const slideImages = [
     'images/slider/case.jpg',
@@ -29,39 +29,49 @@ class PreViewContainer extends Component {
         const { itemjson } = this.props.previewStore;
         const previewList = itemjson.map(list => {
             return (
-                <PreViewWrapper>
-                   <Link to="/list">
-                   <h1 onClick={() => this.OnCategoryClick(list.id)}>{list.category}</h1>
-                   </Link> 
+                <>
+                    <Link to="/list" style={{color:'black'}}>
+                        <Category onClick={() => this.OnCategoryClick(list.id)}>{list.category}</Category>
+                    </Link> 
                     <PreViewList
                         OnitemClick={this.OnitemClick}
                         items={list.items}
-                        itemjson = {list}
-                        >
+                        itemjson = {list}>
                     </PreViewList>
-                </PreViewWrapper>
+                </>
             )
         })
         return (
+            // <PreViewWrapper>
             <div>
-                <div className="slide-container" height="fit-content" >
+                <div className="slide-container"  >
                     <Slide>
-                        <div className="each-slide" style={{'backgroundImage': `url(${slideImages[0]})`, height:'700px'}}>
+                        <div>
+                            <img src={slideImages[0]} alt="test"/>
+                        </div>
+                        <div>
+                            <img src={slideImages[1]} alt="test"/>
+                        </div>
+                        <div>
+                            <img src={slideImages[2]} alt="test"/>
+                        </div>
+                        {/* <div className="each-slide" style={{'backgroundImage': `url(${slideImages[0]})`, height:'600px'}}>
                             <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
                             </div>
-                        </div>
-                        <div className="each-slide" style={{'backgroundImage': `url(${slideImages[1]})`, height:'700px'}}>
+                        </div> */}
+                        {/* <div className="each-slide" style={{'backgroundImage': `url(${slideImages[1]})`, height:'600px'}}>
                             <div style={{'backgroundImage': `url(${slideImages[1]})`}}>
                             </div>
                         </div>
-                        <div className="each-slide" style={{'backgroundImage': `url(${slideImages[2]})`, height:'700px'}}>
+                        <div className="each-slide" style={{'backgroundImage': `url(${slideImages[2]})`, height:'600px'}}>
                             <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
                             </div>
-                        </div>
+                        </div> */}
                     </Slide>
                 </div>
                 {previewList}
-            </div>  
+            {/* </PreViewWrapper> */}
+            </div>
         );
     }
 }
