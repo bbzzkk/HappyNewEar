@@ -16,12 +16,14 @@ class PreViewContainer extends Component {
         console.log("categoryClick");
         this.props.previewStore.CategoryClick(id);
     }
-    itemClick = () => {
+    OnitemClick = (ItemId, CategoryId) => {
         console.log("itemClick");
+        // console.log(ItemId);
+        // console.log(CategoryId);
+        this.props.previewStore.ItemClickDetail(ItemId, CategoryId);
     }
     render() {
         const { itemjson } = this.props.previewStore;
-        console.log(itemjson);
         const previewList = itemjson.map(list => {
             return (
                 <div>
@@ -30,7 +32,9 @@ class PreViewContainer extends Component {
                    </Link> 
                     
                     <PreViewList
+                        OnitemClick={this.OnitemClick}
                         items={list.items}
+                        itemjson = {list}
                         >
                     </PreViewList>
                 </div>
