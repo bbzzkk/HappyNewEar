@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
-import PreViewList from '../components/PreViewList';
-import Product from '../Product';
-import PreViewListItem from './PreViewListItem';
-//import ItemJason from '../ItemJason';
+
+
+
 
 class Detail extends Component {
 
     render() {
-        
-        const temp = Product[0].items[0].items[4];   
-        console.log(temp);
+        const { detailObject } = this.props;
+          
+        console.log(detailObject.id);
 
         return(
             <div>
-                <PreViewListItem name={temp.imageUrl}></PreViewListItem>
-                <p>상품명:{temp.name}</p>
-                <p>가격:{temp.price}원</p>
+                <img 
+                     alt="test" width='100px' height='100px' 
+                     src={detailObject.imageUrl} /> 
+                <p>가격은 : {detailObject.price}</p>
+                <p>아이디 : {detailObject.id}</p>
+                <p>이름 : {detailObject.name}</p>
             </div>
         )
     }
