@@ -14,7 +14,6 @@ import HeaderContainer from "./containers/HeaderContainer";
 import FooterContainer from "./containers/FooterContainer";
 import ListPage from "./pages/ListPage";
 
-import AppLayout from './styles/AppLayout'
 
 @inject((stores) => ({ authStore: stores.authStore }))
 @observer
@@ -43,19 +42,19 @@ class App extends Component {
 
   render() {
     return (
-      <AppLayout>
-        <HeaderContainer />
-        <div className="routes">
-          <Switch>
-            <Route exact path="/" component={Homepage} />
-            <Route path="/list" component={ListPage} />
-            <Route path="/signin" component={SignInAndSignUpPage} />
-            <Route path="/cart" component={CartPage} />
-            <Route path="/detail" component={DetailPage} />
-          </Switch>
+        <div>
+            <HeaderContainer />
+            <div className="routes">
+            <Switch>
+                <Route exact path="/" component={Homepage} />
+                <Route path="/list" component={ListPage} />
+                <Route path="/signin" component={SignInAndSignUpPage} />
+                <Route path="/cart" component={CartPage} />
+                <Route path="/detail" component={DetailPage} />
+            </Switch>
+            </div>
+            <FooterContainer />
         </div>
-        <FooterContainer />
-      </AppLayout>
     );
   }
 }
