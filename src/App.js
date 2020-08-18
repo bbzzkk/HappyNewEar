@@ -40,17 +40,18 @@ class App extends Component {
 
   render() {
      return (
-      <div className="App" style={LayoutStyle}>
-          <HeaderContainer style={HeaderStyle}/>
-          <div className="routes" style={ContentStyle}>
+      <div className="App" >
+          <HeaderContainer />
+          <div className="routes" >
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/login" component={LoginPage} />
+          <Route path="/list" component={ListPage} />
           <Route path="/cart" component={CartPage} />
           <Route path="/detail" component={DetailPage} />
         </Switch>
       </div>
-          <FooterContainer style={FooterStyle}/>
+          <FooterContainer />
     </div>
   );
   }
