@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 
 import PreViewList from '../components/PreViewList'
 
+import { PreViewWrapper } from '../styles/PreViewLayout';
+
 @inject((stores) => ({
     previewStore: stores.previewStore,
   }))
@@ -24,7 +26,7 @@ class PreViewContainer extends Component {
         console.log(itemjson);
         const previewList = itemjson.map(list => {
             return (
-                <div>
+                <PreViewWrapper>
                    <Link to="/list">
                    <h1 onClick={() => this.OnCategoryClick(list.id)}>{list.category}</h1>
                    </Link> 
@@ -33,7 +35,7 @@ class PreViewContainer extends Component {
                         items={list.items}
                         >
                     </PreViewList>
-                </div>
+                </PreViewWrapper>
             )
         })
         return (

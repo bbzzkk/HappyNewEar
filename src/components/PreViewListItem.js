@@ -1,15 +1,31 @@
 import React, { Component } from 'react';
+import { PreViewItemWrapper } from '../styles/PreViewLayout';
+import { Card, Icon, Image, Button, Grid, Label } from 'semantic-ui-react'
 
 class PreViewListItem extends Component {
     render() {
         const { img ,name, price , id} = this.props;
         
-        return ( 
-            <div>
-                <img alt="test" width='100px' height='100px' src={img}/>
-                <p>가격은 : {price}</p>
-                <p>아이디 : {id}</p>
-            </div>
+        return (
+            <PreViewItemWrapper>
+                <Card>
+                    <Image src={img} wrapped ui={false} />
+                    <Card.Content>
+                    <Card.Header>{name}</Card.Header>
+                    </Card.Content>
+                    <Card.Content extra textAlign='center'>
+                        <Grid columns={2} divided centered>
+                            <Grid.Column textAlign='center'>
+                                <p style={{ color: 'black', fontSize: '15px'}}>{price}원</p>
+                            </Grid.Column>
+                            <Grid.Column textAlign='center'>
+                                <Icon name='shopping basket' color='grey' size='large'/>
+                                <label>담기</label>
+                            </Grid.Column>
+                        </Grid>
+                    </Card.Content>
+                </Card>
+            </PreViewItemWrapper>
         );
     }
 }

@@ -40,9 +40,9 @@ class App extends Component {
 
   render() {
      return (
-      <div className="App" style={LayoutStyle}>
-          <HeaderContainer style={HeaderStyle}/>
-          <div className="routes" style={ContentStyle}>
+      <div className="App">
+          <HeaderContainer/>
+          <div className="routes">
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/login" component={LoginPage} />
@@ -50,7 +50,7 @@ class App extends Component {
           <Route path="/detail" component={DetailPage} />
         </Switch>
       </div>
-          <FooterContainer style={FooterStyle}/>
+          <FooterContainer />
     </div>
   );
   }
@@ -64,21 +64,6 @@ const HeaderStyle = {
     width: '100%',
     position: 'fixed'
 };
-  
-const ContentStyle = {
-    padding: '1rem',
-    maxWidth: '1366px', // NOTE: Full Wide XGA / 1366x768 => 16:9
-    width: '100%',
-    margin: '0 auto',
-    minHeight: '84vh',
-    overflow: 'auto',
-    backgroundColor: '#F5F6FF'
-};
-  
-const FooterStyle = {
-    backgroundColor: '#1b1c1d',
-    color: '#fff',
-    float: 'right',
-};
+
 
 export default App;
