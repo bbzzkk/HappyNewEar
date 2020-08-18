@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import PreViewListItem from './PreViewListItem';
+import ListItem from './ListItem';
 
-class PreViewList extends Component {
+class List extends Component {
     render() {
         const { items, itemClick, ItemJson, onCategoryClick} = this.props;
         
-        const prevItems = items.filter(tmp => tmp.id < 5); //초기 4개만 출력하게끔 해줌 하 이거 몇시간 걸렸는지 모르겠네 썅 
+       
 
         // const result = items.map(tmp => {
         //     return (
@@ -17,26 +17,26 @@ class PreViewList extends Component {
         //         </div>
         //     );
         // });
-
-        const previewItems = prevItems.map((preitems) =>{
+        console.log(items);
+        const viewItems = items.map((preitems) =>{
             return (
-               // <Item list={list} onCategoryClick={this.props.onCategoryClick}/>
+               
                <div>
-                   <PreViewListItem img = {preitems.imageUrl}
+                   <ListItem img = {preitems.imageUrl}
                          price = {preitems.price}
                          id = {preitems.id}
                          >
-                         </PreViewListItem>
+                         </ListItem>
                </div>
             );
         })
         return (
            // result
 
-            previewItems
+            viewItems
 
         );
     }
 }
 
-export default PreViewList;
+export default List;
