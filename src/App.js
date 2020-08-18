@@ -9,11 +9,12 @@ import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import Homepage from "./pages/Hompage";
 import CartPage from "./pages/CartPage";
 import DetailPage from "./pages/DetailPage";
+import ListPage from "./pages/ListPage";
 import SignInAndSignUpPage from "./pages/SignInAndSignUpPage";
 import HeaderContainer from "./containers/HeaderContainer";
 import FooterContainer from "./containers/FooterContainer";
-import ListPage from "./pages/ListPage";
 
+import AppLayout from './styles/AppLayout'
 
 @inject((stores) => ({ authStore: stores.authStore }))
 @observer
@@ -42,7 +43,7 @@ class App extends Component {
 
   render() {
     return (
-        <div>
+        <AppLayout>
             <HeaderContainer />
             <div className="routes">
             <Switch>
@@ -54,19 +55,9 @@ class App extends Component {
             </Switch>
             </div>
             <FooterContainer />
-        </div>
+        </AppLayout>
     );
   }
 }
-
-const LayoutStyle = {
-    overflow: 'hidden',
-};
-  
-const HeaderStyle = {
-    width: '100%',
-    position: 'fixed'
-};
-
 
 export default App;

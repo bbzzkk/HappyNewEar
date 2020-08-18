@@ -1,9 +1,15 @@
 import styled from "@emotion/styled";
 
 const HeaderLayout = styled.div((props) => ({
-  //   height: "170px",
+   height: "8em",
+  zIndex:'10000',
+  backgroundColor: 'white',
+  position:'fixed',
+  top: 0,
+  left: 0,
+  right: 0,
   width: "100%",
-  display: "flex",
+    display: "flex",
   justifyContent: "space-between",
   marginBottom: "25px",
   ".logoContainer": {
@@ -12,8 +18,8 @@ const HeaderLayout = styled.div((props) => ({
     padding: "25px",
   },
   ".logo": {
-    width: "80%",
-    height: "90%",
+    width: "20em",
+    height: "4.5em",
     backgroundSize: "cover",
     backgroundPosition: "center",
   },
@@ -23,9 +29,8 @@ const HeaderLayout = styled.div((props) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-end",
-    paddingTop:'2em',
     ".option": {
-      fontSize: "1em",
+      fontSize: "1.2em",
       padding: "10px 15px",
       cursor: "pointer",
     },

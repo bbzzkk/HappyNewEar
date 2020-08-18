@@ -18,8 +18,6 @@ class DetailContainer extends Component {
 
         return (
             <Detail detailObject = {ItemDetailObject}>
-
-
             </Detail>
         );
     }

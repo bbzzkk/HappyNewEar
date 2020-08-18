@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-
 import { observer, inject } from "mobx-react";
-
 import { Link } from "react-router-dom";
-
 import PreViewList from '../components/PreViewList'
 import 'react-slideshow-image/dist/styles.css'
 import { Slide } from 'react-slideshow-image';
+import { PreViewWrapper } from '../styles/PreViewLayout';
 
 const slideImages = [
     'images/slider/case.jpg',
@@ -14,12 +12,9 @@ const slideImages = [
     'images/slider/yellow.jpg'
 ]
 
-import { PreViewWrapper } from '../styles/PreViewLayout';
-
 @inject((stores) => ({
     previewStore: stores.previewStore,
-  }))
-
+}))
 @observer
 class PreViewContainer extends Component {
     OnCategoryClick = (id) => {
@@ -28,8 +23,6 @@ class PreViewContainer extends Component {
     }
     OnitemClick = (ItemId, CategoryId) => {
         console.log("itemClick");
-        // console.log(ItemId);
-        // console.log(CategoryId);
         this.props.previewStore.ItemClickDetail(ItemId, CategoryId);
     }
     render() {
@@ -51,30 +44,36 @@ class PreViewContainer extends Component {
         })
         return (
             <div>
-                 {/* {previewList} */}
-                <div className="slide-container" height="fit-content">
+                <div className="slide-container" height="fit-content" >
                     <Slide>
                         <div className="each-slide" style={{'backgroundImage': `url(${slideImages[0]})`, height:'700px'}}>
                             <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
+<<<<<<< HEAD
                            
+=======
+>>>>>>> 86d3ac87b049d812c02527f0fe1311ab89252ddf
                             </div>
                         </div>
                         <div className="each-slide" style={{'backgroundImage': `url(${slideImages[1]})`, height:'700px'}}>
                             <div style={{'backgroundImage': `url(${slideImages[1]})`}}>
+<<<<<<< HEAD
                         
+=======
+>>>>>>> 86d3ac87b049d812c02527f0fe1311ab89252ddf
                             </div>
                         </div>
                         <div className="each-slide" style={{'backgroundImage': `url(${slideImages[2]})`, height:'700px'}}>
                             <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
+<<<<<<< HEAD
                          
+=======
+>>>>>>> 86d3ac87b049d812c02527f0fe1311ab89252ddf
                             </div>
                         </div>
                     </Slide>
                 </div>
-               
-            </div>
-            
-            
+                {previewList}
+            </div>  
         );
     }
 }

@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-
 import { observer, inject } from "mobx-react";
-
 import SignInForm from "../components/SignInForm";
 
 @inject((stores) => ({ authStore: stores.authStore }))

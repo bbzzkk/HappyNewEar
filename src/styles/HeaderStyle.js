@@ -8,7 +8,6 @@ position: fixed;
 
 `;
 
-
 const Wrapper = styled.div `
 
 `;

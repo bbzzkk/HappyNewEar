@@ -1,5 +1,4 @@
 import { observable, computed, action } from 'mobx';
-
 import ItemJson from '../data/ItemJson';
 
 export default class PreviewStore {
