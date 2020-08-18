@@ -1,30 +1,32 @@
 import React, { Component } from 'react';
-import PreViewListItem from './PreViewListItem';
-import { PreViewListWrapper } from '../styles/PreViewLayout';
 
-class PreViewList extends Component {
-    render() {
-        const { items, OnitemClick, itemjson} = this.props;
-        const prevItems = items.filter(tmp => tmp.id < 5);
-        const previewItems = prevItems.map((preitems) => {
-            return (
-                <PreViewListWrapper>
-                    <PreViewListItem img={preitems.imageUrl}
-                        name={preitems.name}
-                        price={preitems.price}
-                        id={preitems.id}
-                        OnitemClick={OnitemClick}
-                        itemjson = {itemjson}
-                    >
-                    </PreViewListItem>
-                </PreViewListWrapper>
-            );
-        });
+import { Link } from "react-router-dom";
 
-        return (
-            previewItems
-        );
-    }
+import Item from "./Item";
+
+class PreviewList extends Component {
+	render() {
+		const { categoryItems: {id, category, items}, OnCategoryClick, OnitemClick} = this.props;
+		return (
+			<>
+				<Link to="/list">
+					<h3 onClick={() => OnCategoryClick(id)}>
+						{category}
+					</h3>
+				</Link>
+				{
+					items.filter(item => item.id < 5).map(item => ( 
+						<Item
+							id={item.id}
+							item={item}
+							OnitemClick={OnitemClick}
+							items={items}
+						/>
+					))
+				}
+			</>
+		)
+	}
 }
 
-export default PreViewList;
+export default PreviewList;
