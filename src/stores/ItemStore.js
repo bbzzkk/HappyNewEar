@@ -1,6 +1,6 @@
 import { observable, computed, action } from 'mobx';
 
-import ItemData from "../data/ItemJson";
+import ItemData from "../data/ItemData";
 
 export default class ItemStore {
   constructor(root) {
@@ -8,19 +8,19 @@ export default class ItemStore {
   }
 
   @observable 
-  ItemData = ItemData;
+  itemData = ItemData;
 
   @observable
-  SelectCategory = {};
+  selectedCategory = {};
   
   @observable
   ItemDetail = {};
 
   @observable
-  ItemDetailObject = ItemData[0].items[0];
+  itemDetail = ItemData[0].items[0];
 
   @action
-  CategoryClick(categoryId) {
+  clickCategory(categoryId) {
     this.SelectCategory = ItemData; //초기화
     this.SelectCategory = this.SelectCategory.find(
       (Json) => Json.id === categoryId
@@ -28,14 +28,11 @@ export default class ItemStore {
   }
   
   @action
-  ItemClickDetail(itemId, categoryId) {
+  clickItem(itemId, categoryId) {
     const categoryItems = (this.ItemDetail = this.ItemDetail.find(
       (Json) => Json.id === categoryId
     )); // 걸러준 카테고리의 items배열을 가져온다. 
-    
     const items = categoryItems.items;
-
     this.ItemDetailObject = items.find((item) => item.id === itemId); // items 배열의 id를 이용해서 해당 아이템을 가져온다.
-    
   }
 }

@@ -2,21 +2,21 @@ import React, { Component } from 'react';
 
 import { observer, inject } from "mobx-react";
 
-import List from "../components/OverviewList"
+import OverviewList from "../components/OverviewList";
 
 @inject((stores) => ({
   itemStore: stores.itemStore,
 }))
 @observer
-class ListContainer extends Component {
-  OnItemClick = (ItemId, CategoryId) => {
-    this.props.previewStore.ItemClickDetail(ItemId, CategoryId);
+class OverviewContainer extends Component {
+  OnClickItem = (ItemId, CategoryId) => {
+    this.props.itemStore.clickItem(ItemId, CategoryId);
   };
   render() {
-    const { SelectCategory } = this.props.itemStore;
-    const items = SelectCategory.items;
-    return <List items={items} OnItemClick={this.OnItemClick}/>;
+    const { selectedCategory } = this.props.itemStore;
+    const items = selectedCategory.items;
+    return <OverviewList items={items} OnClickItem={this.OnClickItem} />;
   }
 }
 
-export default ListContainer;
+export default OverviewContainer;

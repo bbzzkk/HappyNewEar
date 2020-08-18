@@ -11,26 +11,26 @@ import { PreViewWrapper } from '../styles/PreViewLayout';
 }))
 @observer
 class PreviewContainer extends Component {
-	OnCategoryClick = (id) => {
-		this.props.previewStore.CategoryClick(id);
+	OnClickCategory = (id) => {
+		this.props.itemStore.clickCategory(id);
 	};
-	OnItemClick = (ItemId, CategoryId) => {
-		this.props.previewStore.ItemClickDetail(ItemId, CategoryId);
+	OnClickItem = (ItemId, CategoryId) => {
+		this.props.itemStore.clickItem(ItemId, CategoryId);
 	};
 	render() {
-	const { itemData } = this.props.previewStore;	
-	return (
-		<PreViewWrapper>
-		{itemData.map((categoryItems) => (
-      <PreViewList
-        id={categoryItems.id}
-        categoryItems={categoryItems}
-        OnCategoryClick={this.OnCategoryClick}
-        OnitemClick={this.OnItemClick}
-			/>
-		))}
-    </PreViewWrapper>
-	)
+		const { itemData } = this.props.itemStore;	
+		return (
+      <PreViewWrapper>
+        {itemData.map((categoryItems) => (
+          <PreViewList
+            key={categoryItems.id}
+            categoryItems={categoryItems}
+            OnClickCategory={this.OnClickCategory}
+            OnClickItem={this.OnClickItem}
+          />
+        ))}
+      </PreViewWrapper>
+    );
 }}
 
 export default PreviewContainer;

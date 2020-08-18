@@ -4,9 +4,9 @@ import Item from './Item';
 
 class List extends Component {
 	render() {
-		const { items, OnItemClick } = this.props;
+		const { items, OnClickItem } = this.props;
 		return items.map((item) => (
-      <Item id={item.id} item={item} OnItemClick={OnItemClick} />
+      <Item id={item.id} item={item} OnClickItem={OnClickItem} />
     ));
 	}
 }

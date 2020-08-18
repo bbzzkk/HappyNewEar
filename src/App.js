@@ -9,7 +9,7 @@ import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import Homepage from "./pages/Hompage";
 import CartPage from "./pages/CartPage";
 import DetailPage from "./pages/DetailPage";
-import ListPage from "./pages/ListPage";
+import CategoryPage from "./pages/CategoryPage";
 import SignInAndSignUpPage from "./pages/SignInAndSignUpPage";
 import HeaderContainer from "./containers/HeaderContainer";
 import FooterContainer from "./containers/FooterContainer";
@@ -43,19 +43,19 @@ class App extends Component {
 
   render() {
     return (
-        <AppLayout>
-            <HeaderContainer />
-            <div className="routes">
-            <Switch>
-                <Route exact path="/" component={Homepage} />
-                <Route path="/list" component={ListPage} />
-                <Route path="/signin" component={SignInAndSignUpPage} />
-                <Route path="/cart" component={CartPage} />
-                <Route path="/detail" component={DetailPage} />
-            </Switch>
-            </div>
-            <FooterContainer />
-        </AppLayout>
+      <AppLayout>
+        <HeaderContainer />
+        <div className="routes">
+          <Switch>
+            <Route exact path="/" component={Homepage} />
+            <Route path="/category" component={CategoryPage} />
+            <Route path="/signin" component={SignInAndSignUpPage} />
+            <Route path="/cart" component={CartPage} />
+            <Route path="/detail" component={DetailPage} />
+          </Switch>
+        </div>
+        <FooterContainer />
+      </AppLayout>
     );
   }
 }

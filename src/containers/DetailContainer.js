@@ -1,27 +1,18 @@
 import React, { Component } from 'react';
-//import PreViewList from '../components/PreViewList'
-import Detail from '../components/Detail';
+
 import { observer, inject } from "mobx-react";
 
+import Detail from '../components/Detail';
+
 @inject((stores) => ({
-    previewStore: stores.previewStore,
-  }))
-
+  itemStore: stores.itemStore,
+}))
 @observer
-
 class DetailContainer extends Component {
-    render() {
-        const { ItemDetail } = this.props.previewStore;
-        console.log(ItemDetail);
-        const {ItemDetailObject} = this.props.previewStore;
-        console.log(ItemDetailObject);
-
-        return (
-            <Detail detailObject = {ItemDetailObject}>
-            </Detail>
-        );
-    }
-    
+  render() {
+    const { itemDetail } = this.props.itemStore;
+    return <Detail itemDetail={itemDetail} />;
+  }
 }
 
 export default DetailContainer;
