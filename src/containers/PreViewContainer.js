@@ -42,36 +42,24 @@ class PreViewContainer extends Component {
             )
         })
         return (
-            // <PreViewWrapper>
-            <div>
-                <div className="slide-container"  >
+            <PreViewWrapper>
+                <div className="slide-container">
                     <Slide>
                         <div>
-                            <img src={slideImages[0]} alt="test"/>
+                            <img className="slide-img" src={slideImages[0]} alt="test"/>
                         </div>
                         <div>
-                            <img src={slideImages[1]} alt="test"/>
+                            <img className="slide-img" src={slideImages[1]} alt="test"/>
                         </div>
                         <div>
-                            <img src={slideImages[2]} alt="test"/>
+                            <img className="slide-img" src={slideImages[2]} alt="test"/>
                         </div>
-                        {/* <div className="each-slide" style={{'backgroundImage': `url(${slideImages[0]})`, height:'600px'}}>
-                            <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
-                            </div>
-                        </div> */}
-                        {/* <div className="each-slide" style={{'backgroundImage': `url(${slideImages[1]})`, height:'600px'}}>
-                            <div style={{'backgroundImage': `url(${slideImages[1]})`}}>
-                            </div>
-                        </div>
-                        <div className="each-slide" style={{'backgroundImage': `url(${slideImages[2]})`, height:'600px'}}>
-                            <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
-                            </div>
-                        </div> */}
                     </Slide>
                 </div>
-                {previewList}
-            {/* </PreViewWrapper> */}
-            </div>
+                <div className="previewList-container">
+                    {previewList}
+                </div>
+            </PreViewWrapper>
         );
     }
 }

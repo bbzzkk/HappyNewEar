@@ -1,12 +1,27 @@
 import styled from '@emotion/styled';
 
 const PreViewWrapper = styled.div(props => ({
-    // paddingTop: '75px',
+    paddingTop: '8em',
+    margin: '0 auto',
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    // background: 'lightgray',
+
     // paddingLeft: '1rem',
     // paddingRight: '1rem',
-    // margin: '0 auto',
-    // width: '100%',
     // overflow: 'auto',
+
+    ".slide-container": {
+        marginTop: '1em',
+        textAlign: 'center',
+        marginLeft: '10em',
+        marginRight: '10em',
+    },
+    ".slide-img": {
+        height: '650px',
+        maxWidth: '100%',
+    },
 }))
 
 const PreViewListWrapper = styled.div(props => ({
@@ -20,9 +35,9 @@ const PreViewItemWrapper = styled.div(props => ({
  }))
 
 const CartIconHover = styled.div(props => ({
-    hover: {
-        backgroundColor:'red'
-    }
+    // hover: {
+    //     backgroundColor:'red'
+    // }
  }))
 
 const Category = styled.h1(props => ({
