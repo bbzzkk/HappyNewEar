@@ -18,22 +18,7 @@ class PreViewContainer extends Component {
         console.log("itemClick");
     }
     render() {
-        //const item = ItemJson;
         const { ItemJson } = this.props.HomeStore;
-       // const ItemJson = HomeStore.getItemJson;
-
-        // const previewList = item.map(list => {
-        //     return (
-        //         <div>
-        //             <h1 onClick={this.categoryClick}>{list.category}</h1>
-        //             <PreViewList 
-        //             items={list.items}
-        //             itemClick={this.itemClick}
-        //             ></PreViewList>
-        //         </div>
-        //     );
-        // });
-
         const previewList = ItemJson.map(list => {
             return (
                 <div>
@@ -49,11 +34,6 @@ class PreViewContainer extends Component {
             )
         })
         return (
-            // previewList  원래 있던거 
-
-            // <PreViewList ItemJson = {ItemJson} 
-            // PreviewItems = {PreviewItems}
-            //  onCategoryClick={this.OncategoryClick} />
             previewList
         );
     }
