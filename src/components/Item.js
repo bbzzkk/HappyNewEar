@@ -36,10 +36,8 @@ class Item extends Component {
               <Grid.Column textAlign="center">
                 <p style={{ color: "black", fontSize: "15px" }}>{price}원</p>
               </Grid.Column>
-              <Grid.Column textAlign="center" wrapped>
-                <CustomButton>관심상품 담기</CustomButton>
-              </Grid.Column>
             </Grid>
+            <CustomButton>관심상품 담기</CustomButton>
           </Card.Content>
         </Card>
       </ItemLayout>

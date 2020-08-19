@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
 import Item from "./Item";
+import PreviewListLayout from '../styles/PreviewListLayout'
 
 class PreviewList extends Component {
 	render() {
@@ -13,7 +14,7 @@ class PreviewList extends Component {
     } = this.props;
     console.log(items)
 		return (
-      <>
+      <PreviewListLayout>
         <Link to="/category">
           <h3 onClick={() => OnClickCategory(id)}>{category}</h3>
         </Link>
@@ -28,7 +29,7 @@ class PreviewList extends Component {
               items={items}
             />
           ))}
-      </>
+      </PreviewListLayout>
     );
 	}
 }

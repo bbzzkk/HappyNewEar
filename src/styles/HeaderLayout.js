@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 const HeaderLayout = styled.div((props) => ({
-   height: "8em",
+  height: "8em",
   zIndex:'10000',
   backgroundColor: 'white',
   position:'fixed',
@@ -9,7 +9,7 @@ const HeaderLayout = styled.div((props) => ({
   left: 0,
   right: 0,
   width: "100%",
-    display: "flex",
+  display: "flex",
   justifyContent: "space-between",
   marginBottom: "25px",
   ".logoContainer": {
