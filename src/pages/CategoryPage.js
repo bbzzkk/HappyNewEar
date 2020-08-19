@@ -20,4 +20,4 @@ class CategoryPage extends Component {
   }
 }
 
-export default CategoryPage; 
+export default React.memo(CategoryPage); 

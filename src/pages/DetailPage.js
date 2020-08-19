@@ -9,4 +9,4 @@ class DetailPage extends Component{
     }
 }
 
-export default DetailPage
+export default React.memo(DetailPage)

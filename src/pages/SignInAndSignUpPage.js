@@ -13,4 +13,4 @@ class SignInAndSignUpPage extends Component {
         );
     }
 }
-export default SignInAndSignUpPage;
+export default React.memo(SignInAndSignUpPage);

@@ -37,7 +37,7 @@ export default class ItemStore {
   cartBtnClicked = false;
 
   @observable
-  totalAmount = 0
+  totalPrice = 0
 
   @computed
   get _cartBtnClicked() {
@@ -50,7 +50,7 @@ export default class ItemStore {
   }
 
   @computed
-  get _totalAmount(){
+  get _totalPrice(){
     return(
       this.itemDetail && this.itemQuantity > 0 ?
       this.itemDetail.price * this.itemQuantity : 0
@@ -77,14 +77,6 @@ export default class ItemStore {
   }
 
   @action
-  clickCategory(categoryId) {
-    this.selectedCategory = ItemData;
-    this.selectedCategory = this.selectedCategory.find(
-      (categoryItems) => categoryItems.id === categoryId
-    );
-  }
-
-  @action
   selectCategory(categoryId) {
     this.selectedCategory = this.itemData.find(
         (categoryItems) =>{
@@ -99,5 +91,11 @@ export default class ItemStore {
       } else {
           this.cartBtnClicked = true;
       }
+  }
+
+  @action
+  resetAmountOfItem(){
+    this.itemQuantity = 0
+    this.totalPrice = 0
   }
 }

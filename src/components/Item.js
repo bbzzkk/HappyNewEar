@@ -22,7 +22,7 @@ class Item extends Component {
     }
 
 	render() {
-        const { item, categoryId, categoryName,OnClickItem } = this.props;
+        const { item, categoryName } = this.props;
         const { id, imageUrl, name, price } = item;
 
         return (

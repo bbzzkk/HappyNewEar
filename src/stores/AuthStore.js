@@ -53,6 +53,7 @@ export default class AuthStore {
 
   @action signOut = () =>{
     auth.signOut()
+    this.currentUser = null
   }
 
   @action signUp = async () =>{
@@ -70,6 +71,7 @@ export default class AuthStore {
       
       await createUserProfileDocument(user, {displayName})
       
+      await alert("가입이 완료되었습니다!");
       this.signUpEmail = "";
       this.signUpPassword = "";
       this.confirmedPassword = "";

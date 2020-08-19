@@ -16,25 +16,27 @@ class DetailContainer extends Component {
   }
 
   onAddCart = () => {
-    const itemStore = this.props.itemStore
+    console.log('2222222222222')
+    const {itemStore, cartStore} = this.props
     const item = {
       ...itemStore.itemDetail,
       category: itemStore.selectedCategoryId,
       count: itemStore.itemQuantity,
       checked: true,
     };
-    this.props.cartStore.addItem(item)
+    cartStore.addItem(item)
+    itemStore.resetAmountOfItem()
   }
   
   render() {
     const { categoryId, productId } = this.props.params;
     this.props.itemStore.selectItemDetail(categoryId, parseInt(productId));
-    const { itemDetail, itemQuantity, _totalAmount, options } = this.props.itemStore;
+    const { itemDetail, itemQuantity, _totalPrice, options } = this.props.itemStore;
     return (
       <Detail
         itemDetail={itemDetail}
         itemQuantity={itemQuantity}
-        totalAmount={_totalAmount}
+        totalPrice={_totalPrice}
         options={options}
         OnChange={this.OnChange}
         onAddCart={this.onAddCart}
