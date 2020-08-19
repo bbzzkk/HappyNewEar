@@ -15,8 +15,14 @@ class DetailContainer extends Component {
   }
   
   render() {
-    const { itemDetail, itemQuantity, _totalAmount } = this.props.itemStore;
+    const { categoryId, productId } = this.props.params;
+    console.log(this.props.params);
 
+    this.props.itemStore.selectItemDetail(categoryId, parseInt(productId));
+
+    const { itemDetail, itemQuantity, _totalAmount } = this.props.itemStore;
+    
+    console.log(`${itemDetail.imageUrl}`)
     return (
       <Detail
         itemDetail={itemDetail}

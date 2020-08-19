@@ -27,7 +27,7 @@ class PreviewList extends Component {
               <Item
                 key={item.id}
                 item={item}
-                catetgoryId={id}
+                categoryId={id}
                 categoryName={routeName}
                 OnClickItem={OnClickItem}
                 items={items}

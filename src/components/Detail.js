@@ -22,6 +22,8 @@ class Detail extends Component {
   render() {
     const { itemDetail, totalAmount, itemQuantity, OnChange } = this.props;
 
+    console.log(`디테일의 ${itemDetail.imageUrl}`);
+        
     const width40 = {
       width: "40%",
     };
@@ -42,7 +44,7 @@ class Detail extends Component {
       <DetailsWrapper>
         <Grid columns={2} padded="vertically">
           <Grid.Column>
-            <Image src={itemDetail.imageUrl} />
+            <Image src={require(itemDetail.imageUrl)} />
           </Grid.Column>
 
           <Grid.Column className="DetailView">
@@ -73,9 +75,9 @@ class Detail extends Component {
               </Grid.Column>
             </Grid>
             <Divider />
-            <div class="TOTAL PRICE">
+            <div className="TOTAL PRICE">
               <Header>TOTAL PRICE</Header>
-              <span class="total">
+              <span className="total">
                 <strong>
                   <em>{totalAmount}원 </em>
                 </strong>

@@ -17,9 +17,9 @@ class PreviewContainer extends Component {
 	OnClickItem = (ItemId, CategoryId) => {
 		this.props.itemStore.clickItem(ItemId, CategoryId);
     };
-    OnClickCartBtn = () => {
-        this.props.itemStore.clickCartBtn();
-    }
+  OnClickCartBtn = () => {
+      this.props.itemStore.clickCartBtn();
+  }
 	render() {
 		const { itemData } = this.props.itemStore;	
 		return (
