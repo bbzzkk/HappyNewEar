@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { observer, inject } from "mobx-react";
 
-import PreViewList from '../components/PreviewList'
+import PreviewList from '../components/PreviewList'
 
 import { PreviewWrapper } from "../styles/PreviewLayout";
 
@@ -22,7 +22,7 @@ class PreviewContainer extends Component {
 		return (
       <PreviewWrapper>
         {itemData.map((categoryItems) => (
-          <PreViewList
+          <PreviewList
             key={categoryItems.id}
             categoryItems={categoryItems}
             OnClickCategory={this.OnClickCategory}
