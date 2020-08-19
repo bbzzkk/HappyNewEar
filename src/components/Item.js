@@ -13,7 +13,9 @@ class Item extends Component {
 			item:{id, imageUrl, name, price},
 			categoryId, 
 			OnClickItem
-		} = this.props;
+    } = this.props;
+    
+    console.log(name)
 
 		return (
       <ItemLayout>
@@ -26,20 +28,16 @@ class Item extends Component {
               ui={true}
             />
           </Link>
-          <Card.Content>
+          <Card.Content extra textAlign="center">
             <Card.Header>{name}</Card.Header>
           </Card.Content>
           <Card.Content extra textAlign="center">
-            <Grid columns={2} divided centered>
+            <Grid columns={1} divided centered>
               <Grid.Column textAlign="center">
                 <p style={{ color: "black", fontSize: "15px" }}>{price}원</p>
               </Grid.Column>
-              <Grid.Column textAlign="center">
-                <CustomButton>
-                  관심상품 담기
-                  {/* <Icon name="shopping basket" color="grey" size="large" />
-                  <label>담기</label> */}
-                </CustomButton>
+              <Grid.Column textAlign="center" wrapped>
+                <CustomButton>관심상품 담기</CustomButton>
               </Grid.Column>
             </Grid>
           </Card.Content>

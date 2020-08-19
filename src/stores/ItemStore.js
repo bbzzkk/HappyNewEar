@@ -11,18 +11,15 @@ export default class ItemStore {
   itemData = ItemData;
 
   @observable
-  selectedCategory = {};
-  
-  @observable
-  ItemDetail = {};
+  selectedCategory = ItemData[0];
 
   @observable
   itemDetail = ItemData[0].items[0];
 
   @action
   clickCategory(categoryId) {
-    this.SelectCategory = ItemData; //초기화
-    this.SelectCategory = this.SelectCategory.find(
+    this.selectedCategory = ItemData; //초기화
+    this.selectedCategory = this.selectedCategory.find(
       (Json) => Json.id === categoryId
     );
   }

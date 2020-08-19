@@ -11,9 +11,10 @@ class PreviewList extends Component {
       OnClickCategory,
       OnClickItem,
     } = this.props;
+    console.log(items)
 		return (
       <>
-        <Link to="/list">
+        <Link to="/category">
           <h3 onClick={() => OnClickCategory(id)}>{category}</h3>
         </Link>
         {items
