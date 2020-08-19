@@ -12,6 +12,9 @@ class OverviewContainer extends Component {
   OnClickItem = (ItemId, CategoryId) => {
     this.props.itemStore.selectItem(ItemId, CategoryId);
   };
+  componentWillUnmount(){
+    
+  }
   render() {
     const { categoryId } = this.props.categoryId;
     this.props.itemStore.selectCategory(categoryId);

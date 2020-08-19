@@ -16,10 +16,16 @@ export default class Header extends Component{
             <Link className="logoContainer" to="/">
               <img className="logo" src="images/header/logo.png" alt="logo" />
             </Link>
-            <div className="navigation">
-              <Link to="/case">CASE</Link>
-              <Link to="/keyring">KEYRING</Link>
-              <Link to="/sticker">STICKER</Link>
+            <div className="categories">
+              <div className="category">
+                <Link to="/case">CASE</Link>
+              </div>
+              <div className="category">
+                <Link to="/keyring">KEYRING</Link>
+              </div>
+              <div className="category">
+                <Link to="/sticker">STICKER</Link>
+              </div>
             </div>
             <div className="options">
               <div className="option">
