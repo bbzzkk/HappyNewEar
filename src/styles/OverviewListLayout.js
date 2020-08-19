@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 
-const PreviewLayout = styled.div((props) => ({
+const OverviewListLayout = styled.div((props) => ({
   display: "flex",
   justifyContent: "space-between",
   marginBottom: "5em",
 }));
 
-export default PreviewLayout;
+export default OverviewListLayout;
