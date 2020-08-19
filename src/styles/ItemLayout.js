@@ -1,29 +1,48 @@
 import styled from "@emotion/styled";
 
 const ItemLayout = styled.div((props) => ({
-  width: "15em",
-  display: "flex",
-  flexDirection: "column",
-  height: "350px",
-  alignItems: "center",
-  position: "relative",
-  margin:'1em',
-  ".image": {
-    width: "100%",
-    height: "95%",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    marginBottom: "5px",
-  },
-  "&:hover": {
-    ".image": {
-      opacity: "0.8",
+    textAlign: "center",
+    margin: '0 auto',
+    marginLeft:'0.5em',
+    marginRight:'0.5em',
+    userSelect: 'none',
+
+    ".item-image": {
+        width: "auto",
+        height: "290px",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
     },
     ".button": {
-      opacity: "0.85",
-      display: "flex",
+        textAlign: 'center',
     },
-  },
+    ".put": {
+        color: 'grey',
+    },
+    ".takeout": {
+        color: '#24a0ad',
+        fontWeight: 'bold',
+    },
+    ".button label": {
+        paddingLeft: '5px',
+        fontSize: '15px',
+    },
+    ".item-image:hover": {
+        opacity: "0.8",
+    },
+    ".button:hover": {
+        backgroundColor: '#F3F3F3',
+    },
+    // ".button:hover": {
+    //     "label": {
+    //         color: 'blue',
+    //         fontWeight: 'bold',
+    //         fontSize: '15px',
+    //     },
+    //     ".icon": {
+    //         color: 'blue',
+    //     }
+    // },
 }));
 
 export default ItemLayout;

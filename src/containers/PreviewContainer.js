@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+
 import { observer, inject } from "mobx-react";
 
 import PreviewList from '../components/PreviewList'
 
-import { PreviewWrapper } from "../styles/PreviewLayout";
+import { PreviewLayout } from "../styles/PreviewLayout";
 
 @inject((stores) => ({
   itemStore: stores.itemStore,
@@ -15,20 +16,24 @@ class PreviewContainer extends Component {
 	};
 	OnClickItem = (ItemId, CategoryId) => {
 		this.props.itemStore.clickItem(ItemId, CategoryId);
-	};
+    };
+    OnClickCartBtn = () => {
+        this.props.itemStore.clickCartBtn();
+    }
 	render() {
 		const { itemData } = this.props.itemStore;	
 		return (
-      <PreviewWrapper>
+      <PreviewLayout>
         {itemData.map((categoryItems) => (
           <PreviewList
             key={categoryItems.id}
             categoryItems={categoryItems}
-            OnClickCategory={this.OnClickCategory}
             OnClickItem={this.OnClickItem}
+            cartBtnClicked={this.props.itemStore._cartBtnClicked}
+            OnClickCartBtn={this.OnClickCartBtn}
           />
         ))}
-      </PreviewWrapper>
+      </PreviewLayout>
     );
 }}
 

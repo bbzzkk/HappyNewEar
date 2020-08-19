@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 const CustomButton = styled.button((props) => ({
-  props,
+  ...props,
   // minWidth: "20em",
   flexWrap: "nowrap",
   width: "100%",

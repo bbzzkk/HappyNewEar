@@ -3,9 +3,9 @@ import DetailContainer from '../containers/DetailContainer';
 
 class DetailPage extends Component{
     render(){
-        return(
-            <DetailContainer />
-        )
+        return (
+        <DetailContainer 
+        params={this.props.match.params}/>)
     }
 }
 

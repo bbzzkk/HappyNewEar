@@ -116,6 +116,11 @@ class CartStore {
 
   @action
   take = () => {};
+
+  @action
+  addItem=(item)=>{
+    this.items = [...this.items, item]
+  }
 }
 
 export default CartStore;
