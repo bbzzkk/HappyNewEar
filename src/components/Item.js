@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { observer, inject } from 'mobx-react';
 
-import { Card, Icon, Image, Grid } from "semantic-ui-react";
+import { Card, Icon, Grid } from "semantic-ui-react";
 import ItemLayout from '../styles/ItemLayout'
 
 

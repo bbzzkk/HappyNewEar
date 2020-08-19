@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 
 import { observer, inject } from "mobx-react";
 
-import { Card, Icon, Image, Grid } from "semantic-ui-react";
-import ItemLayout from "../styles/ItemLayout";
+import { Card } from "semantic-ui-react";
+import BestItemLayout from "../styles/BestItemLayout";
+import { CardContent } from "@material-ui/core";
 
 @inject((stores) => ({
   itemStore: stores.itemStore,
@@ -18,13 +19,14 @@ class NewItem extends Component {
     const { id, imageUrl } = item;
 
     return (
-      <ItemLayout>
+      <BestItemLayout>
         <Card>
+          <CardContent className="type">BEST OF BEST</CardContent>
           <Link to={`/${categoryName}/${id}`}>
             <img className="item-image" alt="test" src={imageUrl} />
           </Link>
         </Card>
-      </ItemLayout>
+      </BestItemLayout>
     );
   }
 }
