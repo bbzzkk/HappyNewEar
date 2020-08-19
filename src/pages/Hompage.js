@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import PreviewContainer from "../containers/PreViewContainer";
+import PreviewContainer from "../containers/PreviewContainer";
 import Slider from '../components/Slider'
 
 import { HomepageLayout } from '../styles/HomepageLayout';

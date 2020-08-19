@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Link } from "react-router-dom";
 
-import { PreViewItemWrapper, CartIconHover } from "../styles/PreViewLayout";
+import { PreviewItemWrapper, CartIconHover } from "../styles/PreviewLayout";
 import { Card, Icon, Image, Grid } from "semantic-ui-react";
 import ItemLayout from '../styles/ItemLayout'
 import CustomButton from '../styles/CustomButton'

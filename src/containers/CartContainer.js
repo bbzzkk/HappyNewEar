@@ -5,8 +5,11 @@ import { inject, observer } from "mobx-react";
 import CartList from '../components/CartList';
 import EmptyCart from '../components/EmptyCart';
 import TotalCount from '../components/TotalCount';
+import Cart from '../components/Cart';
 
 import { CartLayout } from '../styles/CartLayout';
+import { Item, Grid, Segment } from 'semantic-ui-react';
+
 
 @inject((stores) => ({ 
     cartStore: stores.cartStore
@@ -69,7 +72,11 @@ class CartContainer extends Component {
                     </>
                     : <EmptyCart />
                 }
+
             </CartLayout>
+           
+
+            
         )
     }
 }

@@ -32,8 +32,9 @@ class CartList extends Component {
 
 		return (
 			<div className='CartList'> 
-					<Segment size='large'>
-						<Grid columns={8} >
+				<br></br>
+					<Segment >
+						<Grid columns='equal' >
 							<Grid.Row>
 								<Grid.Column width={1}>
 									<input 
@@ -42,10 +43,9 @@ class CartList extends Component {
 										onClick={(e) => onHandleAllCheck(e)}
 										style={{width:'20px', height:'20px'}}
 									/>
+									<br></br>
 								</Grid.Column>
-								<Grid.Column>
-									<label>전체선택</label>
-								</Grid.Column>
+								
 								<Grid.Column>
 									<label>종류</label>
 								</Grid.Column>
@@ -53,8 +53,9 @@ class CartList extends Component {
 									<label>사진</label>
 								</Grid.Column>
 								<Grid.Column>
-									<label>상품명</label>
+									<label>상품정보</label>
 								</Grid.Column>
+								
 								<Grid.Column>
 									<label>수량</label>
 								</Grid.Column>
@@ -77,7 +78,10 @@ class CartList extends Component {
 							</Grid.Row>
 						</Grid>
 					</Segment>
-					{cartLists}
+					<Segment>
+						{cartLists}
+					</Segment>
+					
 			</div>
 		);
 	}
