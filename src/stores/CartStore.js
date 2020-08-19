@@ -21,6 +21,7 @@ class CartStore {
 
   @computed
   get _allChecked() {
+    
     return this.allChecked;
   }
 

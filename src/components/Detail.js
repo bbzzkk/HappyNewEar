@@ -20,10 +20,15 @@ class Detail extends Component {
   };
 
   render() {
-    const { itemDetail, totalAmount, itemQuantity, OnChange } = this.props;
-    const { imageUrl, name, price} = itemDetail
-    console.log(`디테일의 ${itemDetail.imageUrl}`);
-        
+    const {
+      itemDetail: { name, imageUrl, price },
+      totalAmount,
+      itemQuantity,
+      options,
+      OnChange,
+      onAddCart,
+    } = this.props;
+
     const width40 = {
       width: "40%",
     };
@@ -31,14 +36,6 @@ class Detail extends Component {
     const width60 = {
       width: "60%",
     };
-
-    const options = [
-      { key: 1, text: "1개", value: 1 },
-      { key: 2, text: "2개", value: 2 },
-      { key: 3, text: "3개", value: 3 },
-      { key: 4, text: "4개", value: 4 },
-      { key: 5, text: "5개", value: 5 },
-    ];
 
     return (
       <DetailsWrapper>
@@ -84,7 +81,7 @@ class Detail extends Component {
                 ({itemQuantity}개)
               </span>
             </div>
-            <Button primary>ADD TO CART</Button>
+            <Button onClick={onAddCart} primary>ADD TO CART</Button>
           </Grid.Column>
         </Grid>
       </DetailsWrapper>

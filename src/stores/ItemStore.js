@@ -13,6 +13,14 @@ export default class ItemStore {
     sticker: 3
   }
 
+  options = [
+      { key: 1, text: "1개", value: 1 },
+      { key: 2, text: "2개", value: 2 },
+      { key: 3, text: "3개", value: 3 },
+      { key: 4, text: "4개", value: 4 },
+      { key: 5, text: "5개", value: 5 },
+    ];
+
   @observable 
   itemData = ItemData;
 
@@ -59,6 +67,7 @@ export default class ItemStore {
 
   @action
   selectItemDetail(categoryId, productId){
+    this.selectedCategoryId=categoryId
     this.itemDetail = this.itemData
       .find((categoryItems) => {
         return categoryItems.id === this.CATEGORY_ID_MAP[categoryId];
@@ -69,13 +78,12 @@ export default class ItemStore {
 
   @action
   clickCategory(categoryId) {
-    this.selectedCategory = ItemData; //초기화
+    this.selectedCategory = ItemData;
     this.selectedCategory = this.selectedCategory.find(
       (categoryItems) => categoryItems.id === categoryId
     );
   }
 
-  // 라우터 연결
   @action
   selectCategory(categoryId) {
     this.selectedCategory = this.itemData.find(
@@ -92,5 +100,4 @@ export default class ItemStore {
           this.cartBtnClicked = true;
       }
   }
-  
 }

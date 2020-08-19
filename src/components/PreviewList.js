@@ -16,24 +16,23 @@ class PreviewList extends Component {
 		return (
       <PreviewListLayout>
         <div className="category">
-          <Link to={`/${routeName}`}>
-            <h3>{category}</h3>
-          </Link>
+        <Link to={`/${routeName}`}>
+          <h3>{category}</h3>
+        </Link>
         </div>
         <div>
-          {items
+            {items
             .filter((item) => item.id < 5)
             .map((item) => (
-              <Item
+                <Item
                 key={item.id}
                 item={item}
-                categoryId={id}
-                categoryName={routeName}
+                catetgoryId={id}
                 OnClickItem={OnClickItem}
                 items={items}
                 cartBtnClicked={cartBtnClicked}
                 OnClickCartBtn={OnClickCartBtn}
-              />
+                />
             ))}
         </div>
       </PreviewListLayout>
