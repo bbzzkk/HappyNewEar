@@ -36,14 +36,14 @@ class CartContainer extends Component {
 			cartStore.deleteItem(itemName);
 	}
 
-	onAddItem = (itemName) => {
+	onAddClick = (itemName) => {
 			const { cartStore } = this.props;
 			cartStore.addClick(itemName);
 	}
 
-	onSubmitItem = (itemName) => {
+	onSubClick = (itemName) => {
 			const { cartStore } = this.props;
-			cartStore.submitItem(itemName);
+			cartStore.subClick(itemName);
 	}
 
 	render() {
@@ -62,8 +62,8 @@ class CartContainer extends Component {
                             onHandleCheck={this.onHandleCheck}
                             onDeleteSelected={this.onDeleteSelected}
                             onDeleteItem={this.onDeleteItem}
-                            onAddItem={this.onAddItem}
-                            onSubClick={this.onSubmitItem}
+                            onAddClick={this.onAddClick}
+                            onSubClick={this.onSubClick}
                         />
                         <TotalCount
                             itemCount={cartStore._itemCount}
