@@ -9,7 +9,6 @@ class PreviewList extends Component {
 	render() {
    	const {
       categoryItems: { id, routeName, category, items },
-      OnClickItem,
       cartBtnClicked,
       OnClickCartBtn,
     } = this.props;
