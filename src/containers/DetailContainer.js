@@ -10,8 +10,9 @@ import Detail from '../components/Detail';
 @observer
 class DetailContainer extends Component {
   render() {
-    const { itemDetail } = this.props.itemStore;
-    return <Detail itemDetail={itemDetail} />;
+    const {params:{categoryId, productId}} = this.props
+    this.props.itemStore.selectItemDetail(categoryId, productId);
+    return <Detail itemDetail={this.props.itemStore.itemDetail} />;
   }
 }
 

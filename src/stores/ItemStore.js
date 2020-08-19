@@ -22,6 +22,20 @@ export default class ItemStore {
   @observable
   itemDetail = ItemData[0].items[0];
 
+  @observable selectedCategoryId = ''
+  @observable selectedItemId = ''
+
+  @action
+  selectItemDetail(categoryId, productId){
+    this.itemDetail = this.itemData
+      .find((categoryItems) => {
+        return categoryItems.id === this.CATEGORY_ID_MAP[categoryId];
+      }).items.find((item) => {
+        return item.id === parseInt(productId)
+      });
+      console.log(this.itemDetail)
+  }
+
   @action
   clickCategory(categoryId) {
     this.selectedCategory = ItemData; //초기화
@@ -32,20 +46,28 @@ export default class ItemStore {
 
   // 라우터 연결
   @action
-  selectCategory(categoryUrlParam) {
-    // this.selectedCategory = ItemData; //초기화
-    this.selectedCategory = this.selectedCategory.find(
-      (categoryItems) =>
-        categoryItems.id === this.CATEGORY_ID_MAP[categoryUrlParam]
-    );
+  selectCategory(categoryId) {
+    this.selectedCategory = this.itemData.find(
+        (categoryItems) =>{
+        return categoryItems.id === this.CATEGORY_ID_MAP[categoryId];
+      });
   }
   
   @action
   clickItem(itemId, categoryId) {
-    const categoryItems = (this.ItemDetail = this.ItemDetail.find(
+    this.itemDetail = ItemData[0].items[0]; // 초기화
+    this.itemData = ItemData; // 초기화
+    const categoryItems = (this.itemData = this.itemData.find(
       (Json) => Json.id === categoryId
-    )); // 걸러준 카테고리의 items배열을 가져온다. 
+    )); // 걸러준 카테고리의 items배열을 가져온다.
     const items = categoryItems.items;
-    this.ItemDetailObject = items.find((item) => item.id === itemId); // items 배열의 id를 이용해서 해당 아이템을 가져온다.
+    this.itemDetail = items.find((item) => item.id === itemId); // items 배열의 id를 이용해서 해당 아이템을 가져온다.
+    console.log(this.itemDetail);
+    this.itemData = ItemData; // 초기화  
   }
+
+  @action
+  selectItem(itemId, categoryId) {
+  }
+  
 }

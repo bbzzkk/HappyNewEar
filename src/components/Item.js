@@ -19,14 +19,14 @@ class Item extends Component {
   }
 
   render() {
-    const { item,categoryId,OnClickItem } = this.props;
+    const { item, categoryId, categoryName,OnClickItem } = this.props;
     const { id, imageUrl, name, price } = item;
     return (
       <ItemLayout>
         <Card>
-          <Link to="/detail">
+          <Link to={`/${categoryName}/${id}`}>
             <Image
-              onClick={() => OnClickItem(id, categoryId)}
+              // onClick={() => OnClickItem(id, categoryId)}
               src={imageUrl}
               wrapped
               ui={true}
