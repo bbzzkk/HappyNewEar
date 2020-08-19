@@ -54,7 +54,7 @@ class CartContainer extends Component {
                 <h2>장바구니</h2>
                 {
                     cartStore._items.length !== 0 ? 
-                    <>
+                    <div>
                         <CartList
                             items={cartStore._items}
                             allChecked={cartStore._allChecked}
@@ -69,10 +69,9 @@ class CartContainer extends Component {
                             itemCount={cartStore._itemCount}
                             totalPrice={cartStore._totalPrice}
                         />
-                    </>
+                    </div>
                     : <EmptyCart />
                 }
-
             </CartLayout>
            
 
