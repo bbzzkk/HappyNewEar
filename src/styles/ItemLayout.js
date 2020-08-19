@@ -7,6 +7,7 @@ const ItemLayout = styled.div((props) => ({
   height: "350px",
   alignItems: "center",
   position: "relative",
+  margin:'2em',
   ".image": {
     width: "100%",
     height: "95%",
