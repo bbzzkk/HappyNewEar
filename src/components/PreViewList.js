@@ -19,7 +19,7 @@ class PreviewList extends Component {
           <h3 onClick={() => OnClickCategory(id)}>{category}</h3>
         </Link>
         {items
-          .filter((item) => item.id < 5)
+          .filter((item) => item.id < 7)
           .map((item) => (
             <Item
               key={item.id}
