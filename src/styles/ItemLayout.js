@@ -15,14 +15,17 @@ const ItemLayout = styled.div((props) => ({
     backgroundPosition: "center",
     marginBottom: "5px",
   },
+  button: {
+    width: '80%',
+    opacity: '0.7',
+    position: 'absolute',
+    top: '255px',
+    display: 'none',
+  },
   "&:hover": {
     ".image": {
       opacity: "0.8",
-    },
-    ".button": {
-      opacity: "0.85",
-      display: "flex",
-    },
+    }
   },
 }));
 

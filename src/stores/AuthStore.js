@@ -1,4 +1,7 @@
 import { action, observable } from "mobx";
+
+// import { persist } from 'mobx-persist';
+
 import { auth, signInWithGoogle, createUserProfileDocument } from "../firebase/firebase.utils";
 
 export default class AuthStore {

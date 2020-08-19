@@ -2,27 +2,31 @@ import React, { Component } from 'react';
 
 import { Link } from "react-router-dom";
 
-import { PreViewItemWrapper, CartIconHover } from "../styles/PreviewLayout";
+import { inject, observer } from "mobx-react";
+
 import { Card, Icon, Image, Grid } from "semantic-ui-react";
 import ItemLayout from '../styles/ItemLayout'
 import CustomButton from '../styles/CustomButton'
 
-class Item extends Component {
-	render() {
-		const { 
-			item:{id, imageUrl, name, price},
-			categoryId, 
-			OnClickItem
-    } = this.props;
-    
-    console.log(name)
 
-		return (
+@inject((stores) => ({
+  itemStore: stores.itemStore,
+}))
+@observer
+class Item extends Component {
+  handleAddItem() {
+    this.props.cartStore.addItem();
+  }
+
+  render() {
+    const { item, categoryId, categoryName,OnClickItem } = this.props;
+    const { id, imageUrl, name, price } = item;
+    return (
       <ItemLayout>
         <Card>
-          <Link to="/detail">
+          <Link to={`/${categoryName}/${id}`}>
             <Image
-              onClick={() => OnClickItem(id, categoryId)}
+              // onClick={() => OnClickItem(id, categoryId)}
               src={imageUrl}
               wrapped
               ui={true}
@@ -37,12 +41,14 @@ class Item extends Component {
                 <p style={{ color: "black", fontSize: "15px" }}>{price}원</p>
               </Grid.Column>
             </Grid>
-            <CustomButton>관심상품 담기</CustomButton>
+            <CustomButton onClick={() => this.handleAddItem(item)} inverted>
+              찜하기
+            </CustomButton>
           </Card.Content>
         </Card>
       </ItemLayout>
     );
-	}
+  }
 }
 
 export default Item;

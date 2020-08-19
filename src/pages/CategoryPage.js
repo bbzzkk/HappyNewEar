@@ -4,7 +4,14 @@ import OverviewContainer from "../containers/OverviewContainer";
 
 class CategoryPage extends Component {
   render() {
-    return <OverviewContainer />;
+    const {match} = this.props.match.params
+    console.log(this.props.match.params.categoryId)
+    // const mapStateToProps = (state)
+    return (
+    <>
+      <OverviewContainer categoryId = {match.params.categoryId}/>
+    </>
+    )
   }
 }
 
