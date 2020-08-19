@@ -33,7 +33,6 @@ class Item extends Component {
                     <img
                         className="item-image"
                         alt="test"
-                        onClick={() => OnClickItem(id, categoryId)}
                         src={imageUrl}
                     />
                 </Link>

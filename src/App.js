@@ -57,11 +57,10 @@ class App extends Component {
               }
             />
                     
-            <Route exact path="/cart" component={CartPage} />
+            {/* <Route exact path="/cart" component={CartPage} /> */}
             <Route exact path="/:categoryId" component={CategoryPage} />
             <Route
-              exact
-              path="/:categoryId/:productId"
+              exact path="/:categoryId/:productId"
               component={DetailPage}
             />
           </Switch>

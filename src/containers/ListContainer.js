@@ -10,10 +10,7 @@ import List from "../components/List"
 class ListContainer extends Component {
     render() {
         const { SelectCategory } = this.props.previewStore;
-        console.log(SelectCategory);
         const SelectCategoryItems = SelectCategory.items;
-        console.log(SelectCategoryItems);
-
         return (
             <List items = {SelectCategoryItems}>
 
