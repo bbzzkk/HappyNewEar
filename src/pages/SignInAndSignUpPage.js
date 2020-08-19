@@ -1,6 +1,8 @@
 import React, { Component} from 'react';
+
 import SignInFormContainer from "../containers/SignInFormContainer";
 import SignUpFormContainer from '../containers/SignUpFormContainer';
+
 import SignInAndSignUpLayout from '../styles/SignInAndSignUpLayout'
 
 class SignInAndSignUpPage extends Component {
@@ -13,5 +15,4 @@ class SignInAndSignUpPage extends Component {
         );
     }
 }
-
 export default SignInAndSignUpPage;

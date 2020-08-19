@@ -54,8 +54,8 @@ const CartIconHover = styled.div(props => ({
 
 
 export {
-    PreViewWrapper,
-    PreViewListWrapper,
-    PreViewItemWrapper,
-    CartIconHover,
-}
+  PreviewWrapper,
+  PreViewListWrapper,
+  PreViewItemWrapper,
+  CartIconHover,
+};

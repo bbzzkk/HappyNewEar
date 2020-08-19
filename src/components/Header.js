@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom"
 
 import HeaderLayout from '../styles/HeaderLayout'
-import {Icon, Segment } from 'semantic-ui-react';
+import {Icon } from 'semantic-ui-react';
 
 export default class Header extends Component{
     render() {
