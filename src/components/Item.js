@@ -10,7 +10,9 @@ class Item extends Component {
 		const { 
 			item:{id, imageUrl, name, price},
 			categoryId, 
-			OnClickItem
+            OnClickItem,
+            cartBtnClicked,
+            OnClickCartBtn,
         } = this.props;
     
         console.log(name)
@@ -34,9 +36,21 @@ class Item extends Component {
                         <Grid.Column textAlign='center'>
                             <p style={{ color: 'black', fontSize: '15px'}}>{price}원</p>
                         </Grid.Column>
+                            {/* <Grid.Column className='button' textAlign='center' onClick={() => OnClickCartBtn()}> */}
                             <Grid.Column className='button' textAlign='center'>
-                                <Icon className='icon' name='shopping basket' color='grey' size='large'/>
-                                <label>담기</label>
+                                {
+                                    // cartBtnClicked === false
+                                    //     ?
+                                        <>
+                                            <Icon className='icon' name='shopping basket' color='grey' size='large' />
+                                            <label className="put">담기</label>
+                                        </>
+                                        // :
+                                        // <>
+                                        //     <Icon className='icon' name='shopping basket' color='blue' size='large' />
+                                        //     <label className="takeout">빼기</label>
+                                        // </>
+                                }
                         </Grid.Column>
                     </Grid>
                 </Card.Content>

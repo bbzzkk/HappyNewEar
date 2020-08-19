@@ -11,6 +11,8 @@ class PreviewList extends Component {
       categoryItems: { id, category, items },
       OnClickCategory,
       OnClickItem,
+      cartBtnClicked,
+      OnClickCartBtn,
     } = this.props;
     console.log(items)
 		return (
@@ -30,6 +32,8 @@ class PreviewList extends Component {
                 catetgoryId={id}
                 OnClickItem={OnClickItem}
                 items={items}
+                cartBtnClicked={cartBtnClicked}
+                OnClickCartBtn={OnClickCartBtn}
                 />
             ))}
         </div>

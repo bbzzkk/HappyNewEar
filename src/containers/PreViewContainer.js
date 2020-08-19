@@ -16,7 +16,10 @@ class PreviewContainer extends Component {
 	};
 	OnClickItem = (ItemId, CategoryId) => {
 		this.props.itemStore.clickItem(ItemId, CategoryId);
-	};
+    };
+    OnClickCartBtn = () => {
+        this.props.itemStore.clickCartBtn();
+    }
 	render() {
 		const { itemData } = this.props.itemStore;	
 		return (
@@ -27,6 +30,8 @@ class PreviewContainer extends Component {
             categoryItems={categoryItems}
             OnClickCategory={this.OnClickCategory}
             OnClickItem={this.OnClickItem}
+            cartBtnClicked={this.props.itemStore._cartBtnClicked}
+            OnClickCartBtn={this.OnClickCartBtn}
           />
         ))}
       </PreviewLayout>

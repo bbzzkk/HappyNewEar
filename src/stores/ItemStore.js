@@ -16,6 +16,14 @@ export default class ItemStore {
   @observable
   itemDetail = ItemData[0].items[0];
 
+  @observable
+  cartBtnClicked = false;
+
+  @computed
+  get _cartBtnClicked() {
+      return this.cartBtnClicked;
+  }
+
   @action
   clickCategory(categoryId) {
     this.selectedCategory = ItemData; //초기화
@@ -31,5 +39,14 @@ export default class ItemStore {
     )); // 걸러준 카테고리의 items배열을 가져온다. 
     const items = categoryItems.items;
     this.ItemDetailObject = items.find((item) => item.id === itemId); // items 배열의 id를 이용해서 해당 아이템을 가져온다.
+  }
+
+  @action
+  clickCartBtn() {
+      if (this.cartBtnClicked === true) {
+          this.cartBtnClicked = false;
+      } else {
+          this.cartBtnClicked = true;
+      }
   }
 }

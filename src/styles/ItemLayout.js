@@ -5,12 +5,23 @@ const ItemLayout = styled.div((props) => ({
     margin: '0 auto',
     marginLeft:'0.5em',
     marginRight:'0.5em',
+    userSelect: 'none',
 
     ".item-image": {
         width: "auto",
         height: "290px",
         backgroundSize: "cover",
         backgroundPosition: "center",
+    },
+    ".button": {
+        textAlign: 'center',
+    },
+    ".put": {
+        color: 'grey',
+    },
+    ".takeout": {
+        color: '#24a0ad',
+        fontWeight: 'bold',
     },
     ".button label": {
         paddingLeft: '5px',
