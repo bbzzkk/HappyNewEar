@@ -6,6 +6,8 @@ import CartList from '../components/CartList';
 import EmptyCart from '../components/EmptyCart';
 import TotalCount from '../components/TotalCount';
 
+import { CartLayout } from '../styles/CartLayout';
+
 @inject((stores) => ({ 
     cartStore: stores.cartStore
  }))
@@ -42,35 +44,34 @@ class CartContainer extends Component {
 	}
 
 	render() {
-		const { cartStore } = this.props;
+        const { cartStore } = this.props;
+        
 		return (
-      <div
-        className="CartContainer"
-        style={{ marginLeft: 50, marginRight: 50 }}
-      >
-			<h2 style={{ marginTop: 10 }}>장바구니</h2>
-			{cartStore._items.length !== 0 ? 
-				<>
-					<CartList
-						items={cartStore._items}
-						allChecked={cartStore._allChecked}
-						onHandleAllCheck={this.onHandleAllCheck}
-						onHandleCheck={this.onHandleCheck}
-						onDeleteSelected={this.onDeleteSelected}
-						onDeleteItem={this.onDeleteItem}
-						onAddItem={this.onAddItem}
-						onSubClick={this.onSubmitItem}
-					/>
-					<TotalCount
-						itemCount={cartStore._itemCount}
-						totalPrice={cartStore._totalPrice}
-					/>
-				</>
-				: 
-				<EmptyCart />
-			}
-    </div>
-  )}
+            <CartLayout>
+                <h2>장바구니</h2>
+                {
+                    cartStore._items.length !== 0 ? 
+                    <>
+                        <CartList
+                            items={cartStore._items}
+                            allChecked={cartStore._allChecked}
+                            onHandleAllCheck={this.onHandleAllCheck}
+                            onHandleCheck={this.onHandleCheck}
+                            onDeleteSelected={this.onDeleteSelected}
+                            onDeleteItem={this.onDeleteItem}
+                            onAddItem={this.onAddItem}
+                            onSubClick={this.onSubmitItem}
+                        />
+                        <TotalCount
+                            itemCount={cartStore._itemCount}
+                            totalPrice={cartStore._totalPrice}
+                        />
+                    </>
+                    : <EmptyCart />
+                }
+            </CartLayout>
+        )
+    }
 }
 
 export default CartContainer;

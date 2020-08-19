@@ -23,7 +23,7 @@ class Footer extends Component {
                         <img
                         src="images/footer/email-icon.jpg"
                         alt="github-icon"
-                        style={{ height: "2em" }}
+                        style={{ height: "1.9em" }}
                         />
                     </a>
                 </div>
