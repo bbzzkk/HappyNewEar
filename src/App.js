@@ -42,6 +42,7 @@ class App extends Component {
   }
 
   render() {
+    const {currentUser} = this.props.authStore
     return (
       <AppLayout>
         <HeaderContainer />
@@ -49,13 +50,11 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route path="/category" component={CategoryPage} />
-            <Route 
-              exact path="/signin"
-              render={()=>
-                this.props.currentUser?
-                (<Redirect to = '/' />)
-                :
-                (<SignInAndSignUpPage/>)
+            <Route
+              exact
+              path="/signin"
+              render={() =>
+                currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
               }
             />
             <Route path="/cart" component={CartPage} />

@@ -11,6 +11,7 @@ const PreviewWrapper = styled.div((props) => ({
   alignItems: "center",
   position: "relative",
   justifyContent: "space-between",
+  marginTop:'5em'
   // height:'100%',
   // minHeight: '84vh',
   // overflow: 'auto',
