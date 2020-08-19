@@ -49,7 +49,7 @@ class App extends Component {
         <div className="routes">
           <Switch>
             <Route exact path="/" component={Homepage} />
-            <Route path="/category" component={CategoryPage} />
+            <Route path="/category/:categoryId" component={CategoryPage} />
             <Route
               exact
               path="/signin"

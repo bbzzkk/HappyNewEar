@@ -12,7 +12,6 @@ class PreviewList extends Component {
       OnClickCategory,
       OnClickItem,
     } = this.props;
-    console.log(items)
 		return (
       <PreviewListLayout>
         <Link to="/category">

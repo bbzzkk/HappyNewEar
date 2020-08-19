@@ -7,6 +7,12 @@ export default class ItemStore {
     this.root = root;
   }
 
+  CATEGORY_ID_MAP = {
+    case: 1,
+    keyring: 2,
+    sticker: 3
+  }
+
   @observable 
   itemData = ItemData;
 
@@ -20,7 +26,17 @@ export default class ItemStore {
   clickCategory(categoryId) {
     this.selectedCategory = ItemData; //초기화
     this.selectedCategory = this.selectedCategory.find(
-      (Json) => Json.id === categoryId
+      (categoryItems) => categoryItems.id === categoryId
+    );
+  }
+
+  // 라우터 연결
+  @action
+  selectCategory(categoryUrlParam) {
+    // this.selectedCategory = ItemData; //초기화
+    this.selectedCategory = this.selectedCategory.find(
+      (categoryItems) =>
+        categoryItems.id === this.CATEGORY_ID_MAP[categoryUrlParam]
     );
   }
   
