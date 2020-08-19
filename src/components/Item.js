@@ -2,25 +2,29 @@ import React, { Component } from 'react';
 
 import { Link } from "react-router-dom";
 
+import { observer, inject } from 'mobx-react';
+
 import { Card, Icon, Image, Grid } from "semantic-ui-react";
 import ItemLayout from '../styles/ItemLayout'
 
+
+@inject((stores) => ({
+  itemStore: stores.itemStore,
+}))
+@observer
 class Item extends Component {
+    handleAddItem() {
+        this.props.cartStore.addItem();
+    }
+
 	render() {
-		const { 
-			item:{id, imageUrl, name, price},
-			categoryId, 
-            OnClickItem,
-            cartBtnClicked,
-            OnClickCartBtn,
-        } = this.props;
-    
-        console.log(name)
+        const { item, categoryId, categoryName,OnClickItem } = this.props;
+        const { id, imageUrl, name, price } = item;
 
         return (
             <ItemLayout>
             <Card>
-                <Link to="/detail">
+            <Link to={`/${categoryName}/${id}`}>
                     <img
                         className="item-image"
                         alt="test"

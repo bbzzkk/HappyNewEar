@@ -23,10 +23,30 @@ const HeaderLayout = styled.div((props) => ({
     ".logo": {
     marginTop: "1rem",
     width: "20em",
+    minWidth:"20em",
     height: "4.5em",
     backgroundSize: "cover",
     backgroundPosition: "center",
   },
+  ".categories": {
+    width: "auto",
+    height: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    paddingRight: "100px",
+    ".category": {
+      fontSize: "1.2em",
+      padding: "15px 30px",
+      cursor: "pointer",
+    },
+    div: {
+      border: "0",
+      outline: "0",
+      backgroundColor: "white",
+    },
+  },
+
   ".options": {
     width: "400px",
     height: "100%",

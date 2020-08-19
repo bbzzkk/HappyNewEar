@@ -10,12 +10,21 @@ import OverviewList from "../components/OverviewList";
 @observer
 class OverviewContainer extends Component {
   OnClickItem = (ItemId, CategoryId) => {
-    this.props.itemStore.clickItem(ItemId, CategoryId);
+    this.props.itemStore.selectItem(ItemId, CategoryId);
   };
+  componentWillUnmount(){
+    
+  }
   render() {
-    const { selectedCategory } = this.props.itemStore;
-    const items = selectedCategory.items;
-    return <OverviewList items={items} OnClickItem={this.OnClickItem} />;
+    const { categoryId } = this.props.categoryId;
+    this.props.itemStore.selectCategory(categoryId);
+    return (
+      <OverviewList
+        categoryName={categoryId}
+        items={this.props.itemStore.selectedCategory.items}
+        OnClickItem={this.OnClickItem}
+      />
+    );
   }
 }
 

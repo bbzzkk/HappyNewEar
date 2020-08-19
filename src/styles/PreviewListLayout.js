@@ -5,7 +5,7 @@ const PreviewListLayout = styled.div((props) => ({
     flexDirection: "column",
     justifyContent: "space-between",
     margin: '0 auto',
-    marginBottom: "0.5em",
+    marginBottom: "2.5em",
 
     "div": {
         flex: 1,

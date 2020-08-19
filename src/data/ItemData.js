@@ -2,7 +2,7 @@ const ItemData = [
   {
     id: 1,
     category: "Case",
-    routeName: "Case",
+    routeName: "case",
     items: [
       {
         id: 1,
@@ -149,7 +149,7 @@ const ItemData = [
   {
     id: 2,
     category: "KeyRing",
-    routeName: "KeyRing",
+    routeName: "keyring",
     items: [
       {
         id: 1,
@@ -296,7 +296,7 @@ const ItemData = [
   {
     id: 3,
     category: "Sticker",
-    routeName: "Sticker",
+    routeName: "sticker",
     items: [
       {
         id: 1,

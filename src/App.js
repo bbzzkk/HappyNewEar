@@ -49,7 +49,6 @@ class App extends Component {
         <div className="routes">
           <Switch>
             <Route exact path="/" component={Homepage} />
-            <Route path="/category" component={CategoryPage} />
             <Route
               exact
               path="/signin"
@@ -57,8 +56,14 @@ class App extends Component {
                 currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
               }
             />
-            <Route path="/cart" component={CartPage} />
-            <Route path="/detail" component={DetailPage} />
+                    
+            <Route exact path="/cart" component={CartPage} />
+            <Route exact path="/:categoryId" component={CategoryPage} />
+            <Route
+              exact
+              path="/:categoryId/:productId"
+              component={DetailPage}
+            />
           </Switch>
         </div>
         <FooterContainer />

@@ -7,6 +7,12 @@ export default class ItemStore {
     this.root = root;
   }
 
+  CATEGORY_ID_MAP = {
+    case: 1,
+    keyring: 2,
+    sticker: 3
+  }
+
   @observable 
   itemData = ItemData;
 
@@ -19,26 +25,52 @@ export default class ItemStore {
   @observable
   cartBtnClicked = false;
 
-  @computed
-  get _cartBtnClicked() {
-      return this.cartBtnClicked;
+    @computed
+    get _cartBtnClicked() {
+        return this.cartBtnClicked;
+    }
+    
+  @observable selectedCategoryId = ''
+  @observable selectedItemId = ''
+
+  @action
+  selectItemDetail(categoryId, productId){
+    this.itemDetail = this.itemData
+      .find((categoryItems) => {
+        return categoryItems.id === this.CATEGORY_ID_MAP[categoryId];
+      }).items.find((item) => {
+        return item.id === parseInt(productId)
+      });
   }
 
   @action
   clickCategory(categoryId) {
     this.selectedCategory = ItemData; //초기화
     this.selectedCategory = this.selectedCategory.find(
-      (Json) => Json.id === categoryId
+      (categoryItems) => categoryItems.id === categoryId
     );
+  }
+
+  // 라우터 연결
+  @action
+  selectCategory(categoryId) {
+    this.selectedCategory = this.itemData.find(
+        (categoryItems) =>{
+        return categoryItems.id === this.CATEGORY_ID_MAP[categoryId];
+      });
   }
   
   @action
   clickItem(itemId, categoryId) {
-    const categoryItems = (this.ItemDetail = this.ItemDetail.find(
+    this.itemDetail = ItemData[0].items[0]; // 초기화
+    this.itemData = ItemData; // 초기화
+    const categoryItems = (this.itemData = this.itemData.find(
       (Json) => Json.id === categoryId
-    )); // 걸러준 카테고리의 items배열을 가져온다. 
+    )); // 걸러준 카테고리의 items배열을 가져온다.
     const items = categoryItems.items;
-    this.ItemDetailObject = items.find((item) => item.id === itemId); // items 배열의 id를 이용해서 해당 아이템을 가져온다.
+    this.itemDetail = items.find((item) => item.id === itemId); // items 배열의 id를 이용해서 해당 아이템을 가져온다.
+    console.log(this.itemDetail);
+    this.itemData = ItemData; // 초기화  
   }
 
   @action
@@ -49,4 +81,7 @@ export default class ItemStore {
           this.cartBtnClicked = true;
       }
   }
+  selectItem(itemId, categoryId) {
+  }
+  
 }

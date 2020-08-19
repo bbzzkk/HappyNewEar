@@ -28,7 +28,6 @@ class PreviewContainer extends Component {
           <PreviewList
             key={categoryItems.id}
             categoryItems={categoryItems}
-            OnClickCategory={this.OnClickCategory}
             OnClickItem={this.OnClickItem}
             cartBtnClicked={this.props.itemStore._cartBtnClicked}
             OnClickCartBtn={this.OnClickCartBtn}
