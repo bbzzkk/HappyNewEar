@@ -17,6 +17,10 @@ class Item extends Component {
         this.props.cartStore.addItem();
     }
 
+    numberWithCommas = (x) => {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
 	render() {
         const { item, categoryId, categoryName,OnClickItem } = this.props;
         const { id, imageUrl, name, price } = item;
@@ -39,7 +43,7 @@ class Item extends Component {
                 <Card.Content extra textAlign='center'>
                     <Grid columns={2} divided centered>
                         <Grid.Column textAlign='center'>
-                            <p style={{ color: 'black', fontSize: '15px'}}>{price}원</p>
+                            <p style={{ color: 'black', fontSize: '15px'}}>{this.numberWithCommas(price)}원</p>
                         </Grid.Column>
                             {/* <Grid.Column className='button' textAlign='center' onClick={() => OnClickCartBtn()}> */}
                             <Grid.Column className='button' textAlign='center'>

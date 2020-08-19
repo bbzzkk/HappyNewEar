@@ -9,14 +9,21 @@ class OverviewList extends Component {
     console.log(categoryName)
     return (
       <OverviewListLayout>
-        {items.map((item) => (
-          <Item
-            key={item.id}
-            item={item}
-            categoryName={categoryName}
-            OnClickItem={OnClickItem}
-          />
-        ))}
+          {/* <div>
+            <h2>베스트상품</h2>
+          </div> */}
+          <div className="items-wrapper">
+            {items.map((item) => (
+                <div className="item-wrapper">
+                    <Item
+                        key={item.id}
+                        item={item}
+                        categoryName={categoryName}
+                        OnClickItem={OnClickItem}
+                    />
+                </div>
+            ))}
+          </div>
       </OverviewListLayout>
     );
 	}
