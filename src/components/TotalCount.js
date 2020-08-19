@@ -11,7 +11,7 @@ class TotalCount extends Component {
 						<Grid columns='equal' >
 							<Grid.Row>
 								<Grid.Column>
-									<label>전체합계</label>
+									<label></label>
 								</Grid.Column>
 								<Grid.Column>
 									<label><span>상품수 </span></label>

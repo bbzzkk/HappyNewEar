@@ -32,7 +32,6 @@ class CartList extends Component {
 
 		return (
 			<div className='CartList'> 
-				<br></br>
 					<Segment >
 						<Grid columns='equal' >
 							<Grid.Row>
@@ -69,7 +68,7 @@ class CartList extends Component {
 										onClick={onDeleteSelected}
 										style={{
 												float: 'right',
-												lineHeight: '5px'
+												// lineHeight: '5px'
 										}}
 									>
 										선택삭제

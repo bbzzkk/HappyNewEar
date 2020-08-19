@@ -14,10 +14,7 @@ class CartItem extends Component {
 
         return (
 
-          <CartLayout>
-            <div className="CartItem"></div>
-
-           
+          <div>
             <Grid columns='equal' >
               <Grid.Row>
 								<Grid.Column width={1}>
@@ -53,8 +50,6 @@ class CartItem extends Component {
                 {item.price * item.count}원
 								</Grid.Column>
 								<Grid.Column>
-                
-
                 <Button basic color='grey' size='tiny' 
 										onClick={() => onDeleteItem(item.name)}
 										style={{	float: 'right', lineHeight: '5px'}}>삭제</Button>
@@ -62,10 +57,7 @@ class CartItem extends Component {
 								
 							</Grid.Row>
 						</Grid>
-
-          
-             
-          </CartLayout>
+          </div>
         );
     }
 }
