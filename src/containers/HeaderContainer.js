@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-
 import {inject, observer} from 'mobx-react'
-
 import Header from '../components/Header'
 
 @inject((stores) => ({
