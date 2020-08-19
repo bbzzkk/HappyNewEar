@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 
-import PreViewContainer from '../containers/PreViewContainer';
+import PreviewContainer from "../containers/PreViewContainer";
+import Slider from '../components/Slider'
 
 class Homepage extends Component{
     render(){
         return(
-            <PreViewContainer />
+            <>
+                <Slider/>
+                <PreviewContainer />
+            </>
         )
     }
 }

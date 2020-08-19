@@ -7,15 +7,16 @@ import Header from '../components/Header'
 }))
 @observer
 class HeaderContainer extends Component {
-    handleLogout = () => {
-        this.props.authStore.logout();
-    };
-    render() {
-        const { currentUser } = this.props.authStore;
-        return (
-        <Header currentUser={currentUser} handleLogout={this.handleLogout} />
-        );
-    }
+	handleSignOut = async () => {
+		await this.props.authStore.signOut();
+		alert('로그아웃되셨습니다!')
+	};
+	render() {
+		const { currentUser } = this.props.authStore;
+		return (
+      <Header currentUser={currentUser} handleSignOut={this.handleSignOut} />
+    );
+	}
 }
 
-export default HeaderContainer
+export default HeaderContainer;

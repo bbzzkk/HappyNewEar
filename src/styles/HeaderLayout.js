@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 const HeaderLayout = styled.div((props) => ({
-   height: "8em",
+  height: "8em",
   zIndex:'10000',
   backgroundColor: 'white',
   position:'fixed',

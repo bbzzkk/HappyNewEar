@@ -13,5 +13,4 @@ class SignInAndSignUpPage extends Component {
         );
     }
 }
-
 export default SignInAndSignUpPage;
