@@ -21,7 +21,7 @@ class Detail extends Component {
 
   render() {
     const { itemDetail, totalAmount, itemQuantity, OnChange } = this.props;
-
+    const { imageUrl, name, price} = itemDetail
     console.log(`디테일의 ${itemDetail.imageUrl}`);
         
     const width40 = {
@@ -44,7 +44,7 @@ class Detail extends Component {
       <DetailsWrapper>
         <Grid columns={2} padded="vertically">
           <Grid.Column>
-            <Image src={itemDetail.imageUrl} />
+            <Image src={'/'+imageUrl} />
           </Grid.Column>
 
           <Grid.Column className="DetailView">
@@ -59,8 +59,8 @@ class Detail extends Component {
                 <GridRow className="DetailViewGridRow">수량 </GridRow>
               </Grid.Column>
               <Grid.Column className="DetailViewGridColumn2" style={width60}>
-                <GridRow>{itemDetail.price}원 </GridRow>
-                <GridRow>{itemDetail.name}</GridRow>
+                <GridRow>{price}원 </GridRow>
+                <GridRow>{name}</GridRow>
                 <GridRow>
                   <Menu compact>
                     <Dropdown

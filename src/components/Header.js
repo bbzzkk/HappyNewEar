@@ -14,7 +14,11 @@ export default class Header extends Component{
         return (
           <HeaderLayout>
             <Link className="logoContainer" to="/">
-              <img className="logo" src="images/header/logo.png" alt="logo" />
+              <img
+                className="logo"
+                src="/images/header/logo.png"
+                alt="logo"
+              />
             </Link>
             <div className="categories">
               <div className="category">

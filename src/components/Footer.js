@@ -14,14 +14,14 @@ class Footer extends Component {
                 <div className="contact">
                     <a href="https://github.com/HappyNewEar">
                         <img
-                        src="images/footer/github-icon.PNG"
+                        src="/images/footer/github-icon.PNG"
                         alt="github-icon"
                         style={{ height: "2em" }}
                         />
                     </a>
                     <a href={"mailto:yeonzzu2@gmail.com"}>
                         <img
-                        src="images/footer/email-icon.jpg"
+                        src="/images/footer/email-icon.jpg"
                         alt="github-icon"
                         style={{ height: "1.9em" }}
                         />

@@ -12,7 +12,6 @@ const HeaderLayout = styled.div((props) => ({
     zIndex:'10000',
     flex: 1,
     backgroundColor: 'white',
-    // background: 'lightgray',
 
   ".logoContainer": {
     height: "auto",
