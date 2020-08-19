@@ -17,10 +17,10 @@ export default class Header extends Component{
                 <div className="options">
                 <div className="option">
                     {currentUser && <div onClick={handleSignOut}>SIGN OUT</div>}
-                    {!currentUser && <Link to="/signin">SIGN IN</Link>}
+                    {!currentUser && <Link style={{ textDecoration: 'none', color: 'black' }} to="/signin">SGIN IN</Link>}
                 </div>
                 <div className="option">
-                    <Link to="/cart"><Icon name = "shopping cart" size="big"/></Link>
+                    <Link to="/cart"><Icon name = "shopping cart" size="big" color='black'/></Link>
                 </div>
                 </div>
             </HeaderLayout>

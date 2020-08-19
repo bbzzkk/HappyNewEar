@@ -12,7 +12,6 @@ const HomepageLayout = styled.div(props => ({
     // overflow: 'auto',
 
     ".slide-container": {
-        marginTop: '1em',
         textAlign: 'center',
         marginLeft: '3em',
         marginRight: '3em',

@@ -11,7 +11,6 @@ const HeaderLayout = styled.div((props) => ({
     justifyContent: "space-between",
     zIndex:'10000',
     flex: 1,
-    padding: '1rem',
     backgroundColor: 'white',
     // background: 'lightgray',
 
@@ -19,30 +18,31 @@ const HeaderLayout = styled.div((props) => ({
     height: "auto",
     width: "auto",
     padding: "1rem",
-    paddingLeft: "4rem",
+    paddingLeft: "6rem",
   },
-  ".logo": {
+    ".logo": {
+    marginTop: "1rem",
     width: "20em",
     height: "4.5em",
     backgroundSize: "cover",
     backgroundPosition: "center",
   },
   ".options": {
-    width: "50%",
+    width: "400px",
     height: "100%",
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-end",
-    paddingRight: '100px',
+    marginRight: '6.0rem',
     ".option": {
       fontSize: "1.2em",
       padding: "15px 30px",
       cursor: "pointer",
+      fontColor: 'black',
     },
     div: {
       border: "0",
       outline: "0",
-      backgroundColor: "white",
     },
   },
 }));
