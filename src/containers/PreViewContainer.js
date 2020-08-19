@@ -30,8 +30,8 @@ class PreViewContainer extends Component {
         const previewList = itemjson.map(list => {
             return (
                 <>
-                    <Link to="/list" style={{color:'black'}}>
-                        <Category onClick={() => this.OnCategoryClick(list.id)}>{list.category}</Category>
+                    <Link className="list-link" to="/list">
+                        <h1 onClick={() => this.OnCategoryClick(list.id)}>{list.category}</h1>
                     </Link> 
                     <PreViewList
                         OnitemClick={this.OnitemClick}

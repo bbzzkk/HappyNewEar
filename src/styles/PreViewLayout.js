@@ -22,6 +22,18 @@ const PreViewWrapper = styled.div(props => ({
         height: '650px',
         maxWidth: '100%',
     },
+    ".previewList-container": {
+        display: 'flex',
+        flexDirection: 'column',
+        margin: '0 auto',
+        textAlign: 'center',
+    },
+    ".list-link": {
+        width: '5em',
+        color: 'black',
+        marginTop: '2em',
+        marginBottom: '2em',
+    },
 }))
 
 const PreViewListWrapper = styled.div(props => ({
@@ -40,15 +52,10 @@ const CartIconHover = styled.div(props => ({
     // }
  }))
 
-const Category = styled.h1(props => ({
-    // textAlign: 'center',
-    // paddingTop: '2rem',
- }))
 
 export {
     PreViewWrapper,
     PreViewListWrapper,
     PreViewItemWrapper,
     CartIconHover,
-    Category
 }
