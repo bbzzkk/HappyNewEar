@@ -7,6 +7,7 @@ import OverviewContainer from "../containers/OverviewContainer";
 class CategoryPage extends Component {
   render() {
     const categoryId = this.props.match.params
+    console.log(categoryId)
     return (
       <>
         {this.props.match.params !== "signin" ? (

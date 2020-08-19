@@ -5,7 +5,8 @@ import Item from './Item';
 import OverviewListLayout from "../styles/OverviewListLayout";
 class OverviewList extends Component {
 	render() {
-		const { categoryName, items, OnClickItem } = this.props;
+    const { categoryName, items, OnClickItem } = this.props;
+    console.log(categoryName)
     return (
       <OverviewListLayout>
         {items.map((item) => (

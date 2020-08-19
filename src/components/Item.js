@@ -21,6 +21,7 @@ class Item extends Component {
         const { item, categoryId, categoryName,OnClickItem } = this.props;
         const { id, imageUrl, name, price } = item;
 
+        console.log(categoryName)
         return (
             <ItemLayout>
             <Card>

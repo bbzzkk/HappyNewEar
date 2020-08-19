@@ -23,13 +23,37 @@ export default class ItemStore {
   itemDetail = ItemData[0].items[0];
 
   @observable
+  itemQuantity = 0
+
+  @observable
   cartBtnClicked = false;
 
-    @computed
-    get _cartBtnClicked() {
-        return this.cartBtnClicked;
-    }
-    
+  @observable
+  totalAmount = 0
+
+  @computed
+  get _cartBtnClicked() {
+      return this.cartBtnClicked;
+  }
+  
+  @computed
+  get _itemQuantity(){
+    return this._itemQuantity>0? this.itemQuantity : 0
+  }
+
+  @computed
+  get _totalAmount(){
+    return(
+      this.itemDetail && this.itemQuantity > 0 ?
+      this.itemDetail.price * this.itemQuantity : 0
+    )
+  }
+
+  @action
+  setQuantity(number){
+    this.itemQuantity = number
+  }
+
   @observable selectedCategoryId = ''
   @observable selectedItemId = ''
 
@@ -61,27 +85,12 @@ export default class ItemStore {
   }
   
   @action
-  clickItem(itemId, categoryId) {
-    this.itemDetail = ItemData[0].items[0]; // 초기화
-    this.itemData = ItemData; // 초기화
-    const categoryItems = (this.itemData = this.itemData.find(
-      (Json) => Json.id === categoryId
-    )); // 걸러준 카테고리의 items배열을 가져온다.
-    const items = categoryItems.items;
-    this.itemDetail = items.find((item) => item.id === itemId); // items 배열의 id를 이용해서 해당 아이템을 가져온다.
-    console.log(this.itemDetail);
-    this.itemData = ItemData; // 초기화  
-  }
-
-  @action
   clickCartBtn() {
       if (this.cartBtnClicked === true) {
           this.cartBtnClicked = false;
       } else {
           this.cartBtnClicked = true;
       }
-  }
-  selectItem(itemId, categoryId) {
   }
   
 }
