@@ -12,6 +12,11 @@ const AppLayout = styled.div((props) => ({
     ".routes": {
         paddingTop: '8em',
         minHeight: '80vh',
+    },
+
+    'a':{
+        textDecoration: 'None',
+        color:'black'
     }
 }))
 
