@@ -10,6 +10,8 @@ const FooterWrapper = styled.div(props => ({
     flexDirection: 'column',
     fontSize: '15px',
     borderTop: '1px solid black',
+    justifyContent: 'flex-end',
+    // flex: 1,
     // background: 'lightgray',
 
     ".address": {

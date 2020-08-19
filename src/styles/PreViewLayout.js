@@ -1,33 +1,22 @@
 import styled from '@emotion/styled';
 
-const PreViewWrapper = styled.div(props => ({
-    paddingTop: '8em',
-    margin: '0 auto',
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    // background: 'lightgray',
+const PreviewWrapper = styled.div(props => ({
+    // paddingTop: '75px',
+  // padding: '1rem',
+  // maxWidth: '1366px', // NOTE: Full Wide XGA / 1366x768 => 16:9
+  width: "100%",
+  margin: "0 auto",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  position: "relative",
+  justifyContent: "space-between",
+  marginTop:'5em',
+  // height:'100%',
+  // minHeight: '84vh',
+  // overflow: 'auto',
+  // backgroundColor: '#F5F6FF'
 
-    // paddingLeft: '1rem',
-    // paddingRight: '1rem',
-    // overflow: 'auto',
-
-    ".slide-container": {
-        marginTop: '1em',
-        textAlign: 'center',
-        marginLeft: '10em',
-        marginRight: '10em',
-    },
-    ".slide-img": {
-        height: '650px',
-        maxWidth: '100%',
-    },
-    ".previewList-container": {
-        display: 'flex',
-        flexDirection: 'column',
-        margin: '0 auto',
-        textAlign: 'center',
-    },
     ".list-link": {
         width: '5em',
         color: 'black',

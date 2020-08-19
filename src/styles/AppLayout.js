@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { GridColumn } from "semantic-ui-react";
 
 const AppLayout = styled.div((props) => ({
     fontcolor: 'black',
@@ -9,6 +8,11 @@ const AppLayout = styled.div((props) => ({
     margin: '0',
     display: 'flex',
     flexDirection: 'column',
+
+    ".routes": {
+        paddingTop: '8em',
+        minHeight: '80vh',
+    }
 }))
 
 export default AppLayout;
