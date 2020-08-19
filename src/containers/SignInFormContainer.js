@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+
 import { observer, inject } from "mobx-react";
+
 import SignInForm from "../components/SignInForm";
 
 @inject((stores) => ({ authStore: stores.authStore }))
@@ -10,9 +12,9 @@ class SignInFormContainer extends Component {
     this.props.authStore.changeSignInForm(name, value);
   };
 
-  handleSignIn = () => {
+  handleSignIn = async () => {
     const {email, password} = this.props.authStore;
-    this.props.authStore.signIn(email, password);
+    await this.props.authStore.signIn(email, password);
   };
 
   handleSignInWithGoogle = () => {
@@ -33,5 +35,5 @@ class SignInFormContainer extends Component {
   }
 }
 
-export default SignInFormContainer;
+export default SignInFormContainer
 

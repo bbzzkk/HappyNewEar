@@ -4,7 +4,7 @@ import { observer, inject } from "mobx-react";
 
 import PreViewList from '../components/PreviewList'
 
-import { PreViewWrapper } from '../styles/PreViewLayout';
+import { PreviewWrapper } from "../styles/PreviewLayout";
 
 @inject((stores) => ({
   itemStore: stores.itemStore,
@@ -20,7 +20,7 @@ class PreviewContainer extends Component {
 	render() {
 		const { itemData } = this.props.itemStore;	
 		return (
-      <PreViewWrapper>
+      <PreviewWrapper>
         {itemData.map((categoryItems) => (
           <PreViewList
             key={categoryItems.id}
@@ -29,7 +29,7 @@ class PreviewContainer extends Component {
             OnClickItem={this.OnClickItem}
           />
         ))}
-      </PreViewWrapper>
+      </PreviewWrapper>
     );
 }}
 

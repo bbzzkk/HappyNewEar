@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 import { observer, inject } from "mobx-react";
 
@@ -49,7 +49,15 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route path="/category" component={CategoryPage} />
-            <Route path="/signin" component={SignInAndSignUpPage} />
+            <Route 
+              exact path="/signin"
+              render={()=>
+                this.props.currentUser?
+                (<Redirect to = '/' />)
+                :
+                (<SignInAndSignUpPage/>)
+              }
+            />
             <Route path="/cart" component={CartPage} />
             <Route path="/detail" component={DetailPage} />
           </Switch>

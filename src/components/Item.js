@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 
 import { Link } from "react-router-dom";
 
-import { PreViewItemWrapper, CartIconHover } from "../styles/PreViewLayout";
+import { PreViewItemWrapper, CartIconHover } from "../styles/PreviewLayout";
 import { Card, Icon, Image, Grid } from "semantic-ui-react";
+import ItemLayout from '../styles/ItemLayout'
+import CustomButton from '../styles/CustomButton'
 
 class Item extends Component {
 	render() {
@@ -14,7 +16,7 @@ class Item extends Component {
 		} = this.props;
 
 		return (
-      <PreViewItemWrapper>
+      <ItemLayout>
         <Card>
           <Link to="/detail">
             <Image
@@ -33,15 +35,16 @@ class Item extends Component {
                 <p style={{ color: "black", fontSize: "15px" }}>{price}원</p>
               </Grid.Column>
               <Grid.Column textAlign="center">
-                <CartIconHover>
-                  <Icon name="shopping basket" color="grey" size="large" />
-                  <label>담기</label>
-                </CartIconHover>
+                <CustomButton>
+                  관심상품 담기
+                  {/* <Icon name="shopping basket" color="grey" size="large" />
+                  <label>담기</label> */}
+                </CustomButton>
               </Grid.Column>
             </Grid>
           </Card.Content>
         </Card>
-      </PreViewItemWrapper>
+      </ItemLayout>
     );
 	}
 }

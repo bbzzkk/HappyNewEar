@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-const PreViewWrapper = styled.div(props => ({
+const PreviewWrapper = styled.div(props => ({
     paddingTop: '75px',
     padding: '1rem',
     maxWidth: '1366px', // NOTE: Full Wide XGA / 1366x768 => 16:9
@@ -27,8 +27,8 @@ const CartIconHover = styled.div(props => ({
  }))
 
 export {
-    PreViewWrapper,
-    PreViewListWrapper,
-    PreViewItemWrapper,
-    CartIconHover,
-}
+  PreviewWrapper,
+  PreViewListWrapper,
+  PreViewItemWrapper,
+  CartIconHover,
+};
