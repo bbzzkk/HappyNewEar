@@ -12,7 +12,7 @@ const slideImages = [
 class Slider extends Component {
   render() {
     return (
-      <div className="slide-container" height="fit-content">
+      <div className="slide-container" height="fit-content" style={{paddingTop: '8em'}}>
         <Slide>
           <div
             className="each-slide"

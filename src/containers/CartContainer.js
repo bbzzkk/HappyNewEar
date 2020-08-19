@@ -46,7 +46,7 @@ class CartContainer extends Component {
 		return (
       <div
         className="CartContainer"
-        style={{ marginLeft: 50, marginRight: 50 }}
+        style={{ marginLeft: 50, marginRight: 50, paddingTop: '8em' }}
       >
 			<h2 style={{ marginTop: 10 }}>장바구니</h2>
 			{cartStore._items.length !== 0 ? 
