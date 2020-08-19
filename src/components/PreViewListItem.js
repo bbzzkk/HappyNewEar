@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { PreViewItemWrapper } from '../styles/PreViewLayout';
+import { PreViewItemWrapper } from '../styles/PreviewLayout';
 import { Card, Icon, Image, Grid  } from 'semantic-ui-react'
-import { CartIconHover } from '../styles/PreViewLayout';
+import { CartIconHover } from '../styles/PreviewLayout';
 import { Link } from "react-router-dom";
 
 class PreViewListItem extends Component {

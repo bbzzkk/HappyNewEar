@@ -4,43 +4,19 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
 const slideImages = [
-  "images/slider/case.jpg",
-  "images/slider/event.jpg",
-  "images/slider/yellow.jpg",
+  "images/slider/slider1.jpg",
+  "images/slider/slider2.jpg",
+  "images/slider/slider3.jpg",
 ];
 
 class Slider extends Component {
   render() {
     return (
-      <div className="slide-container" height="fit-content" style={{paddingTop: '8em'}}>
+      <div className="slide-container">
         <Slide>
-          <div
-            className="each-slide"
-            style={{
-              backgroundImage: `url(${slideImages[0]})`,
-              height: "700px",
-            }}
-          >
-            <div style={{ backgroundImage: `url(${slideImages[0]})` }}></div>
-          </div>
-          <div
-            className="each-slide"
-            style={{
-              backgroundImage: `url(${slideImages[1]})`,
-              height: "700px",
-            }}
-          >
-            <div style={{ backgroundImage: `url(${slideImages[1]})` }}></div>
-          </div>
-          <div
-            className="each-slide"
-            style={{
-              backgroundImage: `url(${slideImages[2]})`,
-              height: "700px",
-            }}
-          >
-            <div style={{ backgroundImage: `url(${slideImages[2]})` }}></div>
-          </div>
+            <img className="slide-img" src={slideImages[0]} alt="test"/>
+            <img className="slide-img" src={slideImages[1]} alt="test"/>
+            <img className="slide-img" src={slideImages[2]} alt="test"/>
         </Slide>
       </div>
     );
