@@ -24,12 +24,15 @@ class DetailContainer extends Component {
     
     console.log(`${itemDetail.imageUrl}`)
     return (
-      <Detail
-        itemDetail={itemDetail}
-        itemQuantity={itemQuantity}
-        totalAmount={_totalAmount}
-        OnChange={this.OnChange}
-      />
+      <>
+        <div style={{ backgroundImage: itemDetail.imageUrl }} />
+        <Detail
+          itemDetail={itemDetail}
+          itemQuantity={itemQuantity}
+          totalAmount={_totalAmount}
+          OnChange={this.OnChange}
+        />
+      </>
     );
   }
 }

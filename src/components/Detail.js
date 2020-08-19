@@ -44,7 +44,7 @@ class Detail extends Component {
       <DetailsWrapper>
         <Grid columns={2} padded="vertically">
           <Grid.Column>
-            <Image src={require(itemDetail.imageUrl)} />
+            <Image src={itemDetail.imageUrl} />
           </Grid.Column>
 
           <Grid.Column className="DetailView">
