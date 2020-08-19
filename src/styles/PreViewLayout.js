@@ -7,7 +7,6 @@ const PreviewLayout = styled.div(props => ({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "space-between",
-
 }))
 
 export {

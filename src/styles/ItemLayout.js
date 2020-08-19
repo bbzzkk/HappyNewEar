@@ -8,7 +8,7 @@ const ItemLayout = styled.div((props) => ({
     userSelect: 'none',
 
     ".item-image": {
-        width: "auto",
+        width: "290px",
         height: "290px",
         backgroundSize: "cover",
         backgroundPosition: "center",

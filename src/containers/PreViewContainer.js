@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import { observer, inject } from "mobx-react";
 
 import PreviewList from '../components/PreviewList'
@@ -23,6 +24,9 @@ class PreviewContainer extends Component {
 		const { itemData } = this.props.itemStore;	
 		return (
       <PreviewLayout>
+        <div className="today-item">
+            <img alt='NoImage' src="images/header/todayitem.jpg" />
+        </div>
         {itemData.map((categoryItems) => (
           <PreviewList
             key={categoryItems.id}
