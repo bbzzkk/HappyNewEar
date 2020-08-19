@@ -12,21 +12,28 @@ export default class Header extends Component{
         const { currentUser, handleSignOut } = this.props;
       
         return (
-            <HeaderLayout>
-                <Link className="logoContainer" to="/">
-                <img className="logo" src="images/header/logo.png" alt="logo" />
+          <HeaderLayout>
+            <Link className="logoContainer" to="/">
+              <img className="logo" src="images/header/logo.png" alt="logo" />
+            </Link>
+            <div className="navigation">
+              <Link to="/case">CASE</Link>
+              <Link to="/keyring">KEYRING</Link>
+              <Link to="/sticker">STICKER</Link>
+            </div>
+            <div className="options">
+              <div className="option">
+                {currentUser && <div onClick={handleSignOut}>SIGN OUT</div>}
+                {!currentUser && <Link to="/signin">SIGN IN</Link>}
+              </div>
+              <div className="option">
+                <Link to="/cart">
+                  <Icon name="shopping cart" size="big" />
                 </Link>
-                <div className="options">
-                    <div className="option">
-                        {currentUser && <div onClick={handleSignOut}>SIGN OUT</div>}
-                        {!currentUser && <Link to="/signin">SIGN IN</Link>}
-                    </div>
-                    <div className="option">
-                        <Link to="/cart"><Icon name = "shopping cart" size="big"/></Link>
-                    </div>
-                </div>
-                {/* <CartDropDown/> */}
-            </HeaderLayout>
+              </div>
+            </div>
+            {/* <CartDropDown/> */}
+          </HeaderLayout>
         );
   }
 }

@@ -15,7 +15,6 @@ class OverviewContainer extends Component {
   render() {
     const { categoryId } = this.props.categoryId;
     this.props.itemStore.selectCategory(categoryId);
-    console.log(this.props.itemStore.selectedCategory)
     return (
       <OverviewList
         categoryName={categoryId}
