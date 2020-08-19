@@ -33,7 +33,6 @@ export default class ItemStore {
       }).items.find((item) => {
         return item.id === parseInt(productId)
       });
-      console.log(this.itemDetail)
   }
 
   @action
