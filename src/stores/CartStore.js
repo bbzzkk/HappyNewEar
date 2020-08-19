@@ -3,7 +3,7 @@ import { observable, computed, action } from 'mobx';
 import UserData from "../data/UserData";
 
 class CartStore {
-  @observable user = UserData[2];
+  @observable user = UserData[3];
   @observable items = this.user.items.sort(function (a, b) {
     return a.category < b.category ? -1 : a.category > b.category ? 1 : 0;
   });
@@ -79,8 +79,23 @@ class CartStore {
     this.allChecked = isAllChecked;
   };
 
+  // 아래 두 delete 함수에 cartBtnClicked를 처리해야 함
   @action
-  deleteSelected = () => {
+  deleteSelected = (itemData) => {
+      const deleteItems = this.items
+          .filter((item) => item.checked === true)
+          .map(item => item.name);
+
+    itemData.map(itemData => {
+        itemData = itemData.items.map(item => {
+            if (deleteItems.indexOf(item.name) !== -1) {
+                item.cartBtnClicked = false;
+            }
+            return item;
+        })
+        return itemData;
+    })
+
     this.items = this.items.filter((item) => item.checked !== true);
   };
 
@@ -110,12 +125,6 @@ class CartStore {
       return item;
     });
   };
-
-  @action
-  put = (listName, item) => {};
-
-  @action
-  take = () => {};
 
   @action
   addItem=(item)=>{

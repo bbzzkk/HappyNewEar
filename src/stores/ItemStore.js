@@ -26,16 +26,8 @@ export default class ItemStore {
   itemQuantity = 0
 
   @observable
-  cartBtnClicked = false;
-
-  @observable
   totalAmount = 0
 
-  @computed
-  get _cartBtnClicked() {
-      return this.cartBtnClicked;
-  }
-  
   @computed
   get _itemQuantity(){
     return this._itemQuantity>0? this.itemQuantity : 0
@@ -83,14 +75,4 @@ export default class ItemStore {
         return categoryItems.id === this.CATEGORY_ID_MAP[categoryId];
       });
   }
-  
-  @action
-  clickCartBtn() {
-      if (this.cartBtnClicked === true) {
-          this.cartBtnClicked = false;
-      } else {
-          this.cartBtnClicked = true;
-      }
-  }
-  
 }
