@@ -44,30 +44,18 @@ class PreViewContainer extends Component {
         })
         return (
             <div>
-                <div className="slide-container" height="fit-content" >
+                <div className="slide-container" height="fit-content" style={{paddingTop: '8em'}}>
                     <Slide>
                         <div className="each-slide" style={{'backgroundImage': `url(${slideImages[0]})`, height:'700px'}}>
                             <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
-<<<<<<< HEAD
-                           
-=======
->>>>>>> 86d3ac87b049d812c02527f0fe1311ab89252ddf
                             </div>
                         </div>
                         <div className="each-slide" style={{'backgroundImage': `url(${slideImages[1]})`, height:'700px'}}>
                             <div style={{'backgroundImage': `url(${slideImages[1]})`}}>
-<<<<<<< HEAD
-                        
-=======
->>>>>>> 86d3ac87b049d812c02527f0fe1311ab89252ddf
                             </div>
                         </div>
                         <div className="each-slide" style={{'backgroundImage': `url(${slideImages[2]})`, height:'700px'}}>
                             <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
-<<<<<<< HEAD
-                         
-=======
->>>>>>> 86d3ac87b049d812c02527f0fe1311ab89252ddf
                             </div>
                         </div>
                     </Slide>

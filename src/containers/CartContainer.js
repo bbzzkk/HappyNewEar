@@ -48,6 +48,7 @@ class CartContainer extends Component {
                 {
                     marginLeft: 50,
                     marginRight: 50,
+                    paddingTop: '8em'
                 }}>
                 <h2 style={{
                     marginTop: 10,
