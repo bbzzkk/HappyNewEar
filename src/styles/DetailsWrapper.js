@@ -23,18 +23,17 @@ const DetailsWrapper = styled.div((props) => ({
     color: "#555555",
   }, // 오른쪽
 
-  ".ui.primary.button": {
+  "div.button > div > button.css-awga7p": {
     width: "100%",
     height: "50px",
-    marginTop: "100px",
-    backgroundColor: "white",
-    color: "black",
+    marginTop: "70px",
     border: "1px solid #7d7d7d",
     letterSpacing: "1.5px",
   },
 
   "div.TOTAL.PRICE": {
     marginTop: "30px",
+    letterSpacing: "1px",
   },
   "div.TOTAL.PRICE > span.total > strong > em": {
     color: "black",
