@@ -10,6 +10,8 @@ import Header from '../components/Header'
 class HeaderContainer extends Component {
 	handleSignOut = async () => {
 		await this.props.authStore.signOut();
+		// this.props.itemStore.item
+		this.props.cartStore.clearItem();
 		alert('로그아웃되셨습니다!')
 	};
 	render() {

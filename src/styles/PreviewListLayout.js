@@ -3,8 +3,8 @@ import styled from "@emotion/styled";
 const PreviewListLayout = styled.div((props) => ({
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-between",
-    margin: '0 auto',
+    // justifyContent: "space-between",
+    // margin: '0 auto',
     marginBottom: "2.5em",
 
     "div": {

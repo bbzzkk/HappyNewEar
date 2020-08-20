@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import LoginForm from "../components/LoginForm";
+
 import { observer, inject } from "mobx-react";
 
 @inject(stores => ({login: stores.login}))

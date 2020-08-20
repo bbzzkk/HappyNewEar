@@ -131,6 +131,11 @@ class CartStore {
   addItem=(item)=>{
     this.items = [...this.items, item]
   }
+
+  @action
+  clearItem=()=>{
+    this.items = []
+  }
 }
 
 export default CartStore;

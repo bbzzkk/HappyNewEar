@@ -65,6 +65,7 @@ export default class AuthStore {
     }= this
     if(signUpPassword !== confirmedPassword){
       alert('입력하신 비밀번호가 서로 다릅니다.')
+      return
     }
     try{
       const {user} = await auth.createUserWithEmailAndPassword(signUpEmail, signUpPassword);
@@ -77,7 +78,7 @@ export default class AuthStore {
       this.confirmedPassword = "";
       this.displayName = "";
     }catch(error){
-      console.error(error.message)
+      alert(error.message)
     }
   }
 }

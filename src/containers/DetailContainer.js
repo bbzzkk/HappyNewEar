@@ -7,6 +7,7 @@ import Detail from "../components/Detail";
 @inject((stores) => ({
   itemStore: stores.itemStore,
   cartStore: stores.cartStore,
+  authStore: stores.authStore
 }))
 @observer
 class DetailContainer extends Component {
@@ -16,8 +17,12 @@ class DetailContainer extends Component {
   };
 
   onAddCart = () => {
-    console.log("2222222222222");
-    const { itemStore, cartStore } = this.props;
+    if (!this.props.authStore.currentUser) {
+      alert("로그인을 해주세요!");
+      return;
+    }
+    const {itemStore, cartStore} = this.props
+
     const item = {
       ...itemStore.itemDetail,
       category: itemStore.selectedCategoryId,
