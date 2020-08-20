@@ -40,6 +40,7 @@ class DetailContainer extends Component {
         options={options}
         OnChange={this.OnChange}
         onAddCart={this.onAddCart}
+        description={this.description}
       />
     );
   }

@@ -2,12 +2,17 @@ import styled from "@emotion/styled";
 
 const ItemLayout = styled.div((props) => ({
     textAlign: "center",
-    // margin: '0 auto',
-    marginLeft:'0.5em',
-    marginRight:'0.5em',
     userSelect: 'none',
+    marginLeft: '0.5em',
+    marginRight: '0.5em',
     boxShadow: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
+    width: '290px',
 
+    ".card-wrapper": {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
     ".item-image": {
         width: "290px",
         height: "290px",
@@ -34,16 +39,6 @@ const ItemLayout = styled.div((props) => ({
     ".button:hover": {
         backgroundColor: '#F3F3F3',
     },
-    // ".button:hover": {
-    //     "label": {
-    //         color: 'blue',
-    //         fontWeight: 'bold',
-    //         fontSize: '15px',
-    //     },
-    //     ".icon": {
-    //         color: 'blue',
-    //     }
-    // },
 }));
 
 export default ItemLayout;

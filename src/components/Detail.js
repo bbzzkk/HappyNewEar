@@ -29,6 +29,7 @@ class Detail extends Component {
       options,
       OnChange,
       onAddCart,
+      description
     } = this.props;
 
     const width40 = {

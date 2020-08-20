@@ -25,8 +25,8 @@ const BestListLayout = styled.div((props) => ({
   flexDirection: "column",
   marginTop: "2em",
   marginBottom: "1em",
-  marginLeft: "10%",
-  marginRight: "10%",
+  marginLeft: "0.5em",
+  marginRight: "0.5em",
   textAlign: "center",
   ".title": {
     animation: `${bounce} 1s ease infinite`,
@@ -39,6 +39,7 @@ const BestListLayout = styled.div((props) => ({
   },
   ".item-wrapper": {
     marginBottom: "2em",
+    flex: '1 0 21%',
   },
 }));
 
