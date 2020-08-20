@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
-const CartLayout = styled.div((props) => ({
-  width:'100%'
+const CartListLayout = styled.div((props) => ({
+  width: "200%",
   // display: "flex",
   // flexDirection: "column",
   // marginLeft: "10%",
@@ -11,4 +11,4 @@ const CartLayout = styled.div((props) => ({
   // },
 }));
 
-export default CartLayout;
+export default CartListLayout;

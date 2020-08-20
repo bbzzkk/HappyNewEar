@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import AddCartDialog from './Notification/AddCartDialog'
+import AddCartDialog from "./Notification/AddCartDialog";
 
 import { DetailsWrapper } from "../styles/DetailsWrapper";
 import {
@@ -19,6 +19,9 @@ import {
 class Detail extends Component {
   state = {
     itemCnt: 1,
+  };
+  numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
   render() {
@@ -47,7 +50,7 @@ class Detail extends Component {
               src={"/" + imageUrl}
               style={{
                 boxShadow:
-                  " 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
+                  " 10px 10px 10px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
               }}
             />
           </Grid.Column>
@@ -61,11 +64,13 @@ class Detail extends Component {
               <Grid.Column className="DetailViewGridColumn1" style={width40}>
                 <GridRow className="DetailViewGridRow">판매가 </GridRow>
                 <GridRow className="DetailViewGridRow">이름 </GridRow>
+                <GridRow className="DetailViewGridRow">배송비 </GridRow>
                 <GridRow className="DetailViewGridRow">수량 </GridRow>
               </Grid.Column>
               <Grid.Column className="DetailViewGridColumn2" style={width60}>
-                <GridRow>{price}원 </GridRow>
+                <GridRow>{this.numberWithCommas(price)}원 </GridRow>
                 <GridRow>{name}</GridRow>
+                <GridRow>무료</GridRow>
                 <GridRow>
                   <Menu>
                     <Dropdown
@@ -85,16 +90,18 @@ class Detail extends Component {
               <Header>TOTAL PRICE</Header>
               <span className="total">
                 <strong>
-                  <em>{totalPrice}원 </em>
+                  <em>{this.numberWithCommas(totalPrice)}원 </em>
                 </strong>
                 ({itemQuantity}개)
               </span>
             </div>
-            <AddCartDialog
-              totalPrice={totalPrice}
-              onAddCart={onAddCart}
-              buttonText="ADD TO CART"
-            />
+            <div className="button">
+              <AddCartDialog
+                totalPrice={totalPrice}
+                onAddCart={onAddCart}
+                buttonText="ADD TO CART"
+              />
+            </div>
           </Grid.Column>
         </Grid>
       </DetailsWrapper>

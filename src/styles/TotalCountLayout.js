@@ -11,11 +11,15 @@ const TotalCountLayout = styled.div((props) => ({
     color: "white !important",
     backgroundColor: "#FC4C4E !important",
     letterSpacing: "1.5px",
+
     "&: hover": {
       fontWeight: "bold",
       border: "solid #FC4C4E !important",
       color: "black !important",
       backgroundColor: "white !important",
+    },
+    "div.column.totalAmount > div.ui.horizontal.statistic": {
+      marginLeft: "-200px",
     },
   },
 }));
