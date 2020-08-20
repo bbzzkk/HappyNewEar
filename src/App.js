@@ -43,6 +43,7 @@ class App extends Component {
 
   render() {
     const {currentUser} = this.props.authStore
+     console.log(currentUser);
     return (
       <AppLayout>
         <HeaderContainer />

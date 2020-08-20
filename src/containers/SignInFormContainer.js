@@ -13,6 +13,7 @@ class SignInFormContainer extends Component {
   handleSignIn = async () => {
     const {email, password} = this.props.authStore;
     await this.props.authStore.signIn(email, password);
+    if(!this.props.authStore.currentUser) alert('새로 오신 분입니다. 회원가입을 해주세요')
   };
 
   handleSignInWithGoogle = () => {
@@ -21,6 +22,7 @@ class SignInFormContainer extends Component {
 
   render() {
     const { email, password } = this.props.authStore;
+   
     return (
       <SignInForm
         email={email}

@@ -3,7 +3,8 @@ import {inject, observer} from 'mobx-react'
 import Header from '../components/Header'
 
 @inject((stores) => ({
-  authStore: stores.authStore,
+	authStore: stores.authStore,
+	cartStore: stores.cartStore
 }))
 @observer
 class HeaderContainer extends Component {
@@ -12,9 +13,14 @@ class HeaderContainer extends Component {
 		alert('로그아웃되셨습니다!')
 	};
 	render() {
-		const { currentUser } = this.props.authStore;
+		const { authStore, cartStore } = this.props;
+		const cartSize = cartStore._items.length
 		return (
-      <Header currentUser={currentUser} handleSignOut={this.handleSignOut} />
+      <Header
+        cartSize={cartSize}
+        currentUser={authStore.currentUser}
+        handleSignOut={this.handleSignOut}
+      />
     );
 	}
 }

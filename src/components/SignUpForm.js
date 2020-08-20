@@ -26,56 +26,54 @@ class SignUpForm extends Component {
         };
     
     return (
-        <SignInAndUpFormLayout>
-            <Card style={formWidth}>
-            <CardHeader
-                style={{ textAlign: "center" }}
-                title="아직 가입하지 않으셨나요?"
-                subheader="몇 가지 정보만 기입하시면 됩니다"
+      <SignInAndUpFormLayout>
+        <Card style={formWidth}>
+          <CardHeader
+            style={{ textAlign: "center" }}
+            title="아직 가입하지 않으셨나요?"
+            subheader="몇 가지 정보만 기입하시면 됩니다"
+          />
+          <form onSubmit={handleSignUp}>
+            <TextField
+              name="displayName"
+              type="text"
+              label="Display Name"
+              onChange={handleChange}
+              value={displayName}
+              required
+              style={inputWidth}
             />
-            <form onSubmit={handleSignUp}>
-                <TextField
-                name="displayName"
-                type="text"
-                label="Display Name"
-                onChange={handleChange}
-                value={displayName}
-                required
-                style={inputWidth}
-                />
-                <TextField
-                name="signUpEmail"
-                type="email"
-                label="Email"
-                onChange={handleChange}
-                value={signUpEmail}
-                required
-                style={inputWidth}
-                />
-                <TextField
-                name="signUpPassword"
-                type="password"
-                label="Password"
-                onChange={handleChange}
-                value={signUpPassword}
-                required
-                style={inputWidth}
-                />
-                <TextField
-                name="confirmedPassword"
-                type="password"
-                label="Confirmed Password"
-                onChange={handleChange}
-                value={confirmedPassword}
-                required
-                style={inputWidth}
-                />
-                <CustomButton variant="outlined" color="primary" type="submit">
-                새로 시작하기
-                </CustomButton>
-            </form>
-            </Card>
-        </SignInAndUpFormLayout>
+            <TextField
+              name="signUpEmail"
+              type="email"
+              label="Email"
+              onChange={handleChange}
+              value={signUpEmail}
+              required
+              style={inputWidth}
+            />
+            <TextField
+              name="signUpPassword"
+              type="password"
+              label="Password"
+              onChange={handleChange}
+              value={signUpPassword}
+              required
+              style={inputWidth}
+            />
+            <TextField
+              name="confirmedPassword"
+              type="password"
+              label="Confirmed Password"
+              onChange={handleChange}
+              value={confirmedPassword}
+              required
+              style={inputWidth}
+            />
+            <CustomButton>새로 시작하기</CustomButton>
+          </form>
+        </Card>
+      </SignInAndUpFormLayout>
     );
   }
 }

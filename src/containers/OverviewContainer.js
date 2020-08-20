@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { observer, inject } from "mobx-react";
 
 import OverviewList from "../components/OverviewList";
+import NewArrivalList from "../components/BestItemList";
 
 @inject((stores) => ({
   itemStore: stores.itemStore,
@@ -12,18 +13,22 @@ class OverviewContainer extends Component {
   OnClickItem = (ItemId, CategoryId) => {
     this.props.itemStore.selectItem(ItemId, CategoryId);
   };
-  componentWillUnmount(){
-    
-  }
   render() {
     const { categoryId } = this.props.categoryId;
     this.props.itemStore.selectCategory(categoryId);
     return (
-      <OverviewList
-        categoryName={categoryId}
-        items={this.props.itemStore.selectedCategory.items}
-        OnClickItem={this.OnClickItem}
-      />
+      <>
+        <NewArrivalList
+          categoryName={categoryId}
+          items={this.props.itemStore.selectedCategory.items}
+          OnClickItem={this.OnClickItem}
+        />
+        <OverviewList
+          categoryName={categoryId}
+          items={this.props.itemStore.selectedCategory.items}
+          OnClickItem={this.OnClickItem}
+        />
+      </>
     );
   }
 }

@@ -13,6 +13,14 @@ export default class ItemStore {
     sticker: 3
   }
 
+  options = [
+      { key: 1, text: "1개", value: 1 },
+      { key: 2, text: "2개", value: 2 },
+      { key: 3, text: "3개", value: 3 },
+      { key: 4, text: "4개", value: 4 },
+      { key: 5, text: "5개", value: 5 },
+    ];
+
   @observable 
   itemData = ItemData;
 
@@ -26,7 +34,7 @@ export default class ItemStore {
   itemQuantity = 0
 
   @observable
-  totalAmount = 0
+  totalPrice = 0
 
   @computed
   get _itemQuantity(){
@@ -34,7 +42,7 @@ export default class ItemStore {
   }
 
   @computed
-  get _totalAmount(){
+  get _totalPrice(){
     return(
       this.itemDetail && this.itemQuantity > 0 ?
       this.itemDetail.price * this.itemQuantity : 0
@@ -51,6 +59,7 @@ export default class ItemStore {
 
   @action
   selectItemDetail(categoryId, productId){
+    this.selectedCategoryId=categoryId
     this.itemDetail = this.itemData
       .find((categoryItems) => {
         return categoryItems.id === this.CATEGORY_ID_MAP[categoryId];
@@ -60,19 +69,16 @@ export default class ItemStore {
   }
 
   @action
-  clickCategory(categoryId) {
-    this.selectedCategory = ItemData; //초기화
-    this.selectedCategory = this.selectedCategory.find(
-      (categoryItems) => categoryItems.id === categoryId
-    );
-  }
-
-  // 라우터 연결
-  @action
   selectCategory(categoryId) {
     this.selectedCategory = this.itemData.find(
         (categoryItems) =>{
         return categoryItems.id === this.CATEGORY_ID_MAP[categoryId];
       });
+  }
+
+  @action
+  resetAmountOfItem(){
+    this.itemQuantity = 0
+    this.totalPrice = 0
   }
 }

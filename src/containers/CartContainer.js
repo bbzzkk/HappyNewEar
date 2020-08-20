@@ -5,11 +5,8 @@ import { inject, observer } from "mobx-react";
 import CartList from '../components/CartList';
 import EmptyCart from '../components/EmptyCart';
 import TotalCount from '../components/TotalCount';
-import Cart from '../components/Cart';
 
 import { CartLayout } from '../styles/CartLayout';
-import { Item, Grid, Segment } from 'semantic-ui-react';
-
 
 @inject((stores) => ({ 
     cartStore: stores.cartStore,
@@ -64,33 +61,30 @@ class CartContainer extends Component {
         const { cartStore } = this.props;
         
 		return (
-            <CartLayout>
-                <h2>장바구니</h2>
-                {
-                    cartStore._items.length !== 0 ? 
-                    <div>
-                        <CartList
-                            items={cartStore._items}
-                            allChecked={cartStore._allChecked}
-                            onHandleAllCheck={this.onHandleAllCheck}
-                            onHandleCheck={this.onHandleCheck}
-                            onDeleteSelected={this.onDeleteSelected}
-                            onDeleteItem={this.onDeleteItem}
-                            onAddClick={this.onAddClick}
-                            onSubClick={this.onSubClick}
-                        />
-                        <TotalCount
-                            itemCount={cartStore._itemCount}
-                            totalPrice={cartStore._totalPrice}
-                        />
-                    </div>
-                    : <EmptyCart />
-                }
-            </CartLayout>
-           
-
-            
-        )
+      <CartLayout>
+          <h2 className="title">장바구니</h2>
+          {cartStore._items.length !== 0 ? (
+            <div className="cart-inside-layout">
+              <CartList
+                items={cartStore._items}
+                allChecked={cartStore._allChecked}
+                onHandleAllCheck={this.onHandleAllCheck}
+                onHandleCheck={this.onHandleCheck}
+                onDeleteSelected={this.onDeleteSelected}
+                onDeleteItem={this.onDeleteItem}
+                onAddClick={this.onAddClick}
+                onSubClick={this.onSubClick}
+              />
+              <TotalCount
+                itemCount={cartStore._itemCount}
+                totalPrice={cartStore._totalPrice}
+              />
+            </div>
+          ) : (
+            <EmptyCart />
+          )}
+      </CartLayout>
+    );
     }
 }
 
