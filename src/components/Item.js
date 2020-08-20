@@ -10,15 +10,29 @@ import ItemLayout from '../styles/ItemLayout'
 
 @inject((stores) => ({
   itemStore: stores.itemStore,
+  cartStore: stores.cartStore,
 }))
 @observer
 class Item extends Component {
-    handleAddItem() {
-        this.props.cartStore.addItem();
-    }
-
     numberWithCommas = (x) => {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    OnClickCartBtn = () => {
+        if (this.props.item.cartBtnClicked === true) {
+            this.props.item.cartBtnClicked = false;
+            this.props.cartStore.deleteItem(this.props.item.name);
+        } else {
+            const addItem = {
+                ...this.props.item,
+                category: this.props.categoryName,
+                checked: true,
+                count: 1,
+            }
+            delete addItem['cartBtnClicked'];
+            this.props.cartStore.addItem(addItem);
+            this.props.item.cartBtnClicked = true;
+        }
     }
 
 	render() {
@@ -45,11 +59,10 @@ class Item extends Component {
                       {this.numberWithCommas(price)}원
                     </p>
                   </Grid.Column>
-                  {/* <Grid.Column className='button' textAlign='center' onClick={() => OnClickCartBtn()}> */}
-                  <Grid.Column className="button" textAlign="center">
+                  <Grid.Column className='button' textAlign='center' onClick={() => this.OnClickCartBtn()}>
                     {
-                      // cartBtnClicked === false
-                      //     ?
+                      item.cartBtnClicked === false
+                          ?
                       <>
                         <Icon
                           className="icon"
@@ -59,11 +72,11 @@ class Item extends Component {
                         />
                         <label className="put">담기</label>
                       </>
-                      // :
-                      // <>
-                      //     <Icon className='icon' name='shopping basket' color='blue' size='large' />
-                      //     <label className="takeout">빼기</label>
-                      // </>
+                      :
+                      <>
+                          <Icon className='icon' name='shopping basket' color='blue' size='large' />
+                          <label className="takeout">빼기</label>
+                      </>
                     }
                   </Grid.Column>
                 </Grid>

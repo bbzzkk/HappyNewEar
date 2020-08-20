@@ -10,6 +10,7 @@ const ItemData = [
         date: 1597370030048,
         price: 10000,
         imageUrl: "images/item/case/1.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 2,
@@ -17,6 +18,7 @@ const ItemData = [
         date: 1597370030050,
         price: 10000,
         imageUrl: "images/item/case/2.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 3,
@@ -24,6 +26,7 @@ const ItemData = [
         date: 1597370030099,
         price: 10000,
         imageUrl: "images/item/case/3.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 4,
@@ -31,6 +34,7 @@ const ItemData = [
         date: 1597370130048,
         price: 10000,
         imageUrl: "images/item/case/4.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 5,
@@ -38,6 +42,7 @@ const ItemData = [
         date: 1597370130003,
         price: 10000,
         imageUrl: "images/item/case/5.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 6,
@@ -45,6 +50,7 @@ const ItemData = [
         date: 1597370130068,
         price: 20000,
         imageUrl: "images/item/case/6.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 7,
@@ -52,6 +58,7 @@ const ItemData = [
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/7.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 8,
@@ -59,6 +66,7 @@ const ItemData = [
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/8.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 9,
@@ -66,6 +74,7 @@ const ItemData = [
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/9.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 10,
@@ -73,6 +82,7 @@ const ItemData = [
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/10.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 11,
@@ -80,6 +90,7 @@ const ItemData = [
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/11.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 12,
@@ -87,6 +98,7 @@ const ItemData = [
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/12.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 13,
@@ -94,6 +106,7 @@ const ItemData = [
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/13.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 14,
@@ -101,6 +114,7 @@ const ItemData = [
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/14.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 15,
@@ -108,6 +122,7 @@ const ItemData = [
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/15.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 16,
@@ -115,6 +130,7 @@ const ItemData = [
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/16.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 17,
@@ -122,6 +138,7 @@ const ItemData = [
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/17.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 18,
@@ -129,6 +146,7 @@ const ItemData = [
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/18.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 19,
@@ -136,6 +154,7 @@ const ItemData = [
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/19.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 20,
@@ -143,6 +162,7 @@ const ItemData = [
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/20.jpg",
+        cartBtnClicked: false,
       },
     ],
   },
@@ -157,6 +177,7 @@ const ItemData = [
         date: 1597380130048,
         price: 10000,
         imageUrl: "images/item/keyring/1.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 2,
@@ -164,6 +185,7 @@ const ItemData = [
         date: 1597380230048,
         price: 10000,
         imageUrl: "images/item/keyring/2.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 3,
@@ -171,6 +193,7 @@ const ItemData = [
         date: 1597380230048,
         price: 10000,
         imageUrl: "images/item/keyring/2.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 4,
@@ -178,6 +201,7 @@ const ItemData = [
         date: 1597380430048,
         price: 10000,
         imageUrl: "images/item/keyring/4.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 5,
@@ -185,6 +209,7 @@ const ItemData = [
         date: 1597380530048,
         price: 10000,
         imageUrl: "images/item/keyring/5.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 6,
@@ -192,6 +217,7 @@ const ItemData = [
         date: 1597380630048,
         price: 10000,
         imageUrl: "images/item/keyring/6.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 7,
@@ -199,6 +225,7 @@ const ItemData = [
         date: 1597380730048,
         price: 10000,
         imageUrl: "images/item/keyring/7.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 8,
@@ -206,6 +233,7 @@ const ItemData = [
         date: 1597380830048,
         price: 8000,
         imageUrl: "images/item/keyring/8.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 9,
@@ -213,6 +241,7 @@ const ItemData = [
         date: 1597380930048,
         price: 9000,
         imageUrl: "images/item/keyring/9.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 10,
@@ -220,6 +249,7 @@ const ItemData = [
         date: 1597381030048,
         price: 10000,
         imageUrl: "images/item/keyring/10.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 11,
@@ -227,6 +257,7 @@ const ItemData = [
         date: 1597381130048,
         price: 11000,
         imageUrl: "images/item/keyring/11.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 12,
@@ -234,6 +265,7 @@ const ItemData = [
         date: 1597381230048,
         price: 12000,
         imageUrl: "images/item/keyring/12.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 13,
@@ -241,6 +273,7 @@ const ItemData = [
         date: 1597381330048,
         price: 9500,
         imageUrl: "images/item/keyring/13.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 14,
@@ -248,6 +281,7 @@ const ItemData = [
         date: 1597381430048,
         price: 8400,
         imageUrl: "images/item/keyring/14.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 15,
@@ -255,6 +289,7 @@ const ItemData = [
         date: 1597381530048,
         price: 7500,
         imageUrl: "images/item/keyring/15.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 16,
@@ -262,6 +297,7 @@ const ItemData = [
         date: 1597381630048,
         price: 13000,
         imageUrl: "images/item/keyring/16.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 17,
@@ -269,6 +305,7 @@ const ItemData = [
         date: 1597381730048,
         price: 8700,
         imageUrl: "images/item/keyring/17.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 18,
@@ -276,6 +313,7 @@ const ItemData = [
         date: 1597381830048,
         price: 20000,
         imageUrl: "images/item/keyring/18.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 19,
@@ -283,6 +321,7 @@ const ItemData = [
         date: 1597381930048,
         price: 20000,
         imageUrl: "images/item/keyring/19.jpg",
+        cartBtnClicked: false,
       },
       {
         id: 20,
@@ -290,6 +329,7 @@ const ItemData = [
         date: 1597382030048,
         price: 15000,
         imageUrl: "images/item/keyring/20.jpg",
+        cartBtnClicked: false,
       },
     ],
   },
@@ -304,6 +344,7 @@ const ItemData = [
         date: 1597390030048,
         price: 2000,
         imageUrl: "images/item/sticker/1.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 2,
@@ -311,6 +352,7 @@ const ItemData = [
         date: 1597390130151,
         price: 2000,
         imageUrl: "images/item/sticker/2.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 3,
@@ -318,6 +360,7 @@ const ItemData = [
         date: 1597390130448,
         price: 2000,
         imageUrl: "images/item/sticker/3.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 4,
@@ -325,6 +368,7 @@ const ItemData = [
         date: 1597390030748,
         price: 2000,
         imageUrl: "images/item/sticker/4.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 5,
@@ -332,6 +376,7 @@ const ItemData = [
         date: 1597390030859,
         price: 2000,
         imageUrl: "images/item/sticker/5.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 6,
@@ -339,6 +384,7 @@ const ItemData = [
         date: 15973900309998,
         price: 2000,
         imageUrl: "images/item/sticker/6.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 7,
@@ -346,6 +392,7 @@ const ItemData = [
         date: 1597390040038,
         price: 2000,
         imageUrl: "images/item/sticker/7.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 8,
@@ -353,6 +400,7 @@ const ItemData = [
         date: 1597390130042,
         price: 2000,
         imageUrl: "images/item/sticker/8.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 9,
@@ -360,6 +408,7 @@ const ItemData = [
         date: 1597390130760,
         price: 2000,
         imageUrl: "images/item/sticker/9.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 10,
@@ -367,6 +416,7 @@ const ItemData = [
         date: 1597390230031,
         price: 2000,
         imageUrl: "images/item/sticker/10.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 11,
@@ -374,6 +424,7 @@ const ItemData = [
         date: 1597390330083,
         price: 2000,
         imageUrl: "images/item/sticker/11.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 12,
@@ -381,6 +432,7 @@ const ItemData = [
         date: 1597390331050,
         price: 2000,
         imageUrl: "images/item/sticker/12.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 13,
@@ -388,6 +440,7 @@ const ItemData = [
         date: 1597390331564,
         price: 2000,
         imageUrl: "images/item/sticker/13.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 14,
@@ -395,6 +448,7 @@ const ItemData = [
         date: 1597390430098,
         price: 2000,
         imageUrl: "images/item/sticker/14.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 15,
@@ -402,6 +456,7 @@ const ItemData = [
         date: 1597390531000,
         price: 2000,
         imageUrl: "images/item/sticker/15.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 16,
@@ -409,6 +464,7 @@ const ItemData = [
         date: 1597390531028,
         price: 2000,
         imageUrl: "images/item/sticker/16.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 17,
@@ -416,6 +472,7 @@ const ItemData = [
         date: 1597390531196,
         price: 2000,
         imageUrl: "images/item/sticker/17.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 18,
@@ -423,6 +480,7 @@ const ItemData = [
         date: 1597390532225,
         price: 2000,
         imageUrl: "images/item/sticker/18.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 19,
@@ -430,6 +488,7 @@ const ItemData = [
         date: 1597390632193,
         price: 2000,
         imageUrl: "images/item/sticker/19.JPG",
+        cartBtnClicked: false,
       },
       {
         id: 20,
@@ -437,6 +496,7 @@ const ItemData = [
         date: 1597390648151,
         price: 2000,
         imageUrl: "images/item/sticker/20.JPG",
+        cartBtnClicked: false,
       },
     ],
   },
