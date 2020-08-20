@@ -7,6 +7,7 @@ const ItemData = [
       {
         id: 1,
         name: "아보카도냥이",
+        description: "◟( ˘ ³˘)◞ ♥ 오늘만 무배~~ 한정판 잇템! 놓치면 바보ㅎ",
         date: 1597370030048,
         price: 10000,
         imageUrl: "images/item/case/1.jpg",
@@ -14,6 +15,7 @@ const ItemData = [
       {
         id: 2,
         name: "초록괴물",
+        description: "주문폭주 할인ෆ 에어팟케이스 + 키링 SET ",
         date: 1597370030050,
         price: 10000,
         imageUrl: "images/item/case/2.jpg",
@@ -21,6 +23,7 @@ const ItemData = [
       {
         id: 3,
         name: "땅콩곰돌",
+        description: "선예약 할인중♥",
         date: 1597370030099,
         price: 10000,
         imageUrl: "images/item/case/3.jpg",
@@ -28,6 +31,7 @@ const ItemData = [
       {
         id: 4,
         name: "주황주황플라워",
+        description: "드뎌! 전컬러 입고완료 :)",
         date: 1597370130048,
         price: 10000,
         imageUrl: "images/item/case/4.jpg",
@@ -35,6 +39,7 @@ const ItemData = [
       {
         id: 5,
         name: "초코칩곰돌이",
+        description: "주문폭주 할인ෆ 당일발송!",
         date: 1597370130003,
         price: 10000,
         imageUrl: "images/item/case/5.jpg",
@@ -42,6 +47,7 @@ const ItemData = [
       {
         id: 6,
         name: "우비쓴아기돼지",
+        description: "+ﾟ* 특가할인 *ﾟ+ ",
         date: 1597370130068,
         price: 20000,
         imageUrl: "images/item/case/6.jpg",
@@ -49,6 +55,7 @@ const ItemData = [
       {
         id: 7,
         name: "체리곰돌이",
+        description: "주문폭주 할인ෆ 당일발송!",
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/7.jpg",
@@ -56,6 +63,7 @@ const ItemData = [
       {
         id: 8,
         name: "과일친구들",
+        description: "드뎌! 전컬러 입고완료 :)",
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/8.jpg",
@@ -63,6 +71,7 @@ const ItemData = [
       {
         id: 9,
         name: "아기돼지",
+        description: "◟( ˘ ³˘)◞ ♥ 오늘만 무배~~ 한정판 잇템! 놓치면 바보ㅎ",
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/9.jpg",
@@ -70,6 +79,7 @@ const ItemData = [
       {
         id: 10,
         name: "라디오굳굳",
+        description: "선예약 할인중♥",
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/10.jpg",
@@ -77,6 +87,7 @@ const ItemData = [
       {
         id: 11,
         name: "우디버즈케이스",
+        description: "주문폭주 할인ෆ 당일발송!",
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/11.jpg",
@@ -84,6 +95,7 @@ const ItemData = [
       {
         id: 12,
         name: "놀러와요동물의숲",
+        description: "+ﾟ* 특가할인 *ﾟ+",
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/12.jpg",
@@ -91,6 +103,7 @@ const ItemData = [
       {
         id: 13,
         name: "주민센터친구들",
+        description: "선예약 할인중♥",
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/13.jpg",
@@ -98,6 +111,7 @@ const ItemData = [
       {
         id: 14,
         name: "케어베어",
+        description: "+ﾟ* 특가할인 *ﾟ+",
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/14.jpg",
@@ -105,6 +119,7 @@ const ItemData = [
       {
         id: 15,
         name: "바나나댕댕",
+        description: "주문폭주 할인ෆ 당일발송!",
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/15.jpg",
@@ -112,6 +127,7 @@ const ItemData = [
       {
         id: 16,
         name: "귀여운토끼",
+        description: "선예약 할인중♥",
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/16.jpg",
@@ -119,6 +135,7 @@ const ItemData = [
       {
         id: 17,
         name: "인형공룡들",
+        description: "주문폭주 할인ෆ 당일발송!",
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/17.jpg",
@@ -126,6 +143,7 @@ const ItemData = [
       {
         id: 18,
         name: "눈감은고라파덕",
+        description: "드뎌! 전컬러 입고완료 :)",
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/18.jpg",
@@ -133,6 +151,7 @@ const ItemData = [
       {
         id: 19,
         name: "핑크세일러문",
+        description: "+ﾟ* 특가할인 *ﾟ+",
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/19.jpg",
@@ -140,6 +159,7 @@ const ItemData = [
       {
         id: 20,
         name: "초코칩프라푸치노",
+        description: "주문폭주 할인ෆ 당일발송!",
         date: 1597370030048,
         price: 20000,
         imageUrl: "images/item/case/20.jpg",
@@ -154,6 +174,7 @@ const ItemData = [
       {
         id: 1,
         name: "스마일꽃",
+        description: "선예약 할인중♥",
         date: 1597380130048,
         price: 10000,
         imageUrl: "images/item/keyring/1.jpg",
@@ -161,6 +182,7 @@ const ItemData = [
       {
         id: 2,
         name: "스펀지밥친구들",
+        description: "드뎌! 전컬러 입고완료 :)",
         date: 1597380230048,
         price: 10000,
         imageUrl: "images/item/keyring/2.jpg",
@@ -168,6 +190,7 @@ const ItemData = [
       {
         id: 3,
         name: "포켓몬친구들",
+        description: "주문폭주 할인ෆ 당일발송!",
         date: 1597380230048,
         price: 10000,
         imageUrl: "images/item/keyring/2.jpg",
@@ -175,6 +198,7 @@ const ItemData = [
       {
         id: 4,
         name: "무궁화태극기",
+        description: "선예약 할인중♥",
         date: 1597380430048,
         price: 10000,
         imageUrl: "images/item/keyring/4.jpg",
@@ -182,6 +206,7 @@ const ItemData = [
       {
         id: 5,
         name: "겨울왕국",
+        description: "+ﾟ* 특가할인 *ﾟ+",
         date: 1597380530048,
         price: 10000,
         imageUrl: "images/item/keyring/5.jpg",
@@ -189,6 +214,7 @@ const ItemData = [
       {
         id: 6,
         name: "그로밋",
+        description: "◟( ˘ ³˘)◞ ♥ 오늘만 무배~~ 한정판 잇템! 놓치면 바보ㅎ",
         date: 1597380630048,
         price: 10000,
         imageUrl: "images/item/keyring/6.jpg",
@@ -196,6 +222,7 @@ const ItemData = [
       {
         id: 7,
         name: "짱구",
+        description: "주문폭주 할인ෆ 당일발송!",
         date: 1597380730048,
         price: 10000,
         imageUrl: "images/item/keyring/7.jpg",
@@ -203,6 +230,7 @@ const ItemData = [
       {
         id: 8,
         name: "파워퍼프걸",
+        description: "선예약 할인중♥",
         date: 1597380830048,
         price: 8000,
         imageUrl: "images/item/keyring/8.jpg",
@@ -210,6 +238,7 @@ const ItemData = [
       {
         id: 9,
         name: "반짝이볼",
+        description: "드뎌! 전컬러 입고완료 :)",
         date: 1597380930048,
         price: 9000,
         imageUrl: "images/item/keyring/9.jpg",
@@ -217,6 +246,7 @@ const ItemData = [
       {
         id: 10,
         name: "기염댕댕",
+        description: "◟( ˘ ³˘)◞ ♥ 오늘만 무배~~ 한정판 잇템! 놓치면 바보ㅎ",
         date: 1597381030048,
         price: 10000,
         imageUrl: "images/item/keyring/10.jpg",
@@ -224,6 +254,7 @@ const ItemData = [
       {
         id: 11,
         name: "달마시안",
+        description: "+ﾟ* 특가할인 *ﾟ+",
         date: 1597381130048,
         price: 11000,
         imageUrl: "images/item/keyring/11.jpg",
@@ -231,6 +262,7 @@ const ItemData = [
       {
         id: 12,
         name: "갈색푸들",
+        description: "주문폭주 할인ෆ 당일발송!",
         date: 1597381230048,
         price: 12000,
         imageUrl: "images/item/keyring/12.jpg",
@@ -238,6 +270,7 @@ const ItemData = [
       {
         id: 13,
         name: "케어베어",
+        description: "◟( ˘ ³˘)◞ ♥ 오늘만 무배~~ 한정판 잇템! 놓치면 바보ㅎ",
         date: 1597381330048,
         price: 9500,
         imageUrl: "images/item/keyring/13.jpg",
@@ -245,6 +278,7 @@ const ItemData = [
       {
         id: 14,
         name: "몬스터주식회사",
+        description: "선예약 할인중♥",
         date: 1597381430048,
         price: 8400,
         imageUrl: "images/item/keyring/14.jpg",
@@ -252,6 +286,7 @@ const ItemData = [
       {
         id: 15,
         name: "말랑비숑",
+        description: "+ﾟ* 특가할인 *ﾟ+",
         date: 1597381530048,
         price: 7500,
         imageUrl: "images/item/keyring/15.jpg",
@@ -259,6 +294,7 @@ const ItemData = [
       {
         id: 16,
         name: "다람쥐",
+        description: "주문폭주 할인ෆ 당일발송!",
         date: 1597381630048,
         price: 13000,
         imageUrl: "images/item/keyring/16.jpg",
@@ -266,6 +302,7 @@ const ItemData = [
       {
         id: 17,
         name: "투명하트볼",
+        description: "선예약 할인중♥",
         date: 1597381730048,
         price: 8700,
         imageUrl: "images/item/keyring/17.jpg",
@@ -273,6 +310,7 @@ const ItemData = [
       {
         id: 18,
         name: "백설공주태슬",
+        description: "+ﾟ* 특가할인 *ﾟ+",
         date: 1597381830048,
         price: 20000,
         imageUrl: "images/item/keyring/18.jpg",
@@ -280,6 +318,7 @@ const ItemData = [
       {
         id: 19,
         name: "반짝달빛",
+        description: "드뎌! 전컬러 입고완료 :)",
         date: 1597381930048,
         price: 20000,
         imageUrl: "images/item/keyring/19.jpg",
@@ -287,6 +326,7 @@ const ItemData = [
       {
         id: 20,
         name: "코카콜라",
+        description: "선예약 할인중♥",
         date: 1597382030048,
         price: 15000,
         imageUrl: "images/item/keyring/20.jpg",
@@ -301,6 +341,7 @@ const ItemData = [
       {
         id: 1,
         name: "오로라스티커",
+        description: "주문폭주 할인ෆ 당일발송!",
         date: 1597390030048,
         price: 2000,
         imageUrl: "images/item/sticker/1.JPG",
@@ -308,6 +349,7 @@ const ItemData = [
       {
         id: 2,
         name: "무광그레이",
+        description: "+ﾟ* 특가할인 *ﾟ+",
         date: 1597390130151,
         price: 2000,
         imageUrl: "images/item/sticker/2.JPG",
@@ -315,6 +357,7 @@ const ItemData = [
       {
         id: 3,
         name: "무광골드",
+        description: "선예약 할인중♥",
         date: 1597390130448,
         price: 2000,
         imageUrl: "images/item/sticker/3.JPG",
@@ -322,6 +365,7 @@ const ItemData = [
       {
         id: 4,
         name: "환불호피무늬",
+        description: "드뎌! 전컬러 입고완료 :)",
         date: 1597390030748,
         price: 2000,
         imageUrl: "images/item/sticker/4.JPG",
@@ -329,6 +373,7 @@ const ItemData = [
       {
         id: 5,
         name: "우주를줄게",
+        description: "◟( ˘ ³˘)◞ ♥ 오늘만 무배~~ 한정판 잇템! 놓치면 바보ㅎ",
         date: 1597390030859,
         price: 2000,
         imageUrl: "images/item/sticker/5.JPG",
@@ -336,6 +381,7 @@ const ItemData = [
       {
         id: 6,
         name: "아일랜드",
+        description: "+ﾟ* 특가할인 *ﾟ+",
         date: 15973900309998,
         price: 2000,
         imageUrl: "images/item/sticker/6.JPG",
@@ -343,6 +389,7 @@ const ItemData = [
       {
         id: 7,
         name: "뱅뱅돌아",
+        description: "선예약 할인중♥",
         date: 1597390040038,
         price: 2000,
         imageUrl: "images/item/sticker/7.JPG",
@@ -350,6 +397,7 @@ const ItemData = [
       {
         id: 8,
         name: "무지개지그재그",
+        description: "드뎌! 전컬러 입고완료 :)",
         date: 1597390130042,
         price: 2000,
         imageUrl: "images/item/sticker/8.JPG",
@@ -357,6 +405,7 @@ const ItemData = [
       {
         id: 9,
         name: "블링크주목",
+        description: "주문폭주 할인ෆ 당일발송!",
         date: 1597390130760,
         price: 2000,
         imageUrl: "images/item/sticker/9.JPG",
@@ -364,6 +413,7 @@ const ItemData = [
       {
         id: 10,
         name: "땡땡이핑크",
+        description: "+ﾟ* 특가할인 *ﾟ+",
         date: 1597390230031,
         price: 2000,
         imageUrl: "images/item/sticker/10.JPG",
@@ -371,6 +421,7 @@ const ItemData = [
       {
         id: 11,
         name: "체리가조아",
+        description: "선예약 할인중♥",
         date: 1597390330083,
         price: 2000,
         imageUrl: "images/item/sticker/11.JPG",
@@ -378,6 +429,7 @@ const ItemData = [
       {
         id: 12,
         name: "블랙홀",
+        description: "드뎌! 전컬러 입고완료 :)",
         date: 1597390331050,
         price: 2000,
         imageUrl: "images/item/sticker/12.JPG",
@@ -385,6 +437,7 @@ const ItemData = [
       {
         id: 13,
         name: "별이쏟아진다",
+        description: "+ﾟ* 특가할인 *ﾟ+",
         date: 1597390331564,
         price: 2000,
         imageUrl: "images/item/sticker/13.JPG",
@@ -392,6 +445,7 @@ const ItemData = [
       {
         id: 14,
         name: "꽃이쏟아진다",
+        description: "주문폭주 할인ෆ 당일발송!",
         date: 1597390430098,
         price: 2000,
         imageUrl: "images/item/sticker/14.JPG",
@@ -399,6 +453,7 @@ const ItemData = [
       {
         id: 15,
         name: "별구름",
+        description: "선예약 할인중♥",
         date: 1597390531000,
         price: 2000,
         imageUrl: "images/item/sticker/15.JPG",
@@ -406,6 +461,7 @@ const ItemData = [
       {
         id: 16,
         name: "핑크구름",
+        description: "+ﾟ* 특가할인 *ﾟ+",
         date: 1597390531028,
         price: 2000,
         imageUrl: "images/item/sticker/16.JPG",
@@ -413,6 +469,7 @@ const ItemData = [
       {
         id: 17,
         name: "달마시안",
+        description: "드뎌! 전컬러 입고완료 :)",
         date: 1597390531196,
         price: 2000,
         imageUrl: "images/item/sticker/17.JPG",
@@ -420,6 +477,7 @@ const ItemData = [
       {
         id: 18,
         name: "대한민국",
+        description: "◟( ˘ ³˘)◞ ♥ 오늘만 무배~~ 한정판 잇템! 놓치면 바보ㅎ",
         date: 1597390532225,
         price: 2000,
         imageUrl: "images/item/sticker/18.JPG",
@@ -427,6 +485,7 @@ const ItemData = [
       {
         id: 19,
         name: "토성",
+        description: "주문폭주 할인ෆ 당일발송!",
         date: 1597390632193,
         price: 2000,
         imageUrl: "images/item/sticker/19.JPG",
@@ -434,6 +493,7 @@ const ItemData = [
       {
         id: 20,
         name: "체크체크",
+        description: "선예약 할인중♥",
         date: 1597390648151,
         price: 2000,
         imageUrl: "images/item/sticker/20.JPG",
