@@ -16,7 +16,7 @@ const ItemData = [
       {
         id: 2,
         name: "초록괴물",
-        description: "주문폭주 할인ෆ 에어팟케이스 + 키링 SET ",
+        description: "๑❤‿❤๑ 주문폭주 할인ෆ 에어팟케이스 + 키링 SET ",
         date: 1597370030050,
         price: 10000,
         imageUrl: "images/item/case/2.jpg",
@@ -25,7 +25,7 @@ const ItemData = [
       {
         id: 3,
         name: "땅콩곰돌",
-        description: "선예약 할인중♥",
+        description: "٩(๑• ₃ -๑)۶ 선예약 할인중♥",
         date: 1597370030099,
         price: 10000,
         imageUrl: "images/item/case/3.jpg",
@@ -34,7 +34,7 @@ const ItemData = [
       {
         id: 4,
         name: "주황주황플라워",
-        description: "드뎌! 전컬러 입고완료 :)",
+        description: "ʕ•ﻌ•ʔ ♡ 드뎌! 전컬러 입고완료 :)",
         date: 1597370130048,
         price: 10000,
         imageUrl: "images/item/case/4.jpg",
@@ -194,7 +194,7 @@ const ItemData = [
       {
         id: 1,
         name: "스마일꽃",
-        description: "선예약 할인중♥",
+        description: "ლ( ╹ ◡ ╹ ლ) 선예약 할인중♥",
         date: 1597380130048,
         price: 10000,
         imageUrl: "images/item/keyring/1.jpg",

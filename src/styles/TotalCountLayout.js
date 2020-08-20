@@ -18,9 +18,6 @@ const TotalCountLayout = styled.div((props) => ({
       color: "black !important",
       backgroundColor: "white !important",
     },
-    "div.column.totalAmount > div.ui.horizontal.statistic": {
-      marginLeft: "-200px",
-    },
   },
 }));
 

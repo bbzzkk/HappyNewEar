@@ -26,13 +26,12 @@ class Detail extends Component {
 
   render() {
     const {
-      itemDetail: { name, imageUrl, price },
+      itemDetail: { name, imageUrl, price, description },
       totalPrice,
       itemQuantity,
       options,
       OnChange,
       onAddCart,
-      description
     } = this.props;
 
     const width40 = {
@@ -57,9 +56,7 @@ class Detail extends Component {
           </Grid.Column>
 
           <Grid.Column className="DetailView">
-            <Header>
-              ◟( ˘ ³˘)◞ ♥ 오늘만 무배~~ 한정판 잇템! 놓치면 바보ㅎ
-            </Header>
+            <Header>{description}</Header>
             <Divider />
             <Grid Columns={2} className="DetailViewGridColumn">
               <Grid.Column className="DetailViewGridColumn1" style={width40}>
