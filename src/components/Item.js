@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { observer, inject } from 'mobx-react';
 
-import { Card, Icon, Image, Grid } from "semantic-ui-react";
+import { Card, Icon, Grid } from "semantic-ui-react";
 import ItemLayout from '../styles/ItemLayout'
 
 
@@ -22,7 +22,7 @@ class Item extends Component {
     }
 
 	render() {
-        const { item, categoryId, categoryName,OnClickItem } = this.props;
+        const { item, categoryName } = this.props;
         const { id, imageUrl, name, price } = item;
 
         return (

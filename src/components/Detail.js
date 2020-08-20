@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { DetailsWrapper } from "../styles/DetailsWrapper";
 
+import AddCartDialog from './Notification/AddCartDialog'
+
+import { DetailsWrapper } from "../styles/DetailsWrapper";
 import {
   Card,
   Icon,
@@ -22,7 +24,7 @@ class Detail extends Component {
   render() {
     const {
       itemDetail: { name, imageUrl, price },
-      totalAmount,
+      totalPrice,
       itemQuantity,
       options,
       OnChange,
@@ -41,7 +43,7 @@ class Detail extends Component {
       <DetailsWrapper>
         <Grid columns={2} padded="vertically">
           <Grid.Column>
-            <Image src={'/'+imageUrl} />
+            <Image src={"/" + imageUrl} />
           </Grid.Column>
 
           <Grid.Column className="DetailView">
@@ -59,13 +61,14 @@ class Detail extends Component {
                 <GridRow>{price}원 </GridRow>
                 <GridRow>{name}</GridRow>
                 <GridRow>
-                  <Menu compact>
+                  <Menu>
                     <Dropdown
                       placeholder="[필수] 수량을 선택해주세요"
                       options={options}
                       simple
                       item
                       onChange={(e) => OnChange(e)}
+                      style={{ width: "100%" }}
                     />
                   </Menu>
                 </GridRow>
@@ -76,12 +79,16 @@ class Detail extends Component {
               <Header>TOTAL PRICE</Header>
               <span className="total">
                 <strong>
-                  <em>{totalAmount}원 </em>
+                  <em>{totalPrice}원 </em>
                 </strong>
                 ({itemQuantity}개)
               </span>
             </div>
-            <Button onClick={onAddCart} primary>ADD TO CART</Button>
+            <AddCartDialog
+              totalPrice={totalPrice}
+              onAddCart={onAddCart}
+              buttonText="ADD TO CART"
+            />
           </Grid.Column>
         </Grid>
       </DetailsWrapper>

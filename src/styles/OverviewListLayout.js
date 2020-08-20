@@ -3,9 +3,9 @@ import styled from "@emotion/styled";
 const OverviewListLayout = styled.div((props) => ({
     display: "flex",
     flexDirection: 'column',
-    marginTop: '1em',
-    marginLeft: '1em',
-    marginRight: '1em',
+    marginTop: '5em',
+    marginLeft: '10%',
+    marginRight: '10%',
 
     ".items-wrapper": {
         display: "flex",

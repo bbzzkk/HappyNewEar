@@ -9,30 +9,29 @@ class PreviewList extends Component {
 	render() {
    	const {
       categoryItems: { id, routeName, category, items },
-      OnClickItem,
       cartBtnClicked,
       OnClickCartBtn,
     } = this.props;
 		return (
       <PreviewListLayout>
         <div className="category">
-        <Link to={`/${routeName}`}>
-          <h3>{category}</h3>
-        </Link>
+          <Link to={`/${routeName}`}>
+            <h3>{category}</h3>
+          </Link>
         </div>
         <div>
-            {items
+          {items
             .filter((item) => item.id < 5)
             .map((item) => (
-                <Item
+              <Item
                 key={item.id}
                 item={item}
                 catetgoryId={id}
-                OnClickItem={OnClickItem}
+                categoryName={routeName}
                 items={items}
                 cartBtnClicked={cartBtnClicked}
                 OnClickCartBtn={OnClickCartBtn}
-                />
+              />
             ))}
         </div>
       </PreviewListLayout>

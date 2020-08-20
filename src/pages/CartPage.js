@@ -9,4 +9,4 @@ class CartPage extends Component {
     }
 }
 
-export default CartPage;
+export default React.memo(CartPage);

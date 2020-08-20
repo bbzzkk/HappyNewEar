@@ -6,19 +6,27 @@ import CartDropDown from './CartDropdown'
 
 import HeaderLayout from '../styles/HeaderLayout'
 import {Icon } from 'semantic-ui-react';
+import Badge from "@material-ui/core/Badge";
+import { withStyles } from "@material-ui/core/styles";
+import IconButton from "@material-ui/core/IconButton";
+
+const StyledBadge = withStyles((theme) => ({
+  badge: {
+    right: -3,
+    top: 13,
+    border: `2px solid ${theme.palette.background.paper}`,
+    padding: "0 4px",
+  },
+}))(Badge);
 
 export default class Header extends Component{
     render() {
-        const { currentUser, handleSignOut } = this.props;
+        const { cartSize, currentUser, handleSignOut } = this.props;
       
         return (
           <HeaderLayout>
             <Link className="logoContainer" to="/">
-              <img
-                className="logo"
-                src="/images/header/logo.png"
-                alt="logo"
-              />
+              <img className="logo" src="/images/header/logo.png" alt="logo" />
             </Link>
             <div className="categories">
               <div className="category">
@@ -38,7 +46,11 @@ export default class Header extends Component{
               </div>
               <div className="option">
                 <Link to="/cart">
-                  <Icon name="shopping cart" size="big" />
+                  <IconButton aria-label="cart">
+                    <StyledBadge badgeContent={cartSize} color="secondary">
+                      <Icon name="shopping cart" size="middle" />
+                    </StyledBadge>
+                  </IconButton>
                 </Link>
               </div>
             </div>

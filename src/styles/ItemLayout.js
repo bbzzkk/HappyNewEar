@@ -2,9 +2,9 @@ import styled from "@emotion/styled";
 
 const ItemLayout = styled.div((props) => ({
     textAlign: "center",
-    margin: '0 auto',
-    marginLeft:'0.5em',
-    marginRight:'0.5em',
+    // margin: '0 auto',
+    // marginLeft:'0.5em',
+    // marginRight:'0.5em',
     userSelect: 'none',
 
     ".item-image": {
