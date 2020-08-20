@@ -4,14 +4,25 @@ import Header from '../components/Header'
 
 @inject((stores) => ({
 	authStore: stores.authStore,
-	cartStore: stores.cartStore
+    cartStore: stores.cartStore,
+    itemStore: stores.itemStore,
 }))
 @observer
 class HeaderContainer extends Component {
 	handleSignOut = async () => {
 		await this.props.authStore.signOut();
-		// this.props.itemStore.item
-		this.props.cartStore.clearItem();
+        const { itemStore } = this.props;
+
+        itemStore.itemData.map(itemData => {
+            itemData = itemData.items.map(item => {
+                item.cartBtnClicked = false;
+                return item;
+            })
+            return itemData;
+        })
+
+        this.props.cartStore.clearItem();
+
 		alert('로그아웃되셨습니다!')
 	};
 	render() {
