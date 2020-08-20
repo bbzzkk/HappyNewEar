@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 import { observer, inject } from 'mobx-react';
 
@@ -11,6 +11,7 @@ import ItemLayout from '../styles/ItemLayout'
 @inject((stores) => ({
   itemStore: stores.itemStore,
   cartStore: stores.cartStore,
+  authStore: stores.authStore
 }))
 @observer
 class Item extends Component {
@@ -19,19 +20,23 @@ class Item extends Component {
     }
 
     OnClickCartBtn = () => {
+        if (!this.props.authStore.currentUser) {
+            alert('로그인을 해주세요!')
+            return
+        }
         if (this.props.item.cartBtnClicked === true) {
-            this.props.item.cartBtnClicked = false;
-            this.props.cartStore.deleteItem(this.props.item.name);
+        this.props.item.cartBtnClicked = false;
+        this.props.cartStore.deleteItem(this.props.item.name);
         } else {
-            const addItem = {
-                ...this.props.item,
-                category: this.props.categoryName,
-                checked: true,
-                count: 1,
-            }
-            delete addItem['cartBtnClicked'];
-            this.props.cartStore.addItem(addItem);
-            this.props.item.cartBtnClicked = true;
+        const addItem = {
+            ...this.props.item,
+            category: this.props.categoryName,
+            checked: true,
+            count: 1,
+        };
+        delete addItem["cartBtnClicked"];
+        this.props.cartStore.addItem(addItem);
+        this.props.item.cartBtnClicked = true;
         }
     }
 

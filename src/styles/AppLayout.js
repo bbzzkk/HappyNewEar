@@ -1,11 +1,12 @@
 import styled from "@emotion/styled";
 
 const AppLayout = styled.div((props) => ({
+    maxWidth:'1280px',
     fontcolor: 'black',
     scrollbarWidth: 'none', /* Firefox */
     // height: '100%',
     // width: '100%',
-    margin: '0',
+    margin: '0 auto',
     display: 'flex',
     flexDirection: 'column',
 
