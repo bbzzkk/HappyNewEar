@@ -20,7 +20,7 @@ class NewItem extends Component {
 
     return (
       <BestItemLayout>
-        <Card>
+        <Card className="card">
           <CardContent className="type">BEST OF BEST</CardContent>
           <Link to={`/${categoryName}/${id}`}>
             <img className="item-image" alt="test" src={imageUrl} />
