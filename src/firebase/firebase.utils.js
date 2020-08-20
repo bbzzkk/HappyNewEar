@@ -13,29 +13,30 @@ const firebaseConfig = {
   measurementId: "G-E9FRXJY814",
 };
 
-export const createUserProfileDocument = async (userAuth, additionalInfo) => {
+export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
-  
+
   const userRef = firestore.doc(`users/${userAuth.uid}`);
+
   const snapShot = await userRef.get();
-  
-  // db에 없는 새로운 사용자일 경우 db에 저장
-  if(!snapShot.exists){
-    const {displayName, email} = userAuth;
+
+  if (!snapShot.exists) {
+    const { displayName, email } = userAuth;
     const createdAt = new Date();
-    try{
+    try {
       await userRef.set({
         displayName,
         email,
         createdAt,
-        ...additionalInfo,
+        ...additionalData,
       });
-    }catch(error){
-      console.log(error.message)
+    } catch (error) {
+      console.log("error creating user", error.message);
     }
   }
+
   return userRef;
-}
+};
 
 firebase.initializeApp(firebaseConfig);
 

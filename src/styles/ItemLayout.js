@@ -3,8 +3,8 @@ import styled from "@emotion/styled";
 const ItemLayout = styled.div((props) => ({
     textAlign: "center",
     // margin: '0 auto',
-    // marginLeft:'0.5em',
-    // marginRight:'0.5em',
+    marginLeft:'0.5em',
+    marginRight:'0.5em',
     userSelect: 'none',
     boxShadow: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
 

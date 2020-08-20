@@ -33,8 +33,7 @@ class SignUpForm extends Component {
             title="아직 가입하지 않으셨나요?"
             subheader="몇 가지 정보만 기입하시면 됩니다"
           />
-          <form onSubmit={handleSignUp}>
-            <TextField
+          <TextField
               name="displayName"
               type="text"
               label="Display Name"
@@ -70,8 +69,7 @@ class SignUpForm extends Component {
               required
               style={inputWidth}
             />
-            <CustomButton>새로 시작하기</CustomButton>
-          </form>
+            <CustomButton onClick={handleSignUp}>새로 시작하기</CustomButton>
         </Card>
       </SignInAndUpFormLayout>
     );

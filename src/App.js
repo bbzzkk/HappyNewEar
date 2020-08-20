@@ -57,11 +57,18 @@ class App extends Component {
                 currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
               }
             />
-                    
-            <Route exact path="/cart" component={CartPage} />
+
+            <Route
+              exact
+              path="/cart"
+              render={() =>
+                currentUser ? <CartPage /> : <Redirect to="/" />
+              }
+            />
             <Route exact path="/:categoryId" component={CategoryPage} />
             <Route
-              exact path="/:categoryId/:productId"
+              exact
+              path="/:categoryId/:productId"
               component={DetailPage}
             />
           </Switch>
