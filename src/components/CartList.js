@@ -1,37 +1,37 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import CartItem from './CartItem';
+import CartItem from "./CartItem";
 
 import CartListLayout from "../styles/CartListLayout";
-import { Button, Segment, Grid } from 'semantic-ui-react';
+import { Button, Segment, Grid } from "semantic-ui-react";
 
 class CartList extends Component {
-	render() {
-		const {
-			items,
-			allChecked,
-			onHandleAllCheck,
-			onHandleCheck,
-			onDeleteSelected,
-			onDeleteItem,
-			onAddClick,
-			onSubClick 
-		} = this.props; 
-		
-		const cartLists = items.map(item => {
-				return (
-					<CartItem
-						id={item.id}
-						item={item}
-						onHandleCheck={onHandleCheck}
-						onDeleteItem={onDeleteItem}
-						onAddClick={onAddClick}
-						onSubClick={onSubClick}
-					/>
-				);
-		});
+  render() {
+    const {
+      items,
+      allChecked,
+      onHandleAllCheck,
+      onHandleCheck,
+      onDeleteSelected,
+      onDeleteItem,
+      onAddClick,
+      onSubClick,
+    } = this.props;
 
-		return (
+    const cartLists = items.map((item) => {
+      return (
+        <CartItem
+          id={item.id}
+          item={item}
+          onHandleCheck={onHandleCheck}
+          onDeleteItem={onDeleteItem}
+          onAddClick={onAddClick}
+          onSubClick={onSubClick}
+        />
+      );
+    });
+
+    return (
       <CartListLayout>
         <Segment>
           <Grid columns="equal">
@@ -71,6 +71,7 @@ class CartList extends Component {
                   style={{
                     float: "right",
                     // lineHeight: '5px'
+                    width: "100px",
                   }}
                 >
                   선택삭제
@@ -82,7 +83,7 @@ class CartList extends Component {
         <Segment>{cartLists}</Segment>
       </CartListLayout>
     );
-	}
+  }
 }
 
 export default CartList;

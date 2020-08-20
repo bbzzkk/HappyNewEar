@@ -13,8 +13,8 @@ import Detail from "../components/Detail";
 class DetailContainer extends Component {
   OnChange = (e) => {
     const number = parseInt(e.target.innerText.replace(/[^0-9]/g, ""));
-    this.props.itemStore.setQuantity(number)
-  }
+    this.props.itemStore.setQuantity(number);
+  };
 
   onAddCart = () => {
     if (!this.props.authStore.currentUser) {
@@ -22,20 +22,26 @@ class DetailContainer extends Component {
       return;
     }
     const {itemStore, cartStore} = this.props
+
     const item = {
       ...itemStore.itemDetail,
       category: itemStore.selectedCategoryId,
       count: itemStore.itemQuantity,
       checked: true,
     };
-    cartStore.addItem(item)
-    itemStore.resetAmountOfItem()
-  }
-  
+    cartStore.addItem(item);
+    itemStore.resetAmountOfItem();
+  };
+
   render() {
     const { categoryId, productId } = this.props.params;
     this.props.itemStore.selectItemDetail(categoryId, parseInt(productId));
-    const { itemDetail, itemQuantity, _totalPrice, options } = this.props.itemStore;
+    const {
+      itemDetail,
+      itemQuantity,
+      _totalPrice,
+      options,
+    } = this.props.itemStore;
     return (
       <Detail
         itemDetail={itemDetail}
@@ -44,7 +50,6 @@ class DetailContainer extends Component {
         options={options}
         OnChange={this.OnChange}
         onAddCart={this.onAddCart}
-        description={this.description}
       />
     );
   }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 import { Switch, Route, Redirect } from "react-router-dom";
 
@@ -14,7 +14,7 @@ import SignInAndSignUpPage from "./pages/SignInAndSignUpPage";
 import HeaderContainer from "./containers/HeaderContainer";
 import FooterContainer from "./containers/FooterContainer";
 
-import AppLayout from './styles/AppLayout'
+import AppLayout from "./styles/AppLayout";
 
 @inject((stores) => ({ authStore: stores.authStore }))
 @observer
@@ -42,8 +42,8 @@ class App extends Component {
   }
 
   render() {
-    const {currentUser} = this.props.authStore
-     console.log(currentUser);
+    const { currentUser } = this.props.authStore;
+    console.log(currentUser);
     return (
       <AppLayout>
         <HeaderContainer />
@@ -57,7 +57,6 @@ class App extends Component {
                 currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
               }
             />
-
             <Route
               exact
               path="/cart"
