@@ -215,7 +215,7 @@ const ItemData = [
         description: "주문폭주 할인ෆ 당일발송!",
         date: 1597380230048,
         price: 10000,
-        imageUrl: "images/item/keyring/2.jpg",
+        imageUrl: "images/item/keyring/3.jpg",
         cartBtnClicked: false,
       },
       {
