@@ -4,7 +4,7 @@
 
 # 🦄Happy New Ear🦄
 
-![version](<https://img.shields.io/badge/version-0.1.0-red>)![react](<https://img.shields.io/badge/react-16.13.1-yellow>)![mobx](<https://img.shields.io/badge/mobx-5.15.5-blueviolet>)![firebase](<https://img.shields.io/badge/firebase-7.18.0-brightgreen>)![documentation](<https://img.shields.io/badge/documentation-yes-ff69b4>)
+![version](<https://img.shields.io/badge/version-0.1.0-red>)   ![react](<https://img.shields.io/badge/react-16.13.1-yellow>)   ![mobx](<https://img.shields.io/badge/mobx-5.15.5-blueviolet>)  ![firebase](<https://img.shields.io/badge/firebase-7.18.0-brightgreen>)   ![documentation](<https://img.shields.io/badge/documentation-yes-ff69b4>)
 
 > 귀염뽀짝한 에어팟 케이스들은 다 여기있다!
 >
@@ -57,6 +57,10 @@
 ![개발환경](./public/images/library.JPG) 
 
 
+<<<<<<< HEAD
+=======
+![개발환경](./public/images/library.JPG){: width="70%"} 
+>>>>>>> b9d61802a8f44c1090e598f308081e8c2a4e9785
 
 # 🗃️Project Folder
 
