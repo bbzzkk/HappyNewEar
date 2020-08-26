@@ -1,6 +1,6 @@
 👇클릭해서 홈페이지로 이동하기👇
 
-![Happy New Year Logo](.\public\images\HappyNewEar.JPG)
+![Happy New Year Logo](./public/images/HappyNewEar.JPG)
 
 # 🦄Happy New Ear🦄
 
@@ -61,7 +61,7 @@
 
 ## 🔨개발환경
 
-![개발환경](C:\taerin\FE\public\images\library.JPG){: width="70%"} 
+![개발환경](./public/images/library.JPG){: width="70%"} 
 
 
 
