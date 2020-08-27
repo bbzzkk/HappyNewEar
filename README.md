@@ -93,7 +93,7 @@
 
 - 고객은 특정 주소에 따라 특정 데이터에 직접 접근할 수 있습니다.
 - 브라우저는 특정 주소에 따라 파일을 로드 하여 렌더링합니다. 
-  ![페이지 라우터](https://user-images.githubusercontent.com/51367622/90961679-a1b72700-e4e5-11ea-950e-559970d26c36.PNG){: width="10%" height="10%"}
+  ![페이지 라우터](https://user-images.githubusercontent.com/51367622/90961679-a1b72700-e4e5-11ea-950e-559970d26c36.PNG)
 
 #### **3. Header**
 
